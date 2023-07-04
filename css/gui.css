@@ -85,3 +85,11 @@ main {
   color: white;
   border-radius: 5px;
 }
+
+.roundbutton {
+  width: 7.5rem;
+  height: 2.5rem;
+  background-color: #525252;
+  color: white;
+  border-radius: 20px;
+}

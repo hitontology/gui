@@ -3,10 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Website Title</title>
+    <title>HITO Search Results</title>
     <link rel="stylesheet" href="css/gui.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost" />-->
+    <style>
+      label,
+      select {
+        display: flex;
+        flex-direction: column;
+      }
+      #filters {
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+      }
+    </style>
   </head>
 
   <body>
@@ -22,7 +34,44 @@
     </header>
 
     <main>
-      <input type="button" />
+      <div>
+        <input type="button" class="roundbutton" value="Software Product" />
+        <input type="button" class="roundbutton" value="Study" />
+      </div>
+      <div id="filters">
+        <div>
+          <label for="ast">Application System Type</label>
+          <select name="ast" id="ast">
+            <!--multiple-->
+            <option value="lis">Laboratory Information System</option>
+            <option value="ris">Radiology Information System</option>
+            <option value="test1">Test1</option>
+            <option value="test2">Test2</option>
+            <option value="test3">Test3</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="t1">Test1</label>
+          <select name="t1" id="t1t">
+            <option value="x">x</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="t2">Test2</label>
+          <select name="t2" id="t2t">
+            <option value="x">x</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="t3">Test3</label>
+          <select name="t3" id="t3t">
+            <option value="x">x</option>
+          </select>
+        </div>
+      </div>
     </main>
 
     <script src="js/index.js"></script>
