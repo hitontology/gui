@@ -13,7 +13,7 @@ function result(title, text, link) {
 function results() {
   const container = document.getElementById("results");
   for (let i = 1; i <= 10; i++) {
-    let html = result("Commercial RIS " + i, "Commercial Radiology Information System (RIS) Dummy " + i, "");
+    let html = result("Commercial RIS " + i, "Commercial Radiology Information System (RIS) Dummy " + i, "details.html?swp=Commercial RIS " + i);
     let fragment = document.createRange().createContextualFragment(html);
     container.appendChild(fragment);
   }
