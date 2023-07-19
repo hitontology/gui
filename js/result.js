@@ -1,5 +1,5 @@
 function search(query) {
-  document.body.innerHTML += `<h2>Search results for: ${query}</h2>`;
+  document.getElementById("query").innerText = `${query}`;
 }
 
 function result(title, text, link) {
@@ -17,6 +17,10 @@ function results() {
     let fragment = document.createRange().createContextualFragment(html);
     container.appendChild(fragment);
   }
+  document.getElementById("primaryname").innerText = "Laborinformationssystem";
+  document.getElementById("synonyms").innerText = "Laboratory Information System, Laborsystem, Labormanagement-System";
+  document.getElementById("definition").innerText =
+    "Das LIS unterstützt alle Schritte der Laboruntersuchung: die Verwaltung von Aufträgen und Proben, die Verteilung der Proben auf die vorhandenen Analysegeräte, das Abrufen und Validieren der Ergebnisse und die abschließende Übermittlung der Ergebnisse an den Auftraggeber. Dadurch wird der nahezu vollautomatische Laborbetrieb ermöglicht, welcher die hohen Durchsatzraten in modernen medizinischen Laborinstituten erlaubt. Analysegeräte können direkt an das Informationssystem angeschlossen werden, um die Werte direkt in das System zu übernehmen.";
 }
 
 document.addEventListener(

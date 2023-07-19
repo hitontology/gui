@@ -6,15 +6,21 @@ function property(p, o) {
   return `<span>
           <b>${p}</b>
           ${o}
-        </span>`;
+        </span><br>`;
 }
 
-function properties() {
-  const container = document.getElementById("properties");
-  for (let i = 1; i <= 50; i++) {
-    let html = property("exampleproperty" + i, "exampleobject" + i);
-    let fragment = document.createRange().createContextualFragment(html);
-    container.appendChild(fragment);
+function details() {
+  const container = document.getElementById("details");
+  for (let d = 0; d < 4; d++) {
+    let div = document
+      .createRange()
+      .createContextualFragment(`<div><h3>${["General Information", "Supports Enterprise Function", "Offers Features", "Studies"][d]}</h3></div>`).firstChild;
+    for (let i = 1; i <= 10; i++) {
+      let html = property("exampleproperty" + i, "exampleobject" + i);
+      let fragment = document.createRange().createContextualFragment(html);
+      div.appendChild(fragment);
+    }
+    container.appendChild(div);
   }
 }
 
@@ -24,7 +30,7 @@ document.addEventListener(
     const urlParams = new URLSearchParams(window.location.search);
     const swp = urlParams.get("swp");
     show(swp);
-    properties();
+    details();
   },
   false
 );

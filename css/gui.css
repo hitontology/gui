@@ -6,7 +6,30 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal; 
+  line-height: normal;
+  margin: 0 5em;
+}
+
+header {
+  margin-bottom: 2em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90em;
+  margin: 0 auto;
+  padding: 1em;
+  gap: 1.5rem;
+}
+
+main * {
+  border-radius: 5px;
+}
+
+main h2 {
+  margin: 0;
 }
 
 .menu {
@@ -31,7 +54,6 @@ body {
   justify-content: space-around;
   align-items: flex-start;
   flex-shrink: 0;
-  margin-bottom: 10em;
 }
 
 .menu li.active {
@@ -53,15 +75,6 @@ body {
 
 .menu li.active a {
   color: black;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 110em;
-  margin: 0 auto;
-  gap: 3em;
 }
 
 #logo {
@@ -106,7 +119,6 @@ main {
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-shrink: 0;
-  margin-top: 4.5rem;
 }
 
 .result {
@@ -117,6 +129,7 @@ main {
   padding: 0.5rem;
   box-shadow: 1px 1px 5px darkgray;
   position: relative;
+  border-radius: 5px;
 }
 
 .result a {
@@ -148,15 +161,23 @@ select {
   width: 45%;
 }
 
-#properties {
+#details {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   /*flex-direction: column;
   align-items: flex-start;*/
+  gap: 1.5rem;
 }
 
-#properties span {
-  flex-basis: 45%;
-  margin: 0.8em;
+#details div {
+  background-color: white;
+  width: 45%;
+  padding: 0.8rem;
+}
+
+#shortdescription {
+  border-radius: 5px;
+  background-color: white;
+  border-spacing: 1rem;
 }
