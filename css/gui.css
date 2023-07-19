@@ -1,8 +1,12 @@
 body {
-  #font-family: "Jost", sans-serif;
-  #font-feature-settings: "ss01" 1;
+  /*font-family: "Jost", sans-serif;
+  font-feature-settings: "ss01" 1;*/
   font-family: "Roboto", sans-serif;
   background-color: #eaeaea;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal; 
 }
 
 .menu {
@@ -57,6 +61,7 @@ main {
   align-items: center;
   max-width: 110em;
   margin: 0 auto;
+  gap: 3em;
 }
 
 #logo {
@@ -71,7 +76,6 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  margin-top: 4.5rem;
 }
 
 #searchfield {
@@ -154,5 +158,5 @@ select {
 
 #properties span {
   flex-basis: 45%;
-  margin: 0.5em;
+  margin: 0.8em;
 }
