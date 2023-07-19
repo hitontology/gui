@@ -27,7 +27,7 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
     const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get("query");
+    const query = urlParams.get("catalog");
     search(query);
     results();
   },
