@@ -1,23 +1,14 @@
-function search(query) {
-  document.getElementById("query").innerText = `${query}`;
-  document.getElementById("primaryname").innerText = "Laborinformationssystem";
-  document.getElementById("synonyms").innerText = "Laboratory Information System, Laborsystem, Labormanagement-System";
-  document.getElementById("definition").innerText =
-    "Das LIS unterstützt alle Schritte der Laboruntersuchung: die Verwaltung von Aufträgen und Proben, die Verteilung der Proben auf die vorhandenen Analysegeräte, das Abrufen und Validieren der Ergebnisse und die abschließende Übermittlung der Ergebnisse an den Auftraggeber. Dadurch wird der nahezu vollautomatische Laborbetrieb ermöglicht, welcher die hohen Durchsatzraten in modernen medizinischen Laborinstituten erlaubt. Analysegeräte können direkt an das Informationssystem angeschlossen werden, um die Werte direkt in das System zu übernehmen.";
-}
-
-function result(title, text, link) {
-  return `<div class="result">
-          <h3>${title}</h3>
-          ${text}
+function classified(title, link) {
+  return `<div class="classified">
+          ${title}
           <a href="${link}">More Info</a>
         </div>`;
 }
 
-function results() {
-  const container = document.getElementById("results");
+function classifieds() {
+  const container = document.getElementById("classifieds");
   for (let i = 1; i <= 10; i++) {
-    let html = result("Commercial RIS " + i, "Commercial Radiology Information System (RIS) Dummy " + i, "details.html?swp=Commercial RIS " + i);
+    let html = classified("Classified " + i, "details.html?swp=Commercial RIS " + i);
     let fragment = document.createRange().createContextualFragment(html);
     container.appendChild(fragment);
   }
@@ -27,9 +18,9 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
     const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get("catalog");
-    search(query);
-    results();
+    const cat = urlParams.get("cat");
+    document.getElementById("cataloguename").innerText = `${cat}`;
+    classifieds();
   },
   false
 );
