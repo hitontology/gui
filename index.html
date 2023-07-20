@@ -29,7 +29,22 @@
         <input id="searchfield" name="query" type="search" autofocus placeholder="&#128269; Search for a software product..." />
         <button id="searchbutton" type="submit">Search</button>
       </form>
-      <img src="img/core.svg" />
+      <div id="core">
+        <button id="ast" style="left: 0; top: 0">Application System Type</button>
+        <button id="function" style="left: 15rem; top: 0">Enterprise Function</button>
+        <button id="feature" style="left: 30rem; top: 0">Feature</button>
+        <button id="swp" style="left: 0; top: 7rem; width: 43rem">Software Product</button>
+        <button id="study" style="left: 47rem; top: 7rem">Study</button>
+        <button id="orgunit" style="left: 0; top: 14rem">Organizational Unit</button>
+        <button id="usergroup" style="left: 15rem; top: 14rem">User Group</button>
+        <!-- rem doesn't seem to work in svg -->
+        <svg width="100%" height="100%">
+          <line x1="6.5em" y1="0" x2="6.5em" y2="14em" stroke="black" />
+          <line x1="21.5em" y1="0" x2="21.5em" y2="14em" stroke="black" />
+          <line x1="36.5em" y1="0" x2="36.5em" y2="7em" stroke="black" />
+          <line x1="43em" y1="8.4em" x2="47em" y2="8.4em" stroke="black" />
+        </svg>
+      </div>
     </main>
   </body>
 </html>
