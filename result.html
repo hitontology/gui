@@ -24,23 +24,32 @@
 
     <main>
       <h2>
-        Search results for:
+        Search results for: LIS
         <span id="query"></span>
       </h2>
-      <table id="shortdescription">
-        <tr>
-          <td nowrap><b>Primary Name:</b></td>
-          <td id="primaryname"></td>
-        </tr>
-        <tr>
-          <td><b>Synonyms:</b></td>
-          <td id="synonyms"></td>
-        </tr>
-        <tr>
-          <td><b>Definition:</b></td>
-          <td id="definition"></td>
-        </tr>
-      </table>
+      <div id="classifiedsummary">
+        <div>
+          <div style="margin-top: 1rem; float: left">From Catalogue:</div>
+          <select name="" style="float: right">
+            <option value="">HITO Function Catalogue</option>
+            <option value="">BB Function Catalogue</option>
+          </select>
+        </div>
+        <table id="shortdescription">
+          <tr>
+            <td nowrap><b>Primary Name:</b></td>
+            <td id="primaryname"></td>
+          </tr>
+          <tr>
+            <td><b>Synonyms:</b></td>
+            <td id="synonyms"></td>
+          </tr>
+          <tr>
+            <td><b>Definition:</b></td>
+            <td id="definition"></td>
+          </tr>
+        </table>
+      </div>
       <div>
         <input type="button" class="roundbutton" value="Software Product" />
         <input type="button" class="roundbutton" value="Study" />
