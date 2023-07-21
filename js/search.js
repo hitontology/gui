@@ -1,4 +1,4 @@
-function search(event) {
+function highlight(event) {
   event.preventDefault();
   document.getElementById("ast").classList.add("highlight");
   document.getElementById("feature").classList.add("highlight");
