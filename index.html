@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/gui.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost" />-->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%220%22%20height%3D%220%22%3E%3C%2Fsvg%3E" />
+    <script src="https://rawcdn.githack.com/nextapps-de/flexsearch/0.7.31/dist/flexsearch.compact.js"></script>
     <script src="js/search.js"></script>
   </head>
 
@@ -27,7 +32,8 @@
       <img src="https://hitontology.eu/public/hito.svg" id="logo" />
       <p>A Health IT Ontology for systematically describing application systems and software products in health IT.</p>
       <form id="searchcontainer" action="result.html">
-        <input id="searchfield" name="query" type="search" onkeyup="change(event)" autofocus placeholder="&#128269; Enter a term..." />
+        <input id="searchfield" name="query" type="search" onkeyup="change(event)" autofocus placeholder="&#128269; Enter a term..." list="searchresults" />
+        <datalist id="searchresults"></datalist>
         <button id="searchbutton">Search</button>
       </form>
       <div id="core">
