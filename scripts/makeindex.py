@@ -7,7 +7,8 @@ import json
 
 sparql_query = """
 PREFIX hito: <http://hitontology.eu/ontology/>
-SELECT DISTINCT ?s SAMPLE(?type)
+SELECT DISTINCT (REPLACE(STR(?s),"http://hitontology.eu/ontology/","") AS ?s)
+(REPLACE(STR(SAMPLE(?s)),"http://hitontology.eu/ontology/","") AS ?type)
 (GROUP_CONCAT(DISTINCT STR(?sl); SEPARATOR="|") AS ?sls)
 (GROUP_CONCAT(DISTINCT STR(?cl); SEPARATOR="|") AS ?cls)
 (GROUP_CONCAT(DISTINCT STR(?comment); SEPARATOR="|") AS ?comments)

@@ -1,5 +1,5 @@
 :root {
-  --info-blue: #3C88C4;
+  --info-blue: #3c88c4;
 }
 
 body {
@@ -112,25 +112,21 @@ main h2 {
 button {
   border-radius: 5px;
   height: 2.5rem;
+  background: var(--info-blue);
+  color: white;
 }
 
 #searchbutton {
   width: 7.5rem; /* 120px */
-  background-color: #525252;
-  color: white;
-  border-radius: 5px;
-  background: var(--info-blue);
 }
 
-.roundbutton {
-  width: 7.5rem;
+button.roundbutton {
+  min-width: 7.5rem;
   height: 2.5rem;
-  background-color: #525252;
-  color: white;
   border-radius: 20px;
 }
 
-#results {
+.boxes {
   display: flex;
   width: 90%;
   justify-content: flex-start;
@@ -138,7 +134,7 @@ button {
   flex-shrink: 0;
 }
 
-.result {
+.box {
   width: 24rem;
   height: 10rem;
   background-color: white;
@@ -210,7 +206,7 @@ select {
 .classified {
 }
 
-.catalogueimg {
+.boximg {
   float: left;
   margin: 0.8rem;
 }
@@ -225,21 +221,10 @@ select {
   width: 13rem;
   border: 1px solid var(--333333-dark-grey, #333);
   background: white;
+  color: black;
   border-radius: 10px;
   height: 2.75rem;
   position: absolute;
-}
-
-#core button#swp {
-  color: white;
-  background: #333;
-  border: 0;
-}
-
-#core button#study {
-  color: white;
-  background: #959595;
-  border: 0;
 }
 
 .highlight {
