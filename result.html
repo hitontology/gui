@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/gui.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost" />-->
+    <link rel="icon" type="image/gif" href="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw" />
   </head>
 
   <body>
@@ -38,25 +39,25 @@
         <table id="shortdescription">
           <tr>
             <td nowrap><b>Primary Name:</b></td>
-            <td id="primaryname"></td>
+            <td id="primaryname">Laborinformationssystem</td>
           </tr>
           <tr>
             <td><b>Synonyms:</b></td>
-            <td id="synonyms"></td>
+            <td id="synonyms">Laborsystem, Labormanagement-System</td>
           </tr>
           <tr>
             <td><b>Definition:</b></td>
-            <td id="definition"></td>
+            <td id="definition">Das LIS unterstützt alle Schritte...</td>
           </tr>
         </table>
       </div>
       <div>
-        <input type="button" class="roundbutton" value="Software Product" />
-        <input type="button" class="roundbutton" value="Study" />
+        <button class="roundbutton" onclick="showSoftware=!showSoftware;refresh()">Software Product</button>
+        <button class="roundbutton" onclick="showStudy=!showStudy;refresh()">Study</button>
       </div>
       <div id="filters">
         <div>
-          <label for="ast">Application System Type</label>
+          <label for="ast">Application System</label>
           <select name="ast" id="ast">
             <!--multiple-->
             <option value="lis">Laboratory Information System</option>
@@ -68,14 +69,14 @@
         </div>
 
         <div>
-          <label for="t1">Test1</label>
+          <label for="t1">Feature</label>
           <select name="t1" id="t1t">
             <option value="x">x</option>
           </select>
         </div>
 
         <div>
-          <label for="t2">Test2</label>
+          <label for="t2">Function</label>
           <select name="t2" id="t2t">
             <option value="x">x</option>
           </select>
@@ -89,7 +90,7 @@
         </div>
       </div>
 
-      <div id="results" />
+      <div id="classifieds" class="boxes" />
     </main>
 
     <script src="js/result.js"></script>
