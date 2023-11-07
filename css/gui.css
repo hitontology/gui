@@ -16,6 +16,8 @@
 }
 
 body {
+  width: 100%;
+  margin: 0;
   /*font-family: "Jost", sans-serif;
   font-feature-settings: "ss01" 1;*/
   font-family: "Roboto", sans-serif;
@@ -24,7 +26,6 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin: 0 5em;
   background-image: url("../img/background.jpg");
 }
 
@@ -36,7 +37,11 @@ button {
 }
 
 header {
+  margin-left: 0;
+  margin-right 0;
   margin-bottom: 2em;
+  padding: 0;
+  width: 100%;
 }
 
 main {
@@ -63,9 +68,10 @@ main h2 {
 
 .menu ul {
   margin-left: auto;
-  margin-right: 5em;
+  margin-right: auto;
   margin-top: 3em;
   max-width: 40rem;
+  min-width: 35rem;
   list-style-type: none;
   #margin: 0;
   #padding: 0;
