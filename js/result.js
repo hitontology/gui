@@ -32,7 +32,7 @@ function refresh() {
   container.innerHTML = "";
   for (let i = 1; i <= 10; i++) {
     if (showSoftware) {
-      let html = software("Software" + i, "this software can be used for the thing selected above" + i, "catalogue.html?cat=BbApplicationSystemTypeCatalogue");
+      let html = software("Software" + i, "this software can be used for the thing selected above" + i, "software.html?suffix=Senaite");
       let fragment = document.createRange().createContextualFragment(html);
       container.appendChild(fragment);
     }
