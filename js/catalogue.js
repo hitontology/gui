@@ -1,7 +1,12 @@
 function classified(title, link) {
   return `<div class="classified">
-          ${title}
-          <a href="${link}">More Info</a>
+          <details>
+		    <summary>
+              <a href="${link}">${title}</a>
+		    </summary>
+			More information describing the classified.
+          </details>
+		  <hr>
         </div>`;
 }
 

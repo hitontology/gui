@@ -38,7 +38,7 @@ button {
 
 header {
   margin-left: 0;
-  margin-right 0;
+  margin-right: 0;
   margin-bottom: 2em;
   padding: 0;
   width: 100%;
@@ -64,7 +64,7 @@ main h2 {
 
 a {
   text-decoration: none;
-  color: #3C88C4;
+  color: #3c88c4;
 }
 
 .menu {
@@ -106,7 +106,7 @@ a {
 
 .menu li a {
   text-decoration: none;
-  color: #3C88C4;
+  color: #3c88c4;
 }
 
 .menu li.active a {
@@ -227,7 +227,13 @@ select {
     4px 4px 8px 1px rgba(74, 164, 209, 0.15);
 }
 
+#classifieds {
+  min-width: 20em;
+  width: 80%;
+}
+
 .classified {
+  font-size: 1.5em;
 }
 
 .boximg {
@@ -253,4 +259,8 @@ select {
 
 .highlight {
   box-shadow: 0px 0px 15px 10px rgba(74, 164, 209, 0.75);
+}
+
+hr {
+  color: lightgray;
 }
