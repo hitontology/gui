@@ -1,0 +1,97 @@
+// based on a copy of the facets from https://github.com/hitontology/facetedbrowsing/blob/master/softwareproduct-service.js
+const facets = {
+  // Text search facet for names
+  name: {
+    facetId: "name",
+    classes: [["hito:Softwareproduct", ["<http://www.w3.org/2000/01/rdf-schema#label>"]]],
+    position: [0, 0],
+    enabled: true,
+    name: "Name",
+  },
+  // Basic facets
+  applicationsystem: {
+    facetId: "applicationsystem",
+    classes: [
+      ["hito:Softwareproduct", ["hito:spIsOfAstCit/hito:astCitClassifiedAs"]],
+      ["hito:Study", ["hito:evaluatesApplicationSystemType"]],
+    ],
+    position: [0, 0],
+    enabled: true,
+    name: "Application System",
+  },
+  client: {
+    facetId: "client",
+    classes: [["hito:Softwareproduct", ["hito:client"]]],
+    position: [0, 0],
+    enabled: true,
+    name: "Client",
+  },
+  database: {
+    facetId: "database",
+    classes: [["hito:Softwareproduct", ["hito:databaseSystem"]]],
+    position: [0, 0],
+    enabled: true,
+    name: "Database",
+  },
+  homepage: {
+    facetId: "homepage",
+    classes: [["hito:Softwareproduct", ["hito:homepage"]]],
+    position: [0, 0],
+    enabled: true,
+    name: "Homepage",
+  },
+  featurecitation: {
+    facetId: "featurecitation",
+    classes: [["hito:Softwareproduct", ["hito:spOffersFCit"]]],
+    position: [0, 0],
+    enabled: true,
+    chart: true,
+    name: "Feature Citation",
+  },
+  featureclassified: {
+    facetId: "featureclassified",
+    classes: [["hito:Softwareproduct", ["hito:spOffersFCit/hito:fCitClassifiedAs"]]],
+    position: [0, 0],
+    enabled: true,
+    chart: true,
+    name: "Feature",
+  },
+  functioncitation: {
+    facetId: "functioncitation",
+    classes: [["hito:Softwareproduct", ["hito:spSupportsEfCit"]]],
+    position: [0, 0],
+    enabled: true,
+    chart: true,
+    name: "Function Citation",
+  },
+  functionclassified: {
+    facetId: "functionclassified",
+    classes: [["hito:Softwareproduct", ["hito:spSupportsEfCit/hito:efCitClassifiedAs"]]],
+    position: [0, 0],
+    enabled: true,
+    chart: true,
+    name: "Function",
+  },
+  language: {
+    facetId: "language",
+    classes: [["hito:Softwareproduct", ["hito:language"]]],
+    position: [0, 0],
+    enabled: true,
+    name: "Language",
+  },
+  operatingsystem: {
+    facetId: "operatingsystem",
+    classes: [["hito:Softwareproduct", ["hito:operatingSystem"]]],
+    position: [0, 0],
+    enabled: true,
+    chart: true,
+    name: "Operating System",
+  },
+  programminglanguage: {
+    facetId: "programminglanguage",
+    classes: [["hito:Softwareproduct", ["hito:programmingLanguage"]]],
+    position: [0, 0],
+    enabled: true,
+    name: "Programming Language",
+  },
+};
