@@ -1,7 +1,7 @@
 const edges = [
-  { source: "SoftwareProduct", target: "ApplicationSystemTypeCitation" },
+  { source: "SoftwareProduct", target: "ApplicationSystemTypeCitation", name: "is of" },
   { source: "SoftwareProduct", target: "EnterpriseFunctionCitation" },
-  { source: "SoftwareProduct", target: "FeatureCitation" },
+  { source: "SoftwareProduct", target: "FeatureCitation", name: "offers" },
   { source: "SoftwareProduct", target: "OrganizationalUnitCitation" },
   { source: "SoftwareProduct", target: "UserGroupCitation" },
   { source: "Study", target: "SoftwareProduct" },
@@ -12,4 +12,6 @@ const edges = [
   { source: "FeatureCitation", target: "FeatureClassified" },
   { source: "OrganizationalUnitCitation", target: "OrganizationalUnitClassified" },
   { source: "UserGroupCitation", target: "UserGroupClassified" },
+  { source: "ApplicationSystemTypeCitation", target: "EnterpriseFunctionCitation", name: "supports" },
+  { source: "ApplicationSystemTypeClassified", target: "EnterpriseFunctionClassified", name: "supports" },
 ];
