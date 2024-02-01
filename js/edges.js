@@ -1,0 +1,15 @@
+const edges = [
+  { source: "SoftwareProduct", target: "ApplicationSystemTypeCitation" },
+  { source: "SoftwareProduct", target: "EnterpriseFunctionCitation" },
+  { source: "SoftwareProduct", target: "FeatureCitation" },
+  { source: "SoftwareProduct", target: "OrganizationalUnitCitation" },
+  { source: "SoftwareProduct", target: "UserGroupCitation" },
+  { source: "Study", target: "SoftwareProduct" },
+  { source: "SoftwareProduct", target: "ApplicationSystemTypeCitation" },
+  { source: "EnterpriseFunctionCitation", target: "EnterpriseFunctionClassified" },
+  { source: "ApplicationSystemTypeCitation", target: "ApplicationSystemTypeClassified" },
+  { source: "EnterpriseFunctionCitation", target: "EnterpriseFunctionClassified" },
+  { source: "FeatureCitation", target: "FeatureClassified" },
+  { source: "OrganizationalUnitCitation", target: "OrganizationalUnitClassified" },
+  { source: "UserGroupCitation", target: "UserGroupClassified" },
+];
