@@ -1,7 +1,7 @@
 export const edges = [
   { source: "SoftwareProduct", target: "ApplicationSystemTypeCitation", name: "is of", id: "spIsOfAstCit" },
-  { source: "SoftwareProduct", target: "EnterpriseFunctionCitation", name: "supports", id: "spIsOfEfCit" },
-  { source: "SoftwareProduct", target: "FeatureCitation", name: "offers", id: "spIsOfFCit" },
+  { source: "SoftwareProduct", target: "EnterpriseFunctionCitation", name: "supports", id: "spSupportsEfCit" },
+  { source: "SoftwareProduct", target: "FeatureCitation", name: "offers", id: "spOffersFCit" },
   { source: "SoftwareProduct", target: "OrganizationalUnitCitation", name: "used in", id: "spUsedInOuCit" },
   { source: "SoftwareProduct", target: "UserGroupCitation", name: "used by", id: "spUsedByUserCit" },
   { source: "Study", target: "SoftwareProduct", name: "evaluates", id: "evaluatesProduct" },
@@ -15,4 +15,6 @@ export const edges = [
   { source: "UserGroupCitation", target: "UserGroupClassified", name: "classified as", id: "userCitClassifiedAs" },
   //{ source: "ApplicationSystemTypeCitation", target: "EnterpriseFunctionCitation", name: "supports", id: "" }, // in dia 22.05 but not in ontology
   { source: "ApplicationSystemTypeClassified", target: "EnterpriseFunctionClassified", name: "supports", id: "astClaSupportsEfCla" },
+  { source: "SoftwareProduct", target: "Interoperability", name: "interoperability", id: "interoperability" },
+  { source: "Study", target: "FirstAuthor", name: "first author", id: "firstAuthor" },
 ];

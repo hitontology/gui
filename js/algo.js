@@ -11,6 +11,7 @@ function search(source, target) {
 }
 
 var source = null;
+var target = null;
 var paths = null;
 var path = null;
 
@@ -43,6 +44,9 @@ async function main() {
     const result = await select(query);
     const count = result[0].count.value;
     console.log(edge.id, count);
+    if (count == 0) {
+      continue;
+    }
     edge.width = Math.log2(count + 2);
     //cy.add({ group: "edges", data: { source: edge.source, target: edge.target } });
     cy.add({ group: "edges", data: edge });
@@ -93,6 +97,11 @@ async function main() {
       if (path) path.unselect();
       path = cy.elements().aStar({ root: source, goal: target }).path;
       path.select();
+      // todo: build SPARQL query to show all values e.g. as a table
+      const eles = path.toArray();
+      for (let ele of eles) {
+        console.log(ele.id());
+      }
     }
   });
 

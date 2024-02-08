@@ -11,4 +11,6 @@ export const nodes = [
   { id: "UserGroupCitation", name: "User Group Citation" },
   { id: "UserGroupClassified", name: "User Group Classified" },
   { id: "Study", name: "Study" },
+  { id: "FirstAuthor", name: "First Author" }, // not actually a class
+  { id: "Interoperability", name: "Interoperability Standard" },
 ];
