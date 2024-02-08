@@ -10,10 +10,10 @@ const HITO = {
 */
 export async function select(query) {
   const browser = typeof window !== "undefined";
-  let url = endpoint + "?query=" + encodeURIComponent(query) + "&format=json";
-  if (graph) {
+  let url = HITO.ENDPOINT + "?query=" + encodeURIComponent(query) + "&format=json";
+  /*if (graph) {
     url += "&default-graph-uri=" + encodeURIComponent(graph);
-  }
+  }*/
   try {
     const response = await fetch(url);
     const json = await response.json();
@@ -33,16 +33,16 @@ export async function select(query) {
         )
       );
     }
-    log.debug(query);
-    log.debug(url);
+    console.debug(query);
+    console.debug(url);
     if (browser) {
       console.groupEnd();
     }
 
     return bindings;
   } catch (err) {
-    log.error(err);
-    log.error(`Error executing SPARQL query:\n${query}\nURL: ${url}\n\n`);
+    console.error(err);
+    console.error(`Error executing SPARQL query:\n${query}\nURL: ${url}\n\n`);
     return [];
   }
 }

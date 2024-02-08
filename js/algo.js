@@ -1,5 +1,6 @@
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
+import { select } from "./sparql.js";
 
 function search(source, target) {
   // calculate all possible paths without cycles between source and target
@@ -22,6 +23,7 @@ async function main() {
         style: {
           "curve-style": "straight",
           "target-arrow-shape": "triangle",
+          width: "data(width)",
           content: "data(name)",
         },
       },
@@ -37,8 +39,13 @@ async function main() {
     cy.add({ group: "nodes", data: { id: node.id, name: node.name } });
   }
   for (let edge of edges) {
+    const query = `SELECT COUNT(*) AS ?count WHERE {?s hito:${edge.id} ?o.}`;
+    const result = await select(query);
+    const count = result[0].count.value;
+    console.log(edge.id, count);
+    edge.width = Math.log2(count + 2);
     //cy.add({ group: "edges", data: { source: edge.source, target: edge.target } });
-    await cy.add({ group: "edges", data: edge });
+    cy.add({ group: "edges", data: edge });
   }
   const layout = cy.layout({
     name: "cose",
