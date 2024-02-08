@@ -1,4 +1,4 @@
-const edges = [
+export const edges = [
   { source: "SoftwareProduct", target: "ApplicationSystemTypeCitation", name: "is of", id: "spIsOfAstCit" },
   { source: "SoftwareProduct", target: "EnterpriseFunctionCitation", name: "supports", id: "spIsOfEfCit" },
   { source: "SoftwareProduct", target: "FeatureCitation", name: "offers", id: "spIsOfFCit" },

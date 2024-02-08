@@ -1,4 +1,4 @@
-const nodes = [
+export const nodes = [
   { id: "SoftwareProduct", name: "Software Product" },
   { id: "EnterpriseFunctionClassified", name: "Enterprise Function Classified" },
   { id: "EnterpriseFunctionCitation", name: "Enterprise Function Citation" },

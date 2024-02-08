@@ -1,4 +1,5 @@
-// draft
+import { nodes } from "./nodes.js";
+import { edges } from "./edges.js";
 
 function search(source, target) {
   // calculate all possible paths without cycles between source and target
@@ -12,7 +13,7 @@ var source = null;
 var paths = null;
 var path = null;
 
-function main() {
+async function main() {
   var cy = cytoscape({
     container: document.getElementById("cy"),
     style: [
@@ -37,7 +38,7 @@ function main() {
   }
   for (let edge of edges) {
     //cy.add({ group: "edges", data: { source: edge.source, target: edge.target } });
-    cy.add({ group: "edges", data: edge });
+    await cy.add({ group: "edges", data: edge });
   }
   const layout = cy.layout({
     name: "cose",
@@ -90,3 +91,5 @@ function main() {
 
   //{ group: "edges", data: { id: "e0", source: "n0", target: "n1" } },
 }
+
+window.addEventListener("load", main);
