@@ -9,6 +9,8 @@ function search(source, target) {
 }
 
 var source = null;
+var paths = null;
+var path = null;
 
 function main() {
   var cy = cytoscape({
@@ -17,6 +19,8 @@ function main() {
       {
         selector: "edge[name]",
         style: {
+          "curve-style": "straight",
+          "target-arrow-shape": "triangle",
           content: "data(name)",
         },
       },
@@ -45,19 +49,42 @@ function main() {
   cy.minZoom(0.5);
   cy.maxZoom(1.5);
   layout.run();
+  /* 
+    paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000 });
+	// Usage example: display each path at regular intervals
+    let maxTimes = paths.length;
+    let currentTimes = 0;
+    let selectedEles;
+    let interval = setInterval(() => {
+      if (currentTimes === maxTimes) {
+        currentTimes = 0;
+      } else {
+        if (selectedEles) selectedEles.unselect();
+        selectedEles = paths[currentTimes];
+        selectedEles.select();
+        currentTimes++;
+      }
+    }, 2000);
+*/
 
   cy.on("tap", "node", function (evt) {
     var node = evt.target;
-    console.log("source: " + node.id());
-    source = node.id();
+    //console.log("source: " + node.id());
+    source = node;
+    //paths = cy.elements().cytoscapeAllPaths({maxPaths: 1000, rootIds: [source]});
+    //paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000 });
+    //console.log(paths.length, "paths found from source", source, ": ", paths);
   });
 
   cy.on("cxttap", "node", function (evt) {
     var node = evt.target;
     console.log("target: " + node.id());
-    target = node.id();
+    target = node;
     if (source) {
-      console.log(`calculating paths from ${source} to ${target}`);
+      console.log(`calculating paths from ${source.id()} to ${target.id()}`);
+      if (path) path.unselect();
+      path = cy.elements().aStar({ root: source, goal: target }).path;
+      path.select();
     }
   });
 
