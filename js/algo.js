@@ -15,6 +15,57 @@ var target = null;
 var paths = null;
 var path = null;
 
+var grid = null;
+
+function table(path) {
+  const eles = path.toArray();
+  const nodes = path.nodes().toArray();
+  const edges = path.edges().toArray();
+  console.debug(
+    "generating table for path",
+    eles.map((ele) => ele.id())
+  );
+  let columnDefs = [];
+  let columns = nodes.map((node) => node.id());
+  for (let node of nodes) {
+    columnDefs.push({ field: node.id() });
+  }
+
+  let rowData = [];
+  for (let i = 0; i < 5; i++) {
+    let row = {};
+    for (let column of columns) {
+      row[column] = "test" + Math.floor(Math.random() * 100);
+    }
+    rowData.push(row);
+  }
+
+  let query = "SELECT * { ";
+  let isNode = true;
+  for (let i = 0; i < nodes.length; i++) {
+    const node = nodes[i];
+    query += `?n${i + 1} a hito:${node.id()}. `;
+  }
+
+  for (let i = 0; i < edges.length; i++) {
+    const edge = edges[i];
+    query += `?n${i + 1} hito:${edge.id()} ?n${i + 2}. `;
+  }
+  query += "}";
+  console.log(query);
+
+  //const table = document.getElementById("table");
+  const gridOptions = {
+    rowData,
+    columnDefs,
+  };
+  const gridEle = document.getElementById("grid");
+  if (grid) {
+    grid.destroy();
+  }
+  grid = agGrid.createGrid(gridEle, gridOptions);
+}
+
 async function main() {
   var cy = cytoscape({
     container: document.getElementById("cy"),
@@ -97,11 +148,7 @@ async function main() {
       if (path) path.unselect();
       path = cy.elements().aStar({ root: source, goal: target }).path;
       path.select();
-      // todo: build SPARQL query to show all values e.g. as a table
-      const eles = path.toArray();
-      for (let ele of eles) {
-        console.log(ele.id());
-      }
+      table(path);
     }
   });
 

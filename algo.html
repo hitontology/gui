@@ -9,6 +9,7 @@
     <link rel="icon" type="image/gif" href="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
     <script src="https://daniel-dx.github.io/cytoscape-all-paths/cytoscape-all-paths.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
     <!--<script src="js/sparql.js"></script>-->
     <script type="module" src="./js/algo.js"></script>
   </head>
@@ -16,6 +17,8 @@
   <body style="margin: 0px; height: 100%; overflow: hidden; padding: 0px">
     <main>
       <div id="cy" style="width: 100%; height: 100vh; position: absolute; top: 0; right: 0; z-index: 99999"></div>
+      <div id="grid" class="ag-theme-quartz" style="width: 100%; height: 500px"></div>
+      <table id="table"></table>
     </main>
   </body>
 </html>
