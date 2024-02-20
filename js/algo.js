@@ -17,7 +17,7 @@ var path = null;
 
 var grid = null;
 
-function table(path) {
+async function table(path) {
   const eles = path.toArray();
   const nodes = path.nodes().toArray();
   const edges = path.edges().toArray();
@@ -29,15 +29,6 @@ function table(path) {
   let columns = nodes.map((node) => node.id());
   for (let node of nodes) {
     columnDefs.push({ field: node.id() });
-  }
-
-  let rowData = [];
-  for (let i = 0; i < 5; i++) {
-    let row = {};
-    for (let column of columns) {
-      row[column] = "test" + Math.floor(Math.random() * 100);
-    }
-    rowData.push(row);
   }
 
   let query = "SELECT * { ";
@@ -52,7 +43,19 @@ function table(path) {
     query += `?n${i + 1} hito:${edge.id()} ?n${i + 2}. `;
   }
   query += "}";
-  console.log(query);
+  //console.log(query);
+  const result = await select(query);
+  let rowData = [];
+  for (let binding of result) {
+    let row = {};
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      row[node.id()] = binding["n" + (i + 1)].value.replaceAll("http://hitontology.eu/ontology/", "");
+    }
+    rowData.push(row);
+  }
+  console.log(columnDefs);
+  console.log(rowData);
 
   //const table = document.getElementById("table");
   const gridOptions = {
