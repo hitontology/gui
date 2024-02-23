@@ -19,35 +19,38 @@ var grid = null;
 
 async function table(path) {
   const eles = path.toArray();
-  const nodes = path.nodes().toArray();
+  const pathNodes = path.nodes().toArray();
   const pathEdges = path.edges().toArray();
   console.debug(
     "generating table for path",
     eles.map((ele) => ele.id())
   );
   let columnDefs = [];
-  let columns = nodes.map((node) => node.id());
-  for (let node of nodes) {
+  let columns = pathNodes.map((node) => node.id());
+  for (let node of pathNodes) {
     columnDefs.push({ field: node.id() });
   }
 
   let query = "SELECT * { ";
   let isNode = true;
-  for (let i = 0; i < nodes.length; i++) {
-    const node = nodes[i];
-    query += `?n${i + 1} a hito:${node.id()}. `;
+  for (let i = 0; i < pathNodes.length; i++) {
+    const nodeId = pathNodes[i].id();
+    const node = nodes[nodeId];
+    if (node?.type === "string") {
+      continue;
+    }
+    //console.log("node", nodeId, node.type, node);
+    query += `?n${i + 1} a hito:${nodeId}. `;
   }
 
   for (let i = 0; i < pathEdges.length; i++) {
     const pathEdge = pathEdges[i];
     const id = pathEdge.id();
     const edge = edges[id];
-    console.log("edges", edges);
-    console.log("edge", edge);
 
-    console.log("edge id ", id);
+    //console.log("edge id ", id);
     // arrow points from source to target
-    if (edge.source === nodes[i].id()) {
+    if (edge.source === pathNodes[i].id()) {
       query += `?n${i + 1} hito:${id} ?n${i + 2}. `;
     }
     // arrow points from target to source
@@ -60,14 +63,14 @@ async function table(path) {
   let rowData = [];
   for (let binding of result) {
     let row = {};
-    for (let i = 0; i < nodes.length; i++) {
-      const node = nodes[i];
+    for (let i = 0; i < pathNodes.length; i++) {
+      const node = pathNodes[i];
       row[node.id()] = binding["n" + (i + 1)].value.replaceAll("http://hitontology.eu/ontology/", "");
     }
     rowData.push(row);
   }
-  console.log(columnDefs);
-  console.log(rowData);
+  //console.log(columnDefs);
+  //console.log(rowData);
 
   const defaultColDef = { editable: false, filter: "AgTextColumnFilter" };
   //const table = document.getElementById("table");
@@ -104,21 +107,21 @@ async function main() {
       },
     ],
   });
-  for (let node of nodes) {
-    cy.add({ group: "nodes", data: { id: node.id, name: node.name } });
+  for (const [id, node] of Object.entries(nodes)) {
+    //console.log("id", id,"node", node);
+    cy.add({ group: "nodes", data: { id, name: node.name } });
   }
   for (let edgeId in edges) {
-    const edge = { ...edges[edgeId], id: edgeId };
-    console.log("edgeee", edge);
-    const query = `SELECT COUNT(*) AS ?count WHERE {?s hito:${edge.id} ?o.}`;
+    const data = { ...edges[edgeId], id: edgeId };
+    const query = `SELECT COUNT(*) AS ?count WHERE {?s hito:${edgeId} ?o.}`;
     const result = await select(query);
     const count = result[0].count.value;
-    console.log(edgeId, count);
     if (count == 0) {
+      console.warn("no edges for", edgeId);
       continue;
     }
-    edge.width = Math.log2(count + 2);
-    cy.add({ group: "edges", data: edge });
+    data.width = Math.log2(count + 2);
+    cy.add({ group: "edges", data });
   }
   const layout = cy.layout({
     name: "cose",
@@ -159,10 +162,10 @@ async function main() {
 
   cy.on("cxttap", "node", function (evt) {
     var node = evt.target;
-    console.log("target: " + node.id());
+    //console.log("target: " + node.id());
     target = node;
     if (source) {
-      console.log(`calculating paths from ${source.id()} to ${target.id()}`);
+      //console.log(`calculating paths from ${source.id()} to ${target.id()}`);
       if (path) path.unselect();
       path = cy.elements().aStar({ root: source, goal: target }).path;
       path.select();

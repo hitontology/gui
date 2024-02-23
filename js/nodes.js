@@ -1,16 +1,16 @@
-export const nodes = [
-  { id: "SoftwareProduct", name: "Software Product" },
-  { id: "EnterpriseFunctionClassified", name: "Enterprise Function Classified" },
-  { id: "EnterpriseFunctionCitation", name: "Enterprise Function Citation" },
-  { id: "ApplicationSystemTypeCitation", name: "Application System Type Citation" },
-  { id: "ApplicationSystemTypeClassified", name: "Application System Type Classified" },
-  { id: "FeatureCitation", name: "Feature Citation" },
-  { id: "FeatureClassified", name: "Feature Classified" },
-  { id: "OrganizationalUnitCitation", name: "Organizational Unit Citation" },
-  { id: "OrganizationalUnitClassified", name: "Organizational Unit Classified" },
-  { id: "UserGroupCitation", name: "User Group Citation" },
-  { id: "UserGroupClassified", name: "User Group Classified" },
-  { id: "Study", name: "Study" },
-  { id: "FirstAuthor", name: "First Author" }, // not actually a class
-  { id: "Interoperability", name: "Interoperability Standard" },
-];
+export const nodes = {
+  SoftwareProduct: { name: "Software Product" },
+  EnterpriseFunctionClassified: { name: "Enterprise Function Classified" },
+  EnterpriseFunctionCitation: { name: "Enterprise Function Citation" },
+  ApplicationSystemTypeCitation: { name: "Application System Type Citation" },
+  ApplicationSystemTypeClassified: { name: "Application System Type Classified" },
+  FeatureCitation: { name: "Feature Citation" },
+  FeatureClassified: { name: "Feature Classified" },
+  OrganizationalUnitCitation: { name: "Organizational Unit Citation" },
+  OrganizationalUnitClassified: { name: "Organizational Unit Classified" },
+  UserGroupCitation: { name: "User Group Citation" },
+  UserGroupClassified: { name: "User Group Classified" },
+  Study: { name: "Study" },
+  FirstAuthor: { name: "First Author", type: "string" },
+  Interoperability: { name: "Interoperability Standard" },
+};
