@@ -57,10 +57,12 @@ async function table(path) {
   console.log(columnDefs);
   console.log(rowData);
 
+  const defaultColDef = { editable: false, filter: "AgTextColumnFilter" };
   //const table = document.getElementById("table");
   const gridOptions = {
     rowData,
     columnDefs,
+    defaultColDef,
   };
   const gridEle = document.getElementById("grid");
   if (grid) {
