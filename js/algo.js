@@ -20,7 +20,7 @@ var grid = null;
 async function table(path) {
   const eles = path.toArray();
   const nodes = path.nodes().toArray();
-  const edges = path.edges().toArray();
+  const pathEdges = path.edges().toArray();
   console.debug(
     "generating table for path",
     eles.map((ele) => ele.id())
@@ -38,12 +38,24 @@ async function table(path) {
     query += `?n${i + 1} a hito:${node.id()}. `;
   }
 
-  for (let i = 0; i < edges.length; i++) {
-    const edge = edges[i];
-    query += `?n${i + 1} hito:${edge.id()} ?n${i + 2}. `;
+  for (let i = 0; i < pathEdges.length; i++) {
+    const pathEdge = pathEdges[i];
+    const id = pathEdge.id();
+    const edge = edges[id];
+    console.log("edges", edges);
+    console.log("edge", edge);
+
+    console.log("edge id ", id);
+    // arrow points from source to target
+    if (edge.source === nodes[i].id()) {
+      query += `?n${i + 1} hito:${id} ?n${i + 2}. `;
+    }
+    // arrow points from target to source
+    else {
+      query += `?n${i + 2} hito:${id} ?n${i + 1}. `;
+    }
   }
   query += "}";
-  //console.log(query);
   const result = await select(query);
   let rowData = [];
   for (let binding of result) {
@@ -95,16 +107,17 @@ async function main() {
   for (let node of nodes) {
     cy.add({ group: "nodes", data: { id: node.id, name: node.name } });
   }
-  for (let edge of edges) {
+  for (let edgeId in edges) {
+    const edge = { ...edges[edgeId], id: edgeId };
+    console.log("edgeee", edge);
     const query = `SELECT COUNT(*) AS ?count WHERE {?s hito:${edge.id} ?o.}`;
     const result = await select(query);
     const count = result[0].count.value;
-    console.log(edge.id, count);
+    console.log(edgeId, count);
     if (count == 0) {
       continue;
     }
     edge.width = Math.log2(count + 2);
-    //cy.add({ group: "edges", data: { source: edge.source, target: edge.target } });
     cy.add({ group: "edges", data: edge });
   }
   const layout = cy.layout({
