@@ -8,16 +8,8 @@ export const edges = {
   evaluatesApplicationSystemType: { source: "Study", target: "ApplicationSystemTypeCitation", name: "evaluates" },
   evaluatesApplicationSystemTypeHavingFeature: { source: "Study", target: "FeatureCitation", name: "evaluates" },
   ocEvaluatesOcCit: { source: "Study", target: "OutcomeCriteriaCitation", name: "evaluates" },
-  evaluatesApplicationSystemTypeHavingUserGroup: {
-    source: "Study",
-    target: "UserGroupCitation",
-    name: "evaluates application system or software product used by",
-  },
-  evaluatesApplicationSystemTypeUsedInUnit: {
-    source: "Study",
-    target: "OrganizationalUnitCitation",
-    name: "evaluates application system or software product used in",
-  },
+  evaluatesApplicationSystemTypeHavingUserGroup: { source: "Study", target: "UserGroupCitation", name: "evaluates application system or software product used by" },
+  evaluatesApplicationSystemTypeUsedInUnit: { source: "Study", target: "OrganizationalUnitCitation", name: "evaluates application system or software product used in" },
   efCitClassifiedAs: { source: "EnterpriseFunctionCitation", target: "EnterpriseFunctionClassified", name: "classified as" },
   efClaFrom: { source: "EnterpriseFunctionClassified", target: "EnterpriseFunctionCatalogue", name: "from catalogue" },
   //"supportedByFeatureCitation": {source: "EnterpriseFunctionCitation", target: "FeatureCitation", name: "supported by feature citation", }, // overlap in display
