@@ -30,7 +30,7 @@ export const edges = {
   ouCitClassifiedAs: { source: "OrganizationalUnitCitation", target: "OrganizationalUnitClassified", name: "classified as" },
   ouClaFrom: { source: "OrganizationalUnitClassified", target: "OrganizationalUnitCatalogue", name: "classified as" },
   userCitClassifiedAs: { source: "UserGroupCitation", target: "UserGroupClassified", name: "classified as" },
-  userClaFrom: { source: "UserGroupClassified", target: "UserGroupCitation", name: "classified as" },
+  userClaFrom: { source: "UserGroupClassified", target: "UserGroupCatalogue", name: "from catalogue" },
   supportsFunction: { source: "FeatureCitation", target: "EnterpriseFunctionCitation", name: "supports function citation" },
   supportsFunctionClassified: { source: "FeatureClassified", target: "EnterpriseFunctionClassified", name: "supports classified function" },
   studyMethod: { source: "Study", target: "StudyMethod", name: "study method" },

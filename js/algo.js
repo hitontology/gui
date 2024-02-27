@@ -123,12 +123,23 @@ async function main() {
     data.width = Math.log2(count + 2);
     cy.add({ group: "edges", data });
   }
-  const layout = cy.layout({
+  const presetOptions = {
+    name: "preset",
+    // could use an object map too but this is simpler
+    positions: function (node) {
+      const id = node.id();
+      console.log(id);
+      // point y axis upwards
+      return { x: nodes[id].x * 22, y: nodes[id].y * -10 };
+    },
+  };
+  const coseOptions = {
     name: "cose",
     nodeRepulsion: function (node) {
       return 2_000_000;
     },
-  });
+  };
+  const layout = cy.layout(presetOptions);
   cy.zoom(0.5);
   cy.minZoom(0.5);
   cy.maxZoom(1.5);
