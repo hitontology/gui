@@ -117,18 +117,27 @@ async function main() {
     const result = await select(query);
     const count = result[0].count.value;
     if (count == 0) {
-      console.warn("no edges for", edgeId);
+      console.warn("Removing unused property", edgeId);
       continue;
     }
     data.width = Math.log2(count + 2);
     cy.add({ group: "edges", data });
+  }
+  const isolated = cy.nodes().filter((node) => node.degree() === 0);
+  if (isolated.size() > 0) {
+    console.warn(
+      "Removing",
+      isolated.size(),
+      "isolated nodes:",
+      isolated.map((node) => node.id())
+    );
+    cy.remove(isolated);
   }
   const presetOptions = {
     name: "preset",
     // could use an object map too but this is simpler
     positions: function (node) {
       const id = node.id();
-      console.log(id);
       // point y axis upwards
       return { x: nodes[id].x * 22, y: nodes[id].y * -10 };
     },
