@@ -1,0 +1,39 @@
+/* Adjust the width of two side-by-side divs by user drag operations https://stackoverflow.com/a/74779477/398963 */
+body,
+main {
+  margin: 0px;
+  height: 100vh;
+  /*overflow: hidden;*/
+  padding: 0px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.left,
+.right {
+  height: 100%;
+  width: 50%;
+  min-width: 100px;
+  min-height: 100%;
+}
+
+.left {
+  overflow: auto; /* required to make the handle visible */
+  resize: both; /* enable resize in either direction   */
+}
+
+.right {
+  flex: 1; /* will fill the remaining horizontal/vertical space */
+}
+
+/* Eye-candy */
+.left {
+  border: 2px dashed #f0f;
+}
+.right {
+  border: 2px dashed #00f;
+}

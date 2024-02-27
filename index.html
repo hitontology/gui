@@ -6,53 +6,13 @@
     <title>HITO Search with Cytoscape</title>
     <!--<link rel="stylesheet" href="css/gui.css" />-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
-    <link rel="icon" type="image/gif" href="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="icon" type="image/svg+xml" href="hito.svg" sizes="any" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
     <script src="https://daniel-dx.github.io/cytoscape-all-paths/cytoscape-all-paths.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
     <!--<script src="js/sparql.js"></script>-->
     <script type="module" src="./js/algo.js"></script>
-    <style>
-      /* Adjust the width of two side-by-side divs by user drag operations https://stackoverflow.com/a/74779477/398963 */
-      body,
-      main {
-        margin: 0px;
-        height: 100vh;
-        /*overflow: hidden;*/
-        padding: 0px;
-      }
-
-      .container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-      }
-
-      .left,
-      .right {
-        height: 100%;
-        width: 50%;
-        min-width: 100px;
-        min-height: 100%;
-      }
-
-      .left {
-        overflow: auto; /* required to make the handle visible */
-        resize: both; /* enable resize in either direction   */
-      }
-
-      .right {
-        flex: 1; /* will fill the remaining horizontal/vertical space */
-      }
-
-      /* Eye-candy */
-      .left {
-        border: 2px dashed #f0f;
-      }
-      .right {
-        border: 2px dashed #00f;
-      }
-    </style>
   </head>
 
   <body>
