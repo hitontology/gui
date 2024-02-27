@@ -30,6 +30,10 @@ async function table(path) {
   for (let node of pathNodes) {
     columnDefs.push({
       field: node.id(),
+      cellRenderer: function (params) {
+        const suffix = params.value;
+        return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${suffix}</a>`;
+      },
     });
   }
 
