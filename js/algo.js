@@ -87,6 +87,7 @@ async function table(path) {
     rowData,
     columnDefs,
     defaultColDef,
+    autoSizeStrategy: { type: "fitCellContents" },
   };
   const gridEle = document.getElementById("grid");
   if (grid) {
