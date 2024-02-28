@@ -35,7 +35,7 @@ export const edges = {
   license: { source: "SoftwareProduct", target: "License", name: "uses license" },
   homepage: { source: "SoftwareProduct", target: "Client", name: "homepage" },
   operatingSystem: { source: "SoftwareProduct", target: "OperatingSystem", name: "available for" },
-  programmingLanguage: { source: "SoftwareProduct", target: "ProgrammingLanguage", name: "written in" },
+  // programmingLanguage: { source: "SoftwareProduct", target: "ProgrammingLanguage", name: "written in" }, // external DBpedia class
   programmingLibrary: { source: "SoftwareProduct", target: "ProgrammingLibrary", name: "uses library" },
   pmid: { source: "Study", target: "PMID", name: "has PMID" },
   publishedInYear: { source: "Study", target: "gYear", name: "published in year" },

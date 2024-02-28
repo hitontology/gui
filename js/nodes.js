@@ -28,7 +28,7 @@ export const nodes = {
   License: { name: "License", x: -15, y: 10 },
   ProgrammingLibrary: { name: "Programming Library", x: -15, y: 5 },
   OperatingSystem: { name: "Operating System", x: -15, y: 0 },
-  ProgrammingLanguage: { name: "Programming Language", x: -15, y: -5 },
+  //ProgrammingLanguage: { name: "Programming Language", x: -15, y: -5 }, // external DBPedia class
   PMID: { name: "PMID", x: 35, y: -15 },
   gYear: { name: "Year", type: "string", x: 35, y: -20 },
   Journal: { name: "Journal", x: 35, y: -25 },
