@@ -25,20 +25,36 @@ async function table(path) {
     "generating table for path",
     eles.map((ele) => ele.id())
   );
-  let columnDefs = [];
-  let columns = pathNodes.map((node) => node.id());
+  const columnDefs = [];
+  const columns = pathNodes.map((node) => node.id());
+  const cellRenderer = function (params) {
+    //const [uri,label] = params.value;
+    const [suffix, label] = params.value;
+    //const [suffix,label] = params.value.split("|");
+    //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${suffix}</a>`;
+    //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
+    //return `<a href="${uri}" target="_blank">${label}</a>`;
+    return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
+  };
+
+  const valueFormatter = function (params) {
+    const [suffix, label] = params.value;
+    return suffix + " " + label;
+  };
+
   for (let node of pathNodes) {
     columnDefs.push({
       field: node.id(),
-      cellRenderer: function (params) {
-        const suffix = params.value;
-        return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${suffix}</a>`;
-      },
+      valueFormatter, // does not work in defaultColDef
     });
   }
 
-  let query = "SELECT * { ";
+  let query = "SELECT ";
   let isNode = true;
+  for (let i = 0; i < pathNodes.length; i++) {
+    query += `?n${i + 1} SAMPLE(?l${i + 1}) AS ?l${i + 1} `;
+  }
+  query += " { ";
   for (let i = 0; i < pathNodes.length; i++) {
     const nodeId = pathNodes[i].id();
     const node = nodes[nodeId];
@@ -47,6 +63,7 @@ async function table(path) {
     }
     //console.log("node", nodeId, node.type, node);
     query += `?n${i + 1} a hito:${nodeId}. `;
+    query += `?n${i + 1} rdfs:label ?l${i + 1}. `;
   }
 
   for (let i = 0; i < pathEdges.length; i++) {
@@ -71,7 +88,15 @@ async function table(path) {
     let row = {};
     for (let i = 0; i < pathNodes.length; i++) {
       const node = pathNodes[i];
-      row[node.id()] = binding["n" + (i + 1)].value.replaceAll("http://hitontology.eu/ontology/", "");
+      // row[node.id()] = binding["n" + (i + 1)].value.replaceAll("http://hitontology.eu/ontology/", ""); // URI Suffix as cell value
+      //row[node.id()] = binding["l" + (i + 1)].value; // label as cell value
+      //row[node.id()] = `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
+      const uri = binding["n" + (i + 1)].value;
+      const suffix = uri.replaceAll("http://hitontology.eu/ontology/", "");
+      const label = binding["l" + (i + 1)].value;
+      row[node.id()] = [suffix, label];
+      //row[node.id()] = [uri,label];
+      //row[node.id()] = suffix + "|" + label;
     }
     rowData.push(row);
   }
@@ -81,6 +106,7 @@ async function table(path) {
   const defaultColDef = {
     editable: false,
     filter: "agTextColumnFilter",
+    cellRenderer,
   };
   //const table = document.getElementById("table");
   const gridOptions = {
