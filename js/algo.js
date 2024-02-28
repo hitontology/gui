@@ -80,7 +80,7 @@ async function table(path) {
 
   const defaultColDef = {
     editable: false,
-    filter: "AgTextColumnFilter",
+    filter: "agTextColumnFilter",
   };
   //const table = document.getElementById("table");
   const gridOptions = {
