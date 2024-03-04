@@ -1,6 +1,7 @@
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 import { select } from "./sparql.js";
+import { style } from "./style.js";
 
 function search(source, target) {
   // calculate all possible paths without cycles between source and target
@@ -125,33 +126,7 @@ async function table(path) {
 async function main() {
   var cy = cytoscape({
     container: document.getElementById("cy"),
-    style: [
-      {
-        selector: "edge[name]",
-        style: {
-          "curve-style": "straight",
-          "target-arrow-shape": "triangle",
-          width: "data(width)",
-          content: "data(name)",
-        },
-      },
-      {
-        selector: "node[name]",
-        style: { content: "data(name)" },
-      },
-      {
-        selector: "node.source",
-        css: { "background-color": "rgb(80,20,200)" },
-      },
-      {
-        selector: "node.target",
-        css: { "background-color": "rgb(0,140,200)" },
-      },
-      {
-        selector: "node.isolated",
-        css: { "background-color": "rgb(200,200,200)" },
-      },
-    ],
+    style,
   });
   for (const [id, node] of Object.entries(nodes)) {
     //console.log("id", id,"node", node);
