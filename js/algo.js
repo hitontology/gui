@@ -13,10 +13,10 @@ function search(source, target) {
 
 var source = null;
 var target = null;
-var paths = null;
-var path = null;
-
+//var paths = null;
+//var path = null;
 var grid = null;
+var cy = null;
 
 async function table(path) {
   const eles = path.toArray();
@@ -123,8 +123,46 @@ async function table(path) {
   grid = agGrid.createGrid(gridEle, gridOptions);
 }
 
+function shortestPath(source, target) {
+  cy.elements().unselect();
+  const path = cy.elements().aStar({
+    root: source,
+    goal: target,
+  }).path;
+  return path;
+}
+
+function allPaths(source, target) {
+  const valid = [
+    [source.id, target.id],
+    [target.id, source.id],
+  ];
+  //const paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000, rootIds: [source.id()] });
+  const paths = cy.elements().cytoscapeAllPaths();
+  console.log(paths.length, "paths found in graph");
+  const targetPaths = paths.filter((path) => valid.some((a) => a == [path.first().id(), path.last().id()]));
+  //console.log(paths.length, "paths found from source", source, ": ", paths);
+  console.log(targetPaths.length, "paths found from source", source.id(), "to target", target.id(), ": ", paths);
+  // Usage example: display each path at regular intervals
+  /*
+	let maxTimes = paths.length;
+    let currentTimes = 0;
+    let selectedEles;
+    let interval = setInterval(() => {
+      if (currentTimes === maxTimes) {
+        currentTimes = 0;
+      } else {
+        if (selectedEles) selectedEles.unselect();
+        selectedEles = paths[currentTimes];
+        selectedEles.select();
+        currentTimes++;
+      }
+    }, 2000);*/
+  return targetPaths;
+}
+
 async function main() {
-  var cy = cytoscape({
+  cy = cytoscape({
     container: document.getElementById("cy"),
     style,
   });
@@ -189,24 +227,6 @@ async function main() {
   cy.minZoom(0.5);
   cy.maxZoom(1.5);
   layout.run();
-  /* 
-    paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000 });
-	// Usage example: display each path at regular intervals
-    let maxTimes = paths.length;
-    let currentTimes = 0;
-    let selectedEles;
-    let interval = setInterval(() => {
-      if (currentTimes === maxTimes) {
-        currentTimes = 0;
-      } else {
-        if (selectedEles) selectedEles.unselect();
-        selectedEles = paths[currentTimes];
-        selectedEles.select();
-        currentTimes++;
-      }
-    }, 2000);
-*/
-
   cy.on("tap", "node", function (evt) {
     var node = evt.target;
     if (node.classes().includes("isolated")) {
@@ -218,9 +238,6 @@ async function main() {
     }
     source = node;
     source.addClass("source");
-    //paths = cy.elements().cytoscapeAllPaths({maxPaths: 1000, rootIds: [source]});
-    //paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000 });
-    //console.log(paths.length, "paths found from source", source, ": ", paths);
   });
 
   cy.on("cxttap", "node", function (evt) {
@@ -234,13 +251,15 @@ async function main() {
     }
     target = node;
     target.addClass("target");
-    if (source) {
+    breakme: if (source) {
       //console.log(`calculating paths from ${source.id()} to ${target.id()}`);
-      if (path) path.unselect();
-      path = cy.elements().aStar({
-        root: source,
-        goal: target,
-      }).path;
+      //const path = shortestPath(source,target);
+      const paths = allPaths(source, target);
+      if (paths.length === 0) {
+        console.warn(`No paths found between ${source.id()} and ${target.id()}}`);
+        break breakme;
+      }
+      const path = paths[0];
       path.select();
       table(path);
     }
