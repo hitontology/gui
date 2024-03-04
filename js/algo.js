@@ -137,12 +137,16 @@ function allPaths(source, target) {
     [source.id, target.id],
     [target.id, source.id],
   ];
-  //const paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000, rootIds: [source.id()] });
-  const paths = cy.elements().cytoscapeAllPaths();
+  //const targetPaths = cy.elements().cytoscapeAllPaths({directed: false, "target": target.id(), maxPaths: 1000, rootIds: [source.id()] });
+  //const targetPaths = cy.elements().cytoscapeAllPaths({directed: true, target: "SoftwareProduct", maxPaths: 1000, rootIds: [source.id()] });
+  //const targetPaths = cy.elements().cytoscapeAllPaths({directed: false, target: target.id() , maxPaths: 1000, rootIds: [source.id()] });
+  //const targetPaths = cy.elements().cytoscapeAllPathsTo(target.id(), 4, {maxPaths: 1000, rootIds: [source.id()] });
+  const paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000 }); // bug: this only finds 27 paths
   console.log(paths.length, "paths found in graph");
   const targetPaths = paths.filter((path) => valid.some((a) => a == [path.first().id(), path.last().id()]));
   //console.log(paths.length, "paths found from source", source, ": ", paths);
-  console.log(targetPaths.length, "paths found from source", source.id(), "to target", target.id(), ": ", paths);
+  console.log(targetPaths.length, "paths found from source", source.id(), "to target", target.id());
+  console.table(targetPaths.map((p) => p.map((x) => x.id())));
   // Usage example: display each path at regular intervals
   /*
 	let maxTimes = paths.length;
