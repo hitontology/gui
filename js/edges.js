@@ -29,7 +29,7 @@ export const edges = {
   //"": {source: "ApplicationSystemTypeCitation", target: "EnterpriseFunctionCitation", name: "supports", }, // in dia 22.05 but not in ontology
   interoperability: { source: "SoftwareProduct", target: "Interoperability", name: "interoperability" },
   firstAuthor: { source: "Study", target: "FirstAuthor", name: "first author" },
-  databaseSystem: { source: "SoftwareProduct", target: "DatabaseSystem", name: "uses DBMS" },
+  databaseManagementSystem: { source: "SoftwareProduct", target: "DatabaseManagementSystem", name: "uses DBMS" },
   certification: { source: "SoftwareProduct", target: "Certification", name: "certified by" },
   language: { source: "SoftwareProduct", target: "Language", name: "available in" },
   license: { source: "SoftwareProduct", target: "License", name: "uses license" },

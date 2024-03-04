@@ -20,7 +20,7 @@ export const nodes = {
   Study: { name: "Study", x: 25, y: 0 },
   StudyMethod: { name: "Study Method", x: 35, y: 30 },
   FirstAuthor: { name: "First Author", type: "string", x: 35, y: -10 },
-  DatabaseSystem: { name: "Database Management System", x: -15, y: 30 },
+  DatabaseManagementSystem: { name: "Database Management System", x: -15, y: 30 },
   Certification: { name: "Certification", x: -20, y: -30 },
   Client: { name: "Client", x: -15, y: 25 },
   Interoperability: { name: "Interoperability Standard", x: -15, y: 20 },
