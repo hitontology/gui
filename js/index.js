@@ -19,6 +19,7 @@ var grid = null;
 var cy = null;
 
 async function table(path) {
+  console.log(path);
   const eles = path.toArray();
   const pathNodes = path.nodes().toArray();
   const pathEdges = path.edges().toArray();
@@ -132,7 +133,69 @@ function shortestPath(source, target) {
   return path;
 }
 
+function toString(collection) {
+  return collection.toArray().map((e) => e.id());
+}
+
+// returns an array of paths without cycles from source to target treating all edges as undirected
+function allPathsRec(visited, path, target) {
+  const cursor = visited.last();
+  console.log(
+    "visited",
+    visited.toArray().map((n) => n.id()),
+    "target",
+    target.id()
+  );
+  if (visited.size() > 20) {
+    console.error("path too long");
+    return [];
+  }
+  if (cursor.id() == target.id()) {
+    console.log("FOUND IT");
+    return [path];
+  }
+  const next = cursor.incomers().merge(cursor.outgoers());
+  console.log("next", toString(next));
+  const results = [];
+  for (let i = 0; i < next.size() / 2; i++) {
+    const edge = next[i * 2];
+    const node = next[i * 2 + 1];
+    if (visited.has(node)) {
+      continue;
+    }
+    results.push(...allPathsRec(visited.union(node), path.union(edge).union(node), target));
+  }
+  return results;
+  //const next = cursor.neighborhood().nodes().difference(visited);
+  //const edges = cursor.connectedEdges();
+  //console.log("outgoers",toString(cursor.outgoers()));
+  //for(const edge of edges)
+  //{
+  //console.log("edge target", edge
+  //}
+  //console.log("next",next.toArray().map(n=>n.id()));
+  //return [].concat(...next.toArray().map(n=>allPathsRec(visited.union(n),visited.union(n),target)));
+}
+
 function allPaths(source, target) {
+  return allPathsRec(cy.collection(source), cy.collection(source), target);
+}
+/*
+function paths(source, target) {
+ const queue = [];
+ const path = [source];
+ const pathCollection = source;
+ queue.push(source);
+ while(queue.length>0)
+ {
+ 	const next = source.neighborhood().difference(pathCollection);
+	next.forEach(queue.push);
+ }
+}
+*/
+
+// using the cytoscape-all-paths extension
+function allPathsExt(source, target) {
   const valid = [
     [source.id, target.id],
     [target.id, source.id],
@@ -141,8 +204,19 @@ function allPaths(source, target) {
   //const targetPaths = cy.elements().cytoscapeAllPaths({directed: true, target: "SoftwareProduct", maxPaths: 1000, rootIds: [source.id()] });
   //const targetPaths = cy.elements().cytoscapeAllPaths({directed: false, target: target.id() , maxPaths: 1000, rootIds: [source.id()] });
   //const targetPaths = cy.elements().cytoscapeAllPathsTo(target.id(), 4, {maxPaths: 1000, rootIds: [source.id()] });
-  const paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000 }); // bug: this only finds 27 paths
+  //const paths = cy.elements().cytoscapeAllPaths({ maxPaths: 1000 }); // bug: this only finds 27 paths
+  const paths = cy.elements().cytoscapeAllPaths({ directed: false, maxPaths: 1000 }); // bug: this only finds 27 paths
   console.log(paths.length, "paths found in graph");
+  console.table(paths.map((p) => p.map((x) => x.id())));
+  console.log(
+    cy.nodes().roots().size(),
+    "roots:",
+    cy
+      .nodes()
+      .roots()
+      .toArray()
+      .map((x) => x.id())
+  );
   const targetPaths = paths.filter((path) => valid.some((a) => a == [path.first().id(), path.last().id()]));
   //console.log(paths.length, "paths found from source", source, ": ", paths);
   console.log(targetPaths.length, "paths found from source", source.id(), "to target", target.id());
@@ -256,15 +330,19 @@ async function main() {
     target = node;
     target.addClass("target");
     breakme: if (source) {
-      //console.log(`calculating paths from ${source.id()} to ${target.id()}`);
+      console.log(`calculating paths from ${source.id()} to ${target.id()}`);
       //const path = shortestPath(source,target);
       const paths = allPaths(source, target);
       if (paths.length === 0) {
         console.warn(`No paths found between ${source.id()} and ${target.id()}}`);
         break breakme;
+      } else {
+        console.info(paths.length, "paths found");
+        console.table(paths.map((p) => p.toArray().map((x) => x.id())));
       }
+      //} else {console.info(paths.length,"paths found");}
       const path = paths[0];
-      path.select();
+      //path.select();
       table(path);
     }
   });
