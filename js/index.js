@@ -110,7 +110,6 @@ async function table(path) {
     filter: "agTextColumnFilter",
     cellRenderer,
   };
-  //const table = document.getElementById("table");
   const gridOptions = {
     rowData,
     columnDefs,
@@ -140,22 +139,22 @@ function toString(collection) {
 // returns an array of paths without cycles from source to target treating all edges as undirected
 function allPathsRec(visited, path, target) {
   const cursor = visited.last();
-  console.log(
+  /*console.log(
     "visited",
     visited.toArray().map((n) => n.id()),
     "target",
     target.id()
-  );
+  );*/
   if (visited.size() > 20) {
     console.error("path too long");
     return [];
   }
   if (cursor.id() == target.id()) {
-    console.log("FOUND IT");
+    //console.log("FOUND IT");
     return [path];
   }
   const next = cursor.incomers().merge(cursor.outgoers());
-  console.log("next", toString(next));
+  //console.log("next", toString(next));
   const results = [];
   for (let i = 0; i < next.size() / 2; i++) {
     const edge = next[i * 2];
