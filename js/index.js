@@ -116,7 +116,7 @@ async function table(path) {
     defaultColDef,
     autoSizeStrategy: { type: "fitCellContents" },
   };
-  const gridEle = document.getElementById("grid");
+  const gridEle = document.getElementById("aggrid");
   if (grid) {
     grid.destroy();
   }
