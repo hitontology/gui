@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,16 +30,7 @@
       <p id="title">A Health IT Ontology for systematically describing application systems and software products in health IT.</p>
       <form id="searchcontainer" action="result.html">
         <!-- autocomplete="off" prevents browser caching -->
-        <input
-          id="searchfield"
-          name="query"
-          type="search"
-          onkeyup="change(event)"
-          autofocus
-          autocomplete="off"
-          placeholder="&#128269; Enter a term..."
-          list="searchresults"
-        />
+        <input id="searchfield" name="query" type="search" onkeyup="change(event)" autofocus autocomplete="off" placeholder="&#128269; Enter a term..." list="searchresults" />
         <datalist id="searchresults"></datalist>
         <button id="searchbutton">Search</button>
       </form>
