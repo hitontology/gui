@@ -34,8 +34,11 @@ In contrast to keyword search and question answering, where users enter a query 
 [Earlier](https://github.com/snikproject/ciono) experiments with similar approaches in the [SNIK](https://www.snik.eu/) project using shortest paths or automatically determining _interesting_ paths did not yield satisfying results, so all non-cyclic paths are given to the user to select a single one.
 While the RDF graph is directed, the edge direction is sometimes arbitrary (e.g. "uses" vs "used by") so edges are traversed in both directions, treating the graph as undirected for the purpose of path finding.
 
-### Algorithm Idea (Pseudocode, automatically translated)
+### Algorithm Idea
 
+![early mockup](https://user-images.githubusercontent.com/43496783/122712136-b8442100-d263-11eb-9e2a-c3414e17db92.png)
+
+Pseudocode, automatically translated:
 Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
 
 - Click on Search Class for Search Input: e.g., EnterpriseFunctionClassified
