@@ -1,18 +1,29 @@
-function preprocess() {
-  const draw = SVG().addTo("#svgContainer");
-  draw.svg(document.getElementById("svgContainer").innerHTML);
+async function preprocess() {
+  // deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon
+  const response = await fetch("https://hitontology.eu/public/2024-03-hito_diagram.svg");
+  const s = await response.text();
+  const draw = SVG().addTo("#svgContainer").size("100%", "100%");
+  draw.svg(s);
+  // object 0 is a white background rectangle
   const g = draw.get(0);
   g.each(addIds, false);
 }
 
 function addIds(i, children) {
-  /* if(i==0 || this.children().length < 3 || this.type == "#text" || (this.node.name != undefined && this.node.name=="#text") || (this.node.data != undefined && this.node.data=="\n  ")) { // generic defs and legend filter
-        return;
-    }*/
+  if (
+    i == 0 ||
+    this.children().length < 3 ||
+    this.type == "#text" ||
+    (this.node.name != undefined && this.node.name == "#text") ||
+    (this.node.data != undefined && this.node.data == "\n  ")
+  ) {
+    // generic defs and legend filter
+    return;
+  }
   console.log(this);
   // add ids
   const link = this.first();
-  console.log(link);
+  console.log("link", link);
   const href = link.attr("xlink:href");
   const split = href.split("/");
   const newId = split[split.length - 1];
