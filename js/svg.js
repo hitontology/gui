@@ -22,16 +22,19 @@ function addIds(i, children) {
   }
   console.log(this);
   // add ids
-  const link = this.first();
-  console.log("link", link);
-  const href = link.attr("xlink:href");
+  const a = this.findOne("a");
+  if (!a) {
+    return;
+  }
+  console.log("a", a);
+  const href = a.attr("xlink:href");
   const split = href.split("/");
   const newId = split[split.length - 1];
   this.attr("id", newId);
 
   // remove <a>link</a> and preserve children
-  link.each(preserveHyperlinkChildren, false);
-  link.remove();
+  a.each(preserveHyperlinkChildren, false);
+  a.remove();
 }
 function preserveHyperlinkChildren(i, children) {
   const correctNodeGroup = this.parents()[1]; // correct parent
