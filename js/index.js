@@ -2,18 +2,10 @@ import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 import { select } from "./sparql.js";
 import { style } from "./style.js";
-
-function search(source, target) {
-  // calculate all possible paths without cycles between source and target
-  const paths = null;
-  // show paths in meta model
-  // user selects one path
-  const path = null;
-}
+import { paths } from "./path.js";
 
 var source = null;
 var target = null;
-//var paths = null;
 //var path = null;
 var grid = null;
 var cy = null;
@@ -123,61 +115,8 @@ async function table(path) {
   grid = agGrid.createGrid(gridEle, gridOptions);
 }
 
-function shortestPath(source, target) {
-  cy.elements().unselect();
-  const path = cy.elements().aStar({
-    root: source,
-    goal: target,
-  }).path;
-  return path;
-}
-
 function toString(collection) {
   return collection.toArray().map((e) => e.id());
-}
-
-// returns an array of paths without cycles from source to target treating all edges as undirected
-function allPathsRec(visited, path, target) {
-  const cursor = visited.last();
-  /*console.log(
-    "visited",
-    visited.toArray().map((n) => n.id()),
-    "target",
-    target.id()
-  );*/
-  if (visited.size() > 20) {
-    console.error("path too long");
-    return [];
-  }
-  if (cursor.id() == target.id()) {
-    //console.log("FOUND IT");
-    return [path];
-  }
-  const next = cursor.incomers().merge(cursor.outgoers());
-  //console.log("next", toString(next));
-  const results = [];
-  for (let i = 0; i < next.size() / 2; i++) {
-    const edge = next[i * 2];
-    const node = next[i * 2 + 1];
-    if (visited.has(node)) {
-      continue;
-    }
-    results.push(...allPathsRec(visited.union(node), path.union(edge).union(node), target));
-  }
-  return results;
-  //const next = cursor.neighborhood().nodes().difference(visited);
-  //const edges = cursor.connectedEdges();
-  //console.log("outgoers",toString(cursor.outgoers()));
-  //for(const edge of edges)
-  //{
-  //console.log("edge target", edge
-  //}
-  //console.log("next",next.toArray().map(n=>n.id()));
-  //return [].concat(...next.toArray().map(n=>allPathsRec(visited.union(n),visited.union(n),target)));
-}
-
-function allPaths(source, target) {
-  return allPathsRec(cy.collection(source), cy.collection(source), target);
 }
 
 async function main() {
@@ -273,16 +212,15 @@ async function main() {
     breakme: if (source) {
       console.log(`calculating paths from ${source.id()} to ${target.id()}`);
       //const path = shortestPath(source,target);
-      const paths = allPaths(source, target);
-      if (paths.length === 0) {
+      const allPaths = paths(cy, source, target);
+      if (allPaths.length === 0) {
         console.warn(`No paths found between ${source.id()} and ${target.id()}}`);
         break breakme;
       } else {
-        console.info(paths.length, "paths found");
-        console.table(paths.map((p) => p.toArray().map((x) => x.id())));
+        console.info(allPaths.length, "paths found");
+        console.table(allPaths.map((p) => p.toArray().map((x) => x.id())));
       }
-      //} else {console.info(paths.length,"paths found");}
-      const path = paths[0];
+      const path = allPaths[0];
       //path.select();
       table(path);
     }
