@@ -1,37 +1,33 @@
 async function preprocess() {
   // deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon
   const response = await fetch("https://hitontology.eu/public/2024-03-hito_diagram.svg");
-  const s = await response.text();
+  const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
   const draw = SVG().addTo("#svgContainer").size("100%", "100%");
   draw.svg(s);
   // object 0 is a white background rectangle
-  const g = draw.get(0);
+  const g = draw.get(0).findOne("g");
   g.each(addIds, false);
 }
 
 function addIds(i, children) {
-  if (
-    i == 0 ||
-    this.children().length < 3 ||
-    this.type == "#text" ||
-    (this.node.name != undefined && this.node.name == "#text") ||
-    (this.node.data != undefined && this.node.data == "\n  ")
-  ) {
+  if (this.type !== "g" || this.children().length > 1) {
     // generic defs and legend filter
     return;
   }
   console.log(this);
   // add ids
-  const link = this.first();
+  const link = this.findOne("a");
   console.log("link", link);
-  const href = link.attr("xlink:href");
-  const split = href.split("/");
-  const newId = split[split.length - 1];
-  this.attr("id", newId);
+  if (link !== null) {
+    const href = link.attr("xlink:href");
+    const split = href.split("/");
+    const newId = split[split.length - 1];
+    this.attr("id", newId);
 
-  // remove <a>link</a> and preserve children
-  link.each(preserveHyperlinkChildren, false);
-  link.remove();
+    // remove <a>link</a> and preserve children
+    link.each(preserveHyperlinkChildren, false);
+    link.remove();
+  }
 }
 function preserveHyperlinkChildren(i, children) {
   const correctNodeGroup = this.parents()[1]; // correct parent
