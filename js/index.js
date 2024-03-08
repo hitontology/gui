@@ -8,20 +8,22 @@ import { table } from "./table.js";
 var source = null;
 var target = null;
 //var path = null;
-var grid = null;
 var cy = null;
 
+/** Debugging function to get the IDs in a Cytoscape Collection 
+@param {Cytoscape.Collection} collection
+*/
 function toString(collection) {
   return collection.toArray().map((e) => e.id());
 }
 
+/** entry point */
 async function main() {
   cy = cytoscape({
     container: document.getElementById("cy"),
     style,
   });
   for (const [id, node] of Object.entries(nodes)) {
-    //console.log("id", id,"node", node);
     cy.add({
       group: "nodes",
       data: {
@@ -56,7 +58,6 @@ async function main() {
       isolated.map((node) => node.id())
     );
     isolated.addClass("isolated");
-    //cy.remove(isolated);
   }
   const presetOptions = {
     name: "preset",

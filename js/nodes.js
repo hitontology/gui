@@ -1,3 +1,4 @@
+/** HITO classes along with positions for the Cytoscape based display */
 export const nodes = {
   SoftwareProduct: { name: "Software Product", x: 0, y: 0 },
   EnterpriseFunctionClassified: { name: "Enterprise Function Classified", x: 10, y: 20 },
