@@ -2,8 +2,8 @@ svg {
   font-family: sans-serif;
 }
 
-.source {
-  fill: rgb(80, 80, 200) !important;
+.source > g:first-child {
+  fill: rgb(120, 120, 200) !important;
 }
 
 .target {

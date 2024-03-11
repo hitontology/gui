@@ -9,6 +9,19 @@ async function preprocess() {
   g.each(addIds, false);
 }
 
+let source = null;
+
+function select(e, id) {
+  e.preventDefault();
+  if (source) {
+    source.classList.remove("source");
+  }
+  console.log(id);
+  source = document.getElementById(id);
+  source.classList.add("source");
+  console.log(source);
+}
+
 function addIds(i, children) {
   if (this.type !== "g" || this.children().length > 1) {
     // generic defs and legend filter
@@ -17,12 +30,14 @@ function addIds(i, children) {
   console.log(this);
   // add ids
   const link = this.findOne("a");
-  console.log("link", link);
   if (link !== null) {
+    console.log("link", link);
     const href = link.attr("xlink:href");
     const split = href.split("/");
     const newId = split[split.length - 1];
     this.attr("id", newId);
+    this.on("click", (e) => select(e, newId));
+    this.on("contextmenu", (e) => select(e, newId));
 
     // remove <a>link</a> and preserve children
     link.each(preserveHyperlinkChildren, false);
