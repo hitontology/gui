@@ -10,6 +10,14 @@ svg {
   fill: rgb(100, 160, 200) !important;
 }
 
+.path > g:first-child {
+  fill: rgb(200, 200, 100) !important;
+}
+
+.path > g:first-child > path {
+  stroke: rgb(170, 170, 85) !important;
+}
+
 .isolated {
   fill: rgb(200, 200, 200) !important;
 }

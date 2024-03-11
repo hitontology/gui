@@ -18,6 +18,27 @@ async function main() {
 let sourceElement = null;
 let targetElement = null;
 let cy;
+let lastPath = null;
+
+function showPath(path) {
+  if (lastPath) {
+    lastPath.forEach((ele) => document.getElementById(ele.id()).classList.remove("path"));
+  }
+  lastPath = path;
+  for (let i = 0; i < path.size(); i++) {
+    const id = path[i].id();
+    const domEle = document.getElementById(id);
+    domEle.classList.add("path");
+  }
+  /*
+  for (let i = 0; i < path.size() / 2 - 1; i++) {
+    const node = path[i * 2];
+    console.log("showing node", node.id());
+    const edge = path[i * 2 + 1];
+    console.log("showing edge", edge.id());
+  }
+*/
+}
 
 function selectSource(e, id) {
   e.preventDefault();
@@ -54,6 +75,7 @@ function selectTarget(e, id) {
       console.table(allPaths.map((p) => p.toArray().map((x) => x.id())));
     }
     const path = allPaths[0];
+    showPath(path);
     //table(path);
   }
 }
