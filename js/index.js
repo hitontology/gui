@@ -1,4 +1,5 @@
 import { graph } from "./graph.js";
+import { paths } from "./path.js";
 
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */
@@ -8,36 +9,53 @@ async function main() {
   const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
   const draw = SVG().addTo("#svgContainer").size("100%", "100%");
   draw.svg(s);
-  const cy = await graphCall;
+  cy = await graphCall;
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
   g.each(addIds, false);
 }
 
-let source = null;
-let target = null;
+let sourceElement = null;
+let targetElement = null;
 let cy;
 
 function selectSource(e, id) {
   e.preventDefault();
-  if (source) {
-    source.classList.remove("source");
+  if (sourceElement) {
+    sourceElement.classList.remove("source");
   }
   console.log(id);
-  source = document.getElementById(id);
-  source.classList.add("source");
-  console.log("set source to", source);
+  sourceElement = document.getElementById(id);
+  sourceElement.classList.add("source");
+  console.log("set source to", sourceElement);
 }
 
 function selectTarget(e, id) {
   e.preventDefault();
-  if (target) {
-    target.classList.remove("target");
+  if (targetElement) {
+    targetElement.classList.remove("target");
   }
   console.log(id);
-  target = document.getElementById(id);
-  target.classList.add("target");
-  console.log("set target to", target);
+  targetElement = document.getElementById(id);
+  targetElement.classList.add("target");
+  console.log("set target to", targetElement);
+  breakme: if (sourceElement) {
+    const sourceId = sourceElement.id;
+    const targetId = targetElement.id;
+    console.log(`calculating paths from ${sourceId} to ${targetId}`);
+    const sourceNode = cy.getElementById(sourceId);
+    const targetNode = cy.getElementById(targetId);
+    const allPaths = paths(cy, sourceNode, targetNode);
+    if (allPaths.length === 0) {
+      console.warn(`No paths found between ${sourceId} and ${targetId}}`);
+      break breakme;
+    } else {
+      console.info(allPaths.length, "paths found");
+      console.table(allPaths.map((p) => p.toArray().map((x) => x.id())));
+    }
+    const path = allPaths[0];
+    //table(path);
+  }
 }
 
 function addIds(i, children) {
