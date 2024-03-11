@@ -6,11 +6,9 @@ import { style } from "./style.js";
 /** Cytoscape.js graph with HITO classes as nodes and connecting properties as edges.
  * Can optionally be displayed as well.
  */
-export async function graph() {
-  cy = cytoscape({
-    container: document.getElementById("cy"),
-    style, // only relevant if the graph is displayed
-  });
+export async function graph(visualize) {
+  const options = visualize ? { container: document.getElementById("cy"), style } : {};
+  const cy = cytoscape(options);
   for (const [id, node] of Object.entries(nodes)) {
     cy.add({
       group: "nodes",

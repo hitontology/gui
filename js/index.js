@@ -17,7 +17,7 @@ function toString(collection) {
 
 /** entry point */
 async function main() {
-  cy = await graph();
+  cy = await graph(true);
   const presetOptions = {
     name: "preset",
     // could use an object map too but this is simpler
