@@ -5,13 +5,14 @@ Under heavy development, prototype available at <https://hitontology.github.io/g
 
 ## Local Development
 
-`git clone` this repository and open `index.html` in a browser.
+`git clone` this repository, run the`scripts/downloadimage` shell script and open `index.html` in a browser.
 In the future you may have to `npm install` as well.
 You need a webserver, for example locally with `python -m http.server` and then open <http://0.0.0.0:8000/>.
 We use plain JavaScript with ES6 modules, no fancy framework, build tool or TypeScript.
 
     git clone git@github.com:hitontology/gui.git
     cd gui
+    scripts/downloadimage
     python -m http.server
 
 ## Contribute

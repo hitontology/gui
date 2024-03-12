@@ -1,0 +1,1 @@
+wget -N https://hitontology.eu/public/2024-03-hito_diagram.svg -O img/diagram.svg

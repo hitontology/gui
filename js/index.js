@@ -5,7 +5,7 @@ import { paths } from "./path.js";
  */
 async function main() {
   const graphCall = graph(); // parallel processing to save time
-  const response = await fetch("https://hitontology.eu/public/2024-03-hito_diagram.svg");
+  const response = await fetch("./img/diagram.svg");
   const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
   const draw = SVG().addTo("#svgContainer").size("100%", "100%");
   draw.svg(s);
