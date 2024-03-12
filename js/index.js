@@ -4,6 +4,7 @@ import { paths } from "./path.js";
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */
 async function main() {
+  MicroModal.init({ onShow: (modal) => console.info(`${modal.id} is shown`) });
   const graphCall = graph(); // parallel processing to save time
   const response = await fetch("./img/diagram.svg");
   const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
@@ -74,8 +75,30 @@ function selectTarget(e, id) {
       console.info(allPaths.length, "paths found");
       console.table(allPaths.map((p) => p.toArray().map((x) => x.id())));
     }
+
+    if (allPaths.length == 1) {
+      showPath(allPaths[0]);
+      return;
+    }
+    MicroModal.show("modal-choose-path");
+    const table = document.getElementById("choose-path-table");
+    for (const path of allPaths) {
+      const tr = document.createElement("tr");
+      tr.addEventListener("click", () => {
+        showPath(path);
+        MicroModal.close("modal-choose-path");
+      });
+
+      path.forEach((ele) => {
+        const td = document.createElement("td");
+        tr.appendChild(td);
+        td.innerText = ele.id();
+      });
+
+      table.appendChild(tr);
+    }
     const path = allPaths[0];
-    showPath(path);
+    //showPath(path);
     //table(path);
   }
 }
