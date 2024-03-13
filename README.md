@@ -5,14 +5,14 @@ Under heavy development, prototype available at <https://hitontology.github.io/g
 
 ## Local Development
 
-`git clone` this repository, run the`scripts/downloadimage` shell script and open `index.html` in a browser.
-In the future you may have to `npm install` as well.
+`git clone` this repository, run the `scripts/downloadimage` shell script, `npm install` and open `index.html` in a browser.
 You need a webserver, for example locally with `python -m http.server` and then open <http://0.0.0.0:8000/>.
 We use plain JavaScript with ES6 modules, no fancy framework, build tool or TypeScript.
 
     git clone git@github.com:hitontology/gui.git
     cd gui
     scripts/downloadimage
+    npm install
     python -m http.server
 
 ## Contribute
@@ -20,7 +20,7 @@ We use plain JavaScript with ES6 modules, no fancy framework, build tool or Type
 Pull requests are encouraged.
 Please use [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) prefixes: fix, feat, build, chore, ci, docs, style, refactor, perf, test...
 For example: `git commit -m "fix: useful commit message, resolves #123"`.
-Format before committing: `prettier -w .`.
+Format before committing: `npm run fmt`.
 
 ## Background
 

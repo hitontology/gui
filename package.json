@@ -1,0 +1,28 @@
+{
+  "name": "hitogui",
+  "version": "24.3-alpha",
+  "description": "HITO search interface",
+  "main": "index.js",
+  "scripts": {
+    "fmt": "prettier -w .",
+    "lint": "eslint js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hitontology/gui.git"
+  },
+  "keywords": [
+    "search"
+  ],
+  "author": "Konrad Höffner",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/hitontology/gui/issues"
+  },
+  "homepage": "https://github.com/hitontology/gui#readme",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  }
+}
