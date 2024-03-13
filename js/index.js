@@ -1,5 +1,6 @@
 import { graph } from "./graph.js";
 import { paths } from "./path.js";
+import MicroModal from "../node_modules/micromodal/dist/micromodal.es.js";
 
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */

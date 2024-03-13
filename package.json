@@ -26,6 +26,7 @@
     "prettier": "^3.2.5"
   },
   "dependencies": {
-    "cytoscape": "^3.28.1"
+    "cytoscape": "^3.28.1",
+    "micromodal": "^0.4.10"
   }
 }
