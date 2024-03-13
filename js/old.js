@@ -8,13 +8,6 @@ var target = null;
 //var path = null;
 var cy = null;
 
-/** Debugging function to get the IDs in a Cytoscape Collection 
-@param {Cytoscape.Collection} collection
-*/
-function toString(collection) {
-  return collection.toArray().map((e) => e.id());
-}
-
 /** entry point */
 async function main() {
   cy = await graph(true);
@@ -30,12 +23,12 @@ async function main() {
       };
     },
   };
-  const coseOptions = {
+  /*const coseOptions = {
     name: "cose",
     nodeRepulsion: function (node) {
       return 2_000_000;
     },
-  };
+  };*/
   const layout = cy.layout(presetOptions);
   cy.zoom(0.5);
   cy.minZoom(0.5);

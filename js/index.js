@@ -100,13 +100,10 @@ function selectTarget(e, id) {
 
       table.appendChild(tr);
     }
-    const path = allPaths[0];
-    //showPath(path);
-    //table(path);
   }
 }
 
-function addIds(i, children) {
+function addIds() {
   if (this.type !== "g" || this.children().length > 1) {
     // generic defs and legend filter
     return;
@@ -128,7 +125,8 @@ function addIds(i, children) {
     link.remove();
   }
 }
-function preserveHyperlinkChildren(i, children) {
+
+function preserveHyperlinkChildren() {
   const correctNodeGroup = this.parents()[1]; // correct parent
   this.toParent(correctNodeGroup);
 }

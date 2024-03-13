@@ -42,13 +42,3 @@ function pathsRec(visited, path, target) {
 export function paths(cy, source, target) {
   return pathsRec(cy.collection(source), cy.collection(source), target);
 }
-
-/** @deprecated **/
-function shortestPath(source, target) {
-  cy.elements().unselect();
-  const path = cy.elements().aStar({
-    root: source,
-    goal: target,
-  }).path;
-  return path;
-}

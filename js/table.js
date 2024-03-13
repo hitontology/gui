@@ -18,7 +18,7 @@ export async function table(path) {
     eles.map((ele) => ele.id())
   );
   const columnDefs = [];
-  const columns = pathNodes.map((node) => node.id());
+  //const columns = pathNodes.map((node) => node.id());
   const cellRenderer = function (params) {
     const [suffix, label] = params.value;
     //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${suffix}</a>`;
@@ -40,7 +40,7 @@ export async function table(path) {
   }
 
   let query = "SELECT ";
-  let isNode = true;
+  //let isNode = true;
   for (let i = 0; i < pathNodes.length; i++) {
     query += `?n${i + 1} SAMPLE(?l${i + 1}) AS ?l${i + 1} `;
   }
