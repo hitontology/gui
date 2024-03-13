@@ -3,6 +3,22 @@ import { edges } from "./edges.js";
 import { select } from "./sparql.js";
 import { style } from "./style.js";
 
+/** */
+async function edgeData(edgeId) {
+  const data = {
+    ...edges[edgeId],
+    id: edgeId,
+  };
+  const query = `SELECT COUNT(*) AS ?count WHERE {?s hito:${edgeId} ?o.}`;
+  const result = await select(query);
+  const count = result[0].count.value;
+  if (count == 0) {
+    console.warn("Removing unused property", edgeId);
+  }
+  data.width = Math.log2(count + 2);
+  return data;
+}
+
 /** Cytoscape.js graph with HITO classes as nodes and connecting properties as edges.
  * Can optionally be displayed as well.
  */
@@ -18,22 +34,10 @@ export async function graph(visualize) {
       },
     });
   }
-  for (let edgeId in edges) {
-    const data = {
-      ...edges[edgeId],
-      id: edgeId,
-    };
-    const query = `SELECT COUNT(*) AS ?count WHERE {?s hito:${edgeId} ?o.}`;
-    const result = await select(query);
-    const count = result[0].count.value;
-    if (count == 0) {
-      console.warn("Removing unused property", edgeId);
-      continue;
-    }
-    data.width = Math.log2(count + 2);
+  for (const edgeId in edges) {
     cy.add({
       group: "edges",
-      data,
+      data: await edgeData(edgeId),
     });
   }
   const isolated = cy.nodes().filter((node) => node.degree() === 0);
