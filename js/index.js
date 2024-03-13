@@ -1,10 +1,12 @@
 import { graph } from "./graph.js";
 import { paths } from "./path.js";
 import MicroModal from "../node_modules/micromodal/dist/micromodal.es.js";
+import { SVG } from "../node_modules/@svgdotjs/svg.js/dist/svg.esm.js";
 
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */
 async function main() {
+  console.log(SVG);
   MicroModal.init({ onShow: (modal) => console.info(`${modal.id} is shown`) });
   const graphCall = graph(); // parallel processing to save time
   const response = await fetch("./img/diagram.svg");

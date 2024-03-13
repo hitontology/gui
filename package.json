@@ -26,6 +26,7 @@
     "prettier": "^3.2.5"
   },
   "dependencies": {
+    "@svgdotjs/svg.js": "^3.2.0",
     "cytoscape": "^3.28.1",
     "micromodal": "^0.4.10"
   }
