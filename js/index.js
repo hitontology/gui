@@ -1,5 +1,6 @@
 import { graph } from "./graph.js";
 import { paths } from "./path.js";
+import { table } from "./table.js";
 import MicroModal from "../node_modules/micromodal/dist/micromodal.es.js";
 import { SVG } from "../node_modules/@svgdotjs/svg.js/dist/svg.esm.js";
 
@@ -34,6 +35,7 @@ function showPath(path) {
     const domEle = document.getElementById(id);
     domEle.classList.add("path");
   }
+  table(path);
   /*
   for (let i = 0; i < path.size() / 2 - 1; i++) {
     const node = path[i * 2];
