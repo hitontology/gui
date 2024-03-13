@@ -2,6 +2,7 @@ import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 import { select } from "./sparql.js";
 import { style } from "./style.js";
+import cytoscape from "../node_modules/cytoscape/dist/cytoscape.esm.min.js";
 
 /** */
 async function edgeData(edgeId) {
