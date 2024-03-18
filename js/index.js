@@ -2,7 +2,7 @@ import { graph } from "./graph.js";
 import { paths } from "./path.js";
 import { table } from "./table.js";
 import MicroModal from "../node_modules/micromodal/dist/micromodal.es.js";
-import { SVG } from "../node_modules/@svgdotjs/svg.js/dist/svg.esm.js";
+import { SVG } from "x../node_modules/@svgdotjs/svg.js/dist/svg.esm.js";
 
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */
