@@ -31,6 +31,7 @@ function pathsRec(visited, path, target) {
     }
     results.push(...pathsRec(visited.union(node), path.union(edge).union(node), target));
   }
+  results.sort((a, b) => a.size() - b.size());
   return results;
 }
 
