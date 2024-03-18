@@ -1,9 +1,9 @@
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 import { select } from "./sparql.js";
-import { createGrid, ModuleRegistry } from "../node_modules/@ag-grid-community/core/dist/core.esm.min.js";
+import { createGrid, ModuleRegistry } from "https://cdn.jsdelivr.net/npm/@ag-grid-community/core/dist/core.esm.min.js";
 // don't use minified version: https://github.com/ag-grid/ag-grid/issues/7755
-import { ClientSideRowModelModule } from "../node_modules/@ag-grid-community/client-side-row-model/dist/client-side-row-model.esm.js";
+import { ClientSideRowModelModule } from "https://cdn.jsdelivr.net/npm/@ag-grid-community/client-side-row-model/dist/client-side-row-model.esm.js";
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 var grid = null;
