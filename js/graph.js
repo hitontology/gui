@@ -35,12 +35,15 @@ export async function graph(visualize) {
       },
     });
   }
-  for (const edgeId in edges) {
-    cy.add({
-      group: "edges",
-      data: await edgeData(edgeId),
-    });
-  }
+  cy.add(
+    await Promise.all(
+      Object.keys(edges).map(async (eid) => ({
+        group: "edges",
+        data: await edgeData(eid),
+      }))
+    )
+  );
+  console.log("cy size", cy.nodes().size());
   const isolated = cy.nodes().filter((node) => node.degree() === 0);
   if (isolated.size() > 0) {
     console.warn(
