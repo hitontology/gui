@@ -25,13 +25,13 @@ main {
 .top {
   overflow: auto; /* required to make the handle visible */
   resize: vertical; /* enable resize in either direction   */
-  height: 60vh;
+  height: 80vh;
 }
 
 .bottom {
   flex: 1; /* will fill the remaining horizontal/vertical space */
   border-top: 1px solid #000;
-  height: 40vh;
+  height: 20vh;
   /*padding: 2% 5%;*/
   /*display: flex;*/
 }
