@@ -8,41 +8,10 @@ ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 var grid = null;
 
-/**
- * Displays all instances of classes along a given path in a table with search and filter options.
- * @param {Cytoscape.Collection} path alternation of nodes and edges with nodes at both ends
- */
-export async function table(path) {
-  console.log(path);
-  const eles = path.toArray();
+/** returns a SPARQL select query for a given path */
+export function pathQuery(path) {
   const pathNodes = path.nodes().toArray();
   const pathEdges = path.edges().toArray();
-  console.debug(
-    "generating table for path",
-    eles.map((ele) => ele.id())
-  );
-  const columnDefs = [];
-  //const columns = pathNodes.map((node) => node.id());
-  const cellRenderer = function (params) {
-    const [suffix, label] = params.value;
-    //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${suffix}</a>`;
-    //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
-    //return `<a href="${uri}" target="_blank">${label}</a>`;
-    return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
-  };
-
-  const valueFormatter = function (params) {
-    const [suffix, label] = params.value;
-    return suffix + " " + label;
-  };
-
-  for (let node of pathNodes) {
-    columnDefs.push({
-      field: node.id(),
-      valueFormatter, // does not work in defaultColDef
-    });
-  }
-
   let query = "SELECT ";
   //let isNode = true;
   for (let i = 0; i < pathNodes.length; i++) {
@@ -76,6 +45,44 @@ export async function table(path) {
     }
   }
   query += "}";
+  return query;
+}
+
+/**
+ * Displays all instances of classes along a given path in a table with search and filter options.
+ * @param {Cytoscape.Collection} path alternation of nodes and edges with nodes at both ends
+ */
+export async function table(path) {
+  console.log(path);
+  const eles = path.toArray();
+  const pathNodes = path.nodes().toArray();
+  console.debug(
+    "generating table for path",
+    eles.map((ele) => ele.id())
+  );
+  const columnDefs = [];
+  //const columns = pathNodes.map((node) => node.id());
+  const cellRenderer = function (params) {
+    const [suffix, label] = params.value;
+    //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${suffix}</a>`;
+    //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
+    //return `<a href="${uri}" target="_blank">${label}</a>`;
+    return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
+  };
+
+  const valueFormatter = function (params) {
+    const [suffix, label] = params.value;
+    return suffix + " " + label;
+  };
+
+  for (let node of pathNodes) {
+    columnDefs.push({
+      field: node.id(),
+      valueFormatter, // does not work in defaultColDef
+    });
+  }
+
+  const query = pathQuery(path);
   const result = await select(query);
   let rowData = [];
   for (let binding of result) {
