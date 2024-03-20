@@ -72,5 +72,5 @@ Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
  
 Run the following regular expressions to preprocess the SVG file (regexes for vscode, may need some refactoring to work properly with your editor of choice):
 VSCODE
-Find: `(<path fill="none" d=".* L)[0-9.]+ [0-9.]+"(/>\n.*)(d=")M([0-9.]+ [0-9.]+)`
+Find: `(<path fill="none" d=".* L)[0-9.]+ [0-9.]+"(/>\n.*)(d="M)([0-9.]+ [0-9.]+)`
 Replace with: `$1$4" class="arrow-body" $2class="arrow-head" $3$4`
