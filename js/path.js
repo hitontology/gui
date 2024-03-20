@@ -43,17 +43,3 @@ function pathsRec(visited, path, target) {
 export function paths(cy, source, target) {
   return pathsRec(cy.collection(source), cy.collection(source), target);
 }
-
-// 8748 as of HITO 24.03
-export function countAllPaths(cy) {
-  const nodes = cy.nodes();
-  let count = 0;
-  for (let i = 0; i < nodes.size(); i++) {
-    const source = nodes[i];
-    for (let j = i + 1; j < nodes.size(); j++) {
-      const target = nodes[j];
-      count += paths(cy, source, target).length;
-    }
-  }
-  return count;
-}

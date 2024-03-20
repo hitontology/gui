@@ -1,5 +1,5 @@
 import { graph } from "./graph.js";
-import { paths, countAllPaths } from "./path.js";
+import { paths } from "./path.js";
 import { table } from "./table.js";
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
@@ -18,7 +18,6 @@ async function main() {
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
   g.each(addIds, false);
-  //console.log("total paths:",countAllPaths(cy));
 }
 
 let sourceElement = null;
