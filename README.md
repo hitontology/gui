@@ -69,7 +69,7 @@ Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
 - A search string can now be entered for the first column. In the first column, all instances of the corresponding class containing the search string are listed. In column n (n=2,...,LastColumn), all instances of the corresponding class are listed that are related to an entry from column n-1 via the specified edge.
 
 # Preprocessing of the SVG file
- 
+
 Run the following regular expressions to preprocess the SVG file (regexes for vscode, may need some refactoring to work properly with your editor of choice):
 VSCODE
 Find: `(<path fill="none" d=".* L)[0-9.]+ [0-9.]+"(/>\n.*)(d="M)([0-9.]+ [0-9.]+)`
