@@ -119,6 +119,7 @@ function addIds() {
     const href = link.attr("xlink:href");
     const split = href.split("/");
     const newId = split[split.length - 1];
+    const oldId = this.attr("id");
     this.attr("id", newId);
     this.on("click", (e) => selectSource(e, newId));
     this.on("contextmenu", (e) => selectTarget(e, newId));
@@ -126,7 +127,19 @@ function addIds() {
     // remove <a>link</a> and preserve children
     link.each(preserveHyperlinkChildren, false);
     link.remove();
+
+    // make arrow head hideable
+    if(oldId.includes("edge")) {
+      nameArrowParts(this);
+    }
   }
+}
+
+function nameArrowParts(svgArrow) {
+  const arrow = svgArrow.first();
+  arrow.addClass("arrow");
+  arrow.get(0).addClass("arrow-body");
+  arrow.get(1).addClass("arrow-head");
 }
 
 function preserveHyperlinkChildren() {
