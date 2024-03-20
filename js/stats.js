@@ -1,6 +1,8 @@
 /** Entrypoint to show stats and preprocessing results. */
 import { graph } from "./graph.js";
 import { paths } from "./path.js";
+import { pathQuery } from "./table.js";
+import { select } from "./sparql.js";
 
 function hashCode(str) {
   return str.split("").reduce((prevHash, currVal) => ((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0, 0);
@@ -33,14 +35,35 @@ export function allPaths(cy) {
   return result;
 }
 
-/** Return hashes for each given path that has values in the SPARQL endpoint. */
-function validHashes(ps) {
-  const hashes = [];
-  for (const p of ps) {
-  }
+/** Return whether the path has at least one row of data. */
+async function validate(path) {
+  const query = pathQuery(path) + " LIMIT 1";
+  // todo: "parallelize" i.e. Promise.all
+  const bindings = await select(query);
+  return bindings.length > 0;
+}
+
+// by Google Gemini
+async function asyncFilter(arr, predicate) {
+  const promises = arr.map(async (element) => {
+    const result = await predicate(element);
+    return result;
+  });
+
+  const results = await Promise.all(promises);
+  return arr.filter((element, index) => results[index]);
+}
+
+/** Return hashes for each given path and its reverse that has values in the SPARQL endpoint. */
+async function validHashes(cy, ps) {
+  // ps = ps.slice(0, 1000); // for faster testing
+  const validPaths = await asyncFilter(ps, validate);
+  const reversePaths = validPaths.map((p) => cy.collection(p.toArray().reverse()));
+  const hashes = [...validPaths, ...reversePaths].map(hash);
   return hashes;
 }
 
+// to speed up preprocessing, temporarily set local SPARQL endpoint in js/sparql.js
 async function main() {
   document.write("loading graph...");
   const cy = await graph();
@@ -48,7 +71,9 @@ async function main() {
   document.write("calculating all paths...");
   const ps = allPaths(cy);
   document.write(ps.length + " (symmetric), " + ps.length * 2 + " (total) <br>");
-  document.write(validHashes(ps).length + " valid hashes");
+  const hashes = await validHashes(cy, ps);
+  document.write(hashes.length + " valid hashes<br>");
+  document.write("hashes: <br>[" + hashes + "]");
 }
 
 window.addEventListener("load", main);

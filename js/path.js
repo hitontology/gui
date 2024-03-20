@@ -1,5 +1,6 @@
 /**
- * @returns an array of paths without cycles from source to target treating all edges as undirected
+ * @returns an array of paths without cycles from source to target treating all edges as undirected.
+ * Each path is an ordered Cytoscape collection with alternating nodes and edges, nodes being at both endpoints.
  * @param {Cytoscape collection} visited all visited nodes
  * @param {Cytoscape collection} path all visited nodes and edges
  * @param {Cytoscape node} target last node of the path
