@@ -87,6 +87,7 @@ function selectTarget(e, id) {
     }
     MicroModal.show("modal-choose-path");
     const table = document.getElementById("choose-path-table");
+    table.innerHTML = "";
     for (const path of allPaths) {
       const tr = document.createElement("tr");
       tr.addEventListener("click", () => {
