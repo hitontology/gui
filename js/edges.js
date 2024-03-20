@@ -33,7 +33,7 @@ export const edges = {
   certification: { source: "SoftwareProduct", target: "Certification", name: "certified by" },
   language: { source: "SoftwareProduct", target: "Language", name: "available in" },
   license: { source: "SoftwareProduct", target: "License", name: "uses license" },
-  homepage: { source: "SoftwareProduct", target: "Client", name: "homepage" },
+  client: { source: "SoftwareProduct", target: "Client", name: "available for" },
   operatingSystem: { source: "SoftwareProduct", target: "OperatingSystem", name: "available for" },
   // programmingLanguage: { source: "SoftwareProduct", target: "ProgrammingLanguage", name: "written in" }, // external DBpedia class
   programmingLibrary: { source: "SoftwareProduct", target: "ProgrammingLibrary", name: "uses library" },
