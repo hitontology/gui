@@ -1,20 +1,8 @@
 /** Entrypoint to show stats and preprocessing results. */
 import { graph } from "./graph.js";
-import { paths } from "./path.js";
+import { paths, pathHash } from "./path.js";
 import { pathQuery } from "./table.js";
 import { select } from "./sparql.js";
-
-function hashCode(str) {
-  return str.split("").reduce((prevHash, currVal) => ((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0, 0);
-}
-
-function hash(path) {
-  const ids = path.map((ele) => ele.id());
-  const s = ids.reduce((a, b) => a + b);
-  const h = hashCode(s);
-  console.log("hash for ", ids, ":", h);
-  return h;
-}
 
 /** Returns an array of all paths in the graph.
 Each symmetric pair only occurs once.
@@ -24,7 +12,6 @@ There are 8748 as of HITO 24.03.
 export function allPaths(cy) {
   const nodes = cy.nodes();
   const result = [];
-  let count = 0;
   for (let i = 0; i < nodes.size(); i++) {
     const source = nodes[i];
     for (let j = i + 1; j < nodes.size(); j++) {
@@ -59,7 +46,7 @@ async function validHashes(cy, ps) {
   // ps = ps.slice(0, 1000); // for faster testing
   const validPaths = await asyncFilter(ps, validate);
   const reversePaths = validPaths.map((p) => cy.collection(p.toArray().reverse()));
-  const hashes = [...validPaths, ...reversePaths].map(hash);
+  const hashes = [...validPaths, ...reversePaths].map(pathHash);
   return hashes;
 }
 

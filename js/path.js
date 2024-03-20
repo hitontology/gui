@@ -44,3 +44,15 @@ function pathsRec(visited, path, target) {
 export function paths(cy, source, target) {
   return pathsRec(cy.collection(source), cy.collection(source), target);
 }
+
+function strHash(str) {
+  return str.split("").reduce((prevHash, currVal) => ((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0, 0);
+}
+
+export function pathHash(path) {
+  const ids = path.map((ele) => ele.id());
+  const s = ids.reduce((a, b) => a + b);
+  const h = strHash(s);
+  console.log("hash for ", ids, ":", h);
+  return h;
+}

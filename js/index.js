@@ -1,6 +1,7 @@
 import { graph } from "./graph.js";
-import { paths } from "./path.js";
+import { paths, pathHash } from "./path.js";
 import { table } from "./table.js";
+import { pathHashes } from "./pathHashes.js";
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
 
@@ -73,22 +74,23 @@ function selectTarget(e, id) {
     const sourceNode = cy.getElementById(sourceId);
     const targetNode = cy.getElementById(targetId);
     const allPaths = paths(cy, sourceNode, targetNode);
-    if (allPaths.length === 0) {
-      console.warn(`No paths found between ${sourceId} and ${targetId}}`);
+    const validPaths = allPaths.filter((p) => pathHashes.has(pathHash(p)));
+    if (validPaths.length === 0) {
+      console.warn(`No valid paths found between ${sourceId} and ${targetId}}`);
       break breakme;
     } else {
-      console.info(allPaths.length, "paths found");
-      console.table(allPaths.map((p) => p.toArray().map((x) => x.id())));
+      console.info(allPaths.length, "paths found,", validPaths.length, " of them valid");
+      console.table(validPaths.map((p) => p.toArray().map((x) => x.id())));
     }
 
-    if (allPaths.length == 1) {
-      showPath(allPaths[0]);
+    if (validPaths.length == 1) {
+      showPath(validPaths[0]);
       return;
     }
     MicroModal.show("modal-choose-path");
     const table = document.getElementById("choose-path-table");
     table.innerHTML = "";
-    for (const path of allPaths) {
+    for (const path of validPaths) {
       const tr = document.createElement("tr");
       tr.addEventListener("click", () => {
         showPath(path);
