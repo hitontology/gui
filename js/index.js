@@ -18,7 +18,7 @@ async function main() {
   cy = await graphCall;
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
-  g.each(addIds, false);
+  g.each(addListeners, false);
 }
 
 let sourceElement = null;
@@ -108,45 +108,13 @@ function selectTarget(e, id) {
   }
 }
 
-function addIds() {
-  if (this.type !== "g" || this.children().length > 1) {
+function addListeners() {
+  if (this.type !== "g") {
     // generic defs and legend filter
     return;
   }
-  console.log(this);
-  // add ids
-  const link = this.findOne("a");
-  if (link !== null) {
-    console.log("link", link);
-    const href = link.attr("xlink:href");
-    const split = href.split("/");
-    const newId = split[split.length - 1];
-    const oldId = this.attr("id");
-    this.attr("id", newId);
-    this.on("click", (e) => selectSource(e, newId));
-    this.on("contextmenu", (e) => selectTarget(e, newId));
-
-    // remove <a>link</a> and preserve children
-    link.each(preserveHyperlinkChildren, false);
-    link.remove();
-
-    // make arrow head hideable
-    if (oldId.includes("edge")) {
-      nameArrowParts(this);
-    }
-  }
+  const id = this.attr("id");
+  this.on("click", (e) => selectSource(e, id));
+  this.on("contextmenu", (e) => selectTarget(e, id));
 }
-
-function nameArrowParts(svgArrow) {
-  const arrow = svgArrow.first();
-  arrow.addClass("arrow");
-  arrow.get(0).addClass("arrow-body");
-  arrow.get(1).addClass("arrow-head");
-}
-
-function preserveHyperlinkChildren() {
-  const correctNodeGroup = this.parents()[1]; // correct parent
-  this.toParent(correctNodeGroup);
-}
-
 window.addEventListener("load", main);
