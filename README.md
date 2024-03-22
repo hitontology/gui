@@ -5,7 +5,7 @@ Under heavy development, prototype available at <https://hitontology.github.io/g
 
 ## Local Development
 
-`git clone` this repository, run the `scripts/downloadimage` shell script, `npm install` and open `index.html` in a browser.
+`git clone` this repository, run the `scripts/diagram-prepare.sh` shell script, `npm install` and open `index.html` in a browser.
 You need a webserver, for example locally with `python -m http.server` and then open <http://0.0.0.0:8000/>.
 We use plain JavaScript with ES6 modules, no fancy framework, build tool or TypeScript.
 
@@ -67,10 +67,3 @@ Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
     > firstAuthor>FirstAuthor
 
 - A search string can now be entered for the first column. In the first column, all instances of the corresponding class containing the search string are listed. In column n (n=2,...,LastColumn), all instances of the corresponding class are listed that are related to an entry from column n-1 via the specified edge.
-
-# Preprocessing of the SVG file
-
-Run the following regular expressions to preprocess the SVG file (regexes for vscode, may need some refactoring to work properly with your editor of choice):
-VSCODE
-Find: `(<path fill="none" d=".* L)[0-9.]+ [0-9.]+"(/>\n.*)(d="M)([0-9.]+ [0-9.]+)`
-Replace with: `$1$4" class="arrow-body" $2class="arrow-head" $3$4`
