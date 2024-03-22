@@ -14,11 +14,11 @@ svg {
   fill: rgb(200, 200, 100) !important;
 }
 
-.path > .arrow > path {
+.path > g:first-child > .arrow-body {
   stroke: rgb(170, 170, 85) !important;
   stroke-width: 5px !important;
 }
-.path > .arrow > .arrow-head {
+.path > g:first-child > .arrow-head {
   stroke: none !important;
   fill: none !important;
 }

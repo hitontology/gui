@@ -7,7 +7,7 @@ wget -N https://hitontology.eu/public/2024-03-hito_diagram.svg -O img/diagram.sv
 # Preprocessing
 # 1. x,y,height,width 5.831902424 -> 5.0
 # 2. arrow head/body declaration
-# 3. hyperlinks to ids, remove links TODO fix onclick listeners
+# 3. hyperlinks to ids, remove links
 # 4+5. viewport
 # 6. minify (remove new lines + spaces at line start)
 sed -i -z -r \
