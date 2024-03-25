@@ -5,6 +5,9 @@ import { pathHashes } from "./pathHashes.js";
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
 
+import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
+const notyf = new Notyf();
+
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */
 async function main() {
@@ -76,7 +79,7 @@ function selectTarget(e, id) {
     const allPaths = paths(cy, sourceNode, targetNode);
     const validPaths = allPaths.filter((p) => pathHashes.has(pathHash(p)));
     if (validPaths.length === 0) {
-      console.warn(`No valid paths found between ${sourceId} and ${targetId}}`);
+      notyf.error(`No valid paths found between ${sourceId} and ${targetId}`);
       break breakme;
     } else {
       console.info(allPaths.length, "paths found,", validPaths.length, " of them valid");
