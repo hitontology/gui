@@ -43,7 +43,6 @@ export async function graph(visualize) {
       }))
     )
   );
-  console.log("cy size", cy.nodes().size());
   const isolated = cy.nodes().filter((node) => node.degree() === 0);
   if (isolated.size() > 0) {
     console.warn(
