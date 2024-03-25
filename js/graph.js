@@ -4,20 +4,27 @@ import { select } from "./sparql.js";
 import { style } from "./style.js";
 import cytoscape from "https://cdn.jsdelivr.net/npm/cytoscape/dist/cytoscape.esm.min.js";
 
-/** */
-async function edgeData(edgeId) {
-  const data = {
-    ...edges[edgeId],
-    id: edgeId,
-  };
-  const query = `SELECT COUNT(*) AS ?count WHERE {?s hito:${edgeId} ?o.}`;
+/** returns a map from HITO properties to counts */
+async function selectEdgeCounts() {
+  const query = "SELECT ?p COUNT(*) AS ?count WHERE {?s ?p ?o. {?p a owl:ObjectProperty.} UNION {?p a owl:DatatypeProperty.} } GROUP BY ?p";
   const result = await select(query);
-  const count = result[0].count.value;
+  return new Map(result.map((b) => [b.p.value.replace("http://hitontology.eu/ontology/", ""), b.count.value]));
+}
+
+/** */
+function edgeObject(id, count) {
+  const obj = {
+    group: "edges",
+    data: {
+      id,
+      width: Math.log2(count + 2),
+      ...edges[id],
+    },
+  };
   if (count == 0) {
-    console.warn("Removing unused property", edgeId);
+    console.warn("Removing unused property", id);
   }
-  data.width = Math.log2(count + 2);
-  return data;
+  return obj;
 }
 
 /** Cytoscape.js graph with HITO classes as nodes and connecting properties as edges.
@@ -25,6 +32,7 @@ async function edgeData(edgeId) {
  */
 export async function graph(visualize) {
   const options = visualize ? { container: document.getElementById("cy"), style } : {};
+  const edgeCounts = await selectEdgeCounts();
   const cy = cytoscape(options);
   for (const [id, node] of Object.entries(nodes)) {
     cy.add({
@@ -35,14 +43,7 @@ export async function graph(visualize) {
       },
     });
   }
-  cy.add(
-    await Promise.all(
-      Object.keys(edges).map(async (eid) => ({
-        group: "edges",
-        data: await edgeData(eid),
-      }))
-    )
-  );
+  cy.add(Object.keys(edges).map((eid) => edgeObject(eid, edgeCounts.get(eid))));
   const isolated = cy.nodes().filter((node) => node.degree() === 0);
   if (isolated.size() > 0) {
     console.warn(
