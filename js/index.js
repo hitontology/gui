@@ -114,7 +114,9 @@ function addListeners() {
     return;
   }
   const id = this.attr("id");
-  this.on("click", (e) => selectSource(e, id));
-  this.on("contextmenu", (e) => selectTarget(e, id));
+  if(!id.startsWith("y.")) {
+    this.on("click", (e) => selectSource(e, id));
+    this.on("contextmenu", (e) => selectTarget(e, id));
+  }
 }
 window.addEventListener("load", main);
