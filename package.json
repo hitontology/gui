@@ -3,10 +3,11 @@
   "version": "24.3-alpha",
   "description": "HITO search interface",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "fmt": "prettier -w .",
     "lint": "oxlint js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,9 @@
   },
   "homepage": "https://github.com/hitontology/gui#readme",
   "devDependencies": {
+    "oxlint": "^0.2.14",
     "prettier": "^3.2.5",
-    "oxlint": "^0.2.14"
+    "vitest": "^1.4.0"
   },
   "dependencies": {
     "@ag-grid-community/client-side-row-model": "^31.1.1",
