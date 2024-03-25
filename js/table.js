@@ -1,6 +1,7 @@
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 import { select } from "./sparql.js";
+import { getPath } from "./index.js";
 import { createGrid, ModuleRegistry } from "https://cdn.jsdelivr.net/npm/@ag-grid-community/core/dist/core.esm.min.js";
 // don't use minified version: https://github.com/ag-grid/ag-grid/issues/7755
 import { ClientSideRowModelModule } from "https://cdn.jsdelivr.net/npm/@ag-grid-community/client-side-row-model/dist/client-side-row-model.esm.js";
@@ -84,6 +85,12 @@ export async function table(path) {
 
   const query = pathQuery(path);
   const result = await select(query);
+  // if new path was selected while waiting for SPARQL query to finish
+  if (path !== getPath()) {
+    console.warn("New path was selected while SPARQL query was run. Not displaying old path results now.");
+    return;
+  }
+  // display SPARQL query results in table
   let rowData = [];
   for (let binding of result) {
     let row = {};
