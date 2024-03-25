@@ -1,3 +1,6 @@
+import { nodes } from "./nodes.js";
+import { edges } from "./edges.js";
+
 /**
  * @returns an array of paths without cycles from source to target treating all edges as undirected.
  * Each path is an ordered Cytoscape collection with alternating nodes and edges, nodes being at both endpoints.
@@ -55,4 +58,44 @@ export function pathHash(path) {
   const h = strHash(s);
   console.log("hash for ", ids, ":", h);
   return h;
+}
+
+/** returns a SPARQL select query for a given path */
+export function pathQuery(path) {
+  const pathNodes = path.nodes().toArray();
+  const pathEdges = path.edges().toArray();
+  let query = "SELECT ";
+  //let isNode = true;
+  for (let i = 0; i < pathNodes.length; i++) {
+    query += `?n${i + 1} SAMPLE(?l${i + 1}) AS ?l${i + 1} `;
+  }
+  query += " { ";
+  for (let i = 0; i < pathNodes.length; i++) {
+    const nodeId = pathNodes[i].id();
+    const node = nodes[nodeId];
+    if (node?.type === "string") {
+      continue;
+    }
+    //console.log("node", nodeId, node.type, node);
+    query += `?n${i + 1} a hito:${nodeId}. `;
+    query += `?n${i + 1} rdfs:label ?l${i + 1}. `;
+  }
+
+  for (let i = 0; i < pathEdges.length; i++) {
+    const pathEdge = pathEdges[i];
+    const id = pathEdge.id();
+    const edge = edges[id];
+
+    //console.log("edge id ", id);
+    // arrow points from source to target
+    if (edge.source === pathNodes[i].id()) {
+      query += `?n${i + 1} hito:${id} ?n${i + 2}. `;
+    }
+    // arrow points from target to source
+    else {
+      query += `?n${i + 2} hito:${id} ?n${i + 1}. `;
+    }
+  }
+  query += "}";
+  return query;
 }

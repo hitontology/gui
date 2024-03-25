@@ -1,7 +1,6 @@
 /** Entrypoint to show stats and preprocessing results. */
 import { graph } from "./graph.js";
-import { paths, pathHash } from "./path.js";
-import { pathQuery } from "./table.js";
+import { paths, pathHash, pathQuery } from "./path.js";
 import { select } from "./sparql.js";
 
 /** Returns an array of all paths in the graph.
@@ -23,7 +22,7 @@ export function allPaths(cy) {
 }
 
 /** Return whether the path has at least one row of data. */
-async function validate(path) {
+export async function validate(path) {
   const query = pathQuery(path) + " LIMIT 1";
   // todo: "parallelize" i.e. Promise.all
   const bindings = await select(query);
@@ -31,7 +30,7 @@ async function validate(path) {
 }
 
 // by Google Gemini
-async function asyncFilter(arr, predicate) {
+export async function asyncFilter(arr, predicate) {
   const promises = arr.map(async (element) => {
     const result = await predicate(element);
     return result;
@@ -51,7 +50,7 @@ async function validHashes(cy, ps) {
 }
 
 // to speed up preprocessing, temporarily set local SPARQL endpoint in js/sparql.js
-async function main() {
+export async function main() {
   document.write("loading graph...");
   const cy = await graph();
   document.write(cy.nodes().size() + " nodes, ", cy.edges().size() + " edges loaded.<br>");
@@ -62,5 +61,3 @@ async function main() {
   document.write(hashes.length + " valid hashes<br>");
   document.write("hashes: <br>[" + hashes + "]");
 }
-
-window.addEventListener("load", main);
