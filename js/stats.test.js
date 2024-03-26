@@ -19,6 +19,8 @@ test("validates paths correctly", async () => {
     console.log(pa.map((x) => x.id()));
     expect(pa[0]).toBe(swp);
     expect(pa[2]).toBe(study);
+    const hash = pathHash(p);
+    console.log(hash);
   }
   {
     const astCit = cy.getElementById("ApplicationSystemTypeCitation");
