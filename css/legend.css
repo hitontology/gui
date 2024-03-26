@@ -1,7 +1,7 @@
 #legend {
     text-align: center;
-    margin: auto;
-    padding: 10px;
+    height: 100%;
+    width: 100vw;
 }
 
 .legend-hidden {
@@ -12,12 +12,15 @@
 }
 
 .svg-text-wrapper {
+    vertical-align: middle;
     position: relative;
 }
 .svg-label {
     font-size: 16pt;
+    vertical-align: middle;
 }
-div > span {
+.svg-text-wrapper > * , .legend-explanation {
+    vertical-align: middle;
     display: inline-block;
     margin: 10px 0;
 }
