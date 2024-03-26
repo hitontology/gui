@@ -1,0 +1,23 @@
+#legend {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.legend-hidden {
+    width: 0% !important;
+    height: 0% !important;
+    background-color: none !important;
+    opacity: 0;
+}
+
+.svg-text-wrapper {
+    position: relative;
+}
+.svg-label {
+    font-size: 16pt;
+}
+div > span {
+    display: inline-block;
+    margin: 10px 0;
+}
