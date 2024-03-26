@@ -1,26 +1,27 @@
 #legend {
-    text-align: center;
-    height: 100%;
-    width: 100vw;
+  text-align: center;
+  height: 100%;
+  width: 100vw;
 }
 
 .legend-hidden {
-    width: 0% !important;
-    height: 0% !important;
-    background-color: none !important;
-    opacity: 0;
+  width: 0% !important;
+  height: 0% !important;
+  background-color: none !important;
+  opacity: 0;
 }
 
 .svg-text-wrapper {
-    vertical-align: middle;
-    position: relative;
+  vertical-align: middle;
+  position: relative;
 }
 .svg-label {
-    font-size: 16pt;
-    vertical-align: middle;
+  font-size: 16pt;
+  vertical-align: middle;
 }
-.svg-text-wrapper > * , .legend-explanation {
-    vertical-align: middle;
-    display: inline-block;
-    margin: 10px 0;
+.svg-text-wrapper > *,
+.legend-explanation {
+  vertical-align: middle;
+  display: inline-block;
+  margin: 10px 0;
 }

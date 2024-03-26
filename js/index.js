@@ -93,7 +93,7 @@ function selectTarget(e, id) {
       showPath(validPaths[0]);
       return;
     }
-    
+
     MicroModal.show("modal-choose-path");
     const table = document.getElementById("choose-path-table");
     table.innerHTML = "";
