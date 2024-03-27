@@ -1,7 +1,7 @@
 #legend {
   text-align: center;
-  height: 100%;
-  width: 100vw;
+  margin: auto;
+  padding: 10px;
 }
 
 .legend-hidden {
@@ -10,12 +10,14 @@
   background-color: none !important;
   opacity: 0;
 }
-.controls {
-  font-size: 16pt;
-  vertical-align: middle;
+
+.svg-text-wrapper {
+  position: relative;
 }
-.legend > * {
-  vertical-align: middle;
+.svg-label {
+  font-size: 16pt;
+}
+div > span {
   display: inline-block;
   margin: 10px 0;
 }

@@ -21,13 +21,28 @@
         <div id="svgContainer" class="top" style="z-index: 0; width: 100%"></div>
         <div id="aggrid" class="ag-theme-quartz grid bottom">
           <div id="legend">
-            <p class="controls">Click (primary mouse button, with touch: short tap) to select source node</p>
-            <p class="controls">Context Menu (secondary mouse button, with touch: long tap) to select target node</p>
-            <p class="github-note">
-              For more on the algorithm,
-              <a href="https://www.github.com/hitontology/gui">view on GitHub</a>.
-            </p>
+            <div class="svg-text-wrapper">
+              <svg width="32" height="48" id="leftclick">
+                <rect name="mousebody" width="32" height="48" rx="15" fill="darkcyan"/>
+                <path name="lmb" d="M0 24 L16 24 L16 0 C0 0, -1 0, 0 24" fill="cyan"/>
+                <path name="rmb" d="M32 24 L16 24 L16 0 C32 0, 33 0, 32 24" fill="lightgrey"/>
+                <rect name="mmb" width="6" height="12" rx="5" x="13" y="6" fill="darkslategrey" />
+              </svg>
+              <span class="svg-label">Click (primary mouse button, with touch: short tap) to select source node</span>
+            </div>
+           <div class="svg-text-wrapper">
+            <svg width="32" height="48" id="rightclick">
+              <rect name="mousebody" width="32" height="48" rx="15" fill="darkcyan"/>
+              <path name="lmb" d="M0 24 L16 24 L16 0 C0 0, -1 0, 0 24" fill="lightgrey"/>
+              <path name="rmb" d="M32 24 L16 24 L16 0 C32 0, 33 0, 32 24" fill="cyan"/>
+              <rect name="mmb" width="6" height="12" rx="5" x="13" y="6" fill="darkslategrey" />
+            </svg>
+            <span class="svg-label">Context Menu (secondary mouse button, with touch: long tap) to select target node</span>
           </div>
+          <div class="legend-explanation">
+            <span>For an in-depth explanation, <a href="https://www.github.com/hitontology/gui">view on GitHub</a>.</span>
+          </div>
+        </div>
           <!--<div id="bottom-container" class="ag-theme-quartz">
           <h1>HITO Search with Cytoscape</h1>
           <p>To select source node press LMB, for target node press RMB</p>
