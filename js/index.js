@@ -29,17 +29,28 @@ let targetElement = null;
 let cy;
 let lastPath = null;
 
-function showPath(path) {
+function showPath(validPaths) {
   if (lastPath) {
-    lastPath.forEach((ele) => document.getElementById(ele.id()).classList.remove("path"));
+    for (let i = 0; i < lastPath.length; i++) {
+      const path = lastPath[i];
+      path.forEach((ele) => {
+        const domEle = document.getElementById(ele.id());
+        domEle.classList.remove("path");
+        domEle.classList.remove("path" + i);
+      });
+    }
   }
-  lastPath = path;
-  for (let i = 0; i < path.size(); i++) {
-    const id = path[i].id();
-    const domEle = document.getElementById(id);
-    domEle.classList.add("path");
+  lastPath = validPaths;
+  for (let i = validPaths.length - 1; i >= 0; i--) {
+    const path = validPaths[i];
+    for (let j = 0; j < path.size(); j++) {
+      const id = path[j].id();
+      const domEle = document.getElementById(id);
+      domEle.classList.add("path" + i);
+      domEle.classList.add("path");
+    }
   }
-  table(path);
+  //table(path);
   /*
   for (let i = 0; i < path.size() / 2 - 1; i++) {
     const node = path[i * 2];
@@ -89,11 +100,12 @@ function selectTarget(e, id) {
     const legend = document.getElementById("legend");
     legend.classList.add("legend-hidden");
 
-    if (validPaths.length == 1) {
+    /*if (validPaths.length == 1) {
       showPath(validPaths[0]);
       return;
-    }
-
+    }*/
+    showPath(validPaths);
+    return;
     MicroModal.show("modal-choose-path");
     const table = document.getElementById("choose-path-table");
     table.innerHTML = "";
