@@ -10,17 +10,11 @@
   background-color: none !important;
   opacity: 0;
 }
-
-.svg-text-wrapper {
-  vertical-align: middle;
-  position: relative;
-}
-.svg-label {
+.controls {
   font-size: 16pt;
   vertical-align: middle;
 }
-.svg-text-wrapper > *,
-.legend-explanation {
+.legend > * {
   vertical-align: middle;
   display: inline-block;
   margin: 10px 0;
