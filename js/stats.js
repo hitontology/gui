@@ -25,7 +25,7 @@ export function allPaths(cy) {
 export async function validate(path) {
   const query = pathQuery(path) + " LIMIT 1";
   // todo: "parallelize" i.e. Promise.all
-  const bindings = await select(query);
+  const bindings = await select(query, false, 3);
   return bindings.length > 0;
 }
 
@@ -49,13 +49,19 @@ async function validHashes(cy, ps) {
   return hashes;
 }
 
-// to speed up preprocessing, temporarily set local SPARQL endpoint in js/sparql.js
+/** To speed up preprocessing, temporarily set local SPARQL endpoint in js/sparql.js
+ * Still takes a few minutes even with local SPARQL endpoint on an Intel i9-12900k.
+ * Try if increasing Virtuoso buffer size significantly increases speed.
+ */
 export async function main() {
   document.write("loading graph...");
   const cy = await graph();
   document.write(cy.nodes().size() + " nodes, ", cy.edges().size() + " edges loaded.<br>");
   document.write("calculating all paths...");
   const ps = allPaths(cy);
+  //const ps = paths(cy, swp, study);
+  const swp = cy.getElementById("SoftwareProduct");
+  const study = cy.getElementById("Study");
   document.write(ps.length + " (symmetric), " + ps.length * 2 + " (total) <br>");
   const hashes = await validHashes(cy, ps);
   document.write(hashes.length + " valid hashes<br>");

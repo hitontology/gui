@@ -1,6 +1,14 @@
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 
+/** @returns a string representation of a Cytoscape path */
+export function toString(path) {
+  return path
+    .toArray()
+    .map((x) => x.id())
+    .reduce((a, b) => a + " " + b);
+}
+
 /**
  * @returns an array of paths without cycles from source to target treating all edges as undirected.
  * Each path is an ordered Cytoscape collection with alternating nodes and edges, nodes being at both endpoints.
@@ -56,7 +64,7 @@ export function pathHash(path) {
   const ids = path.map((ele) => ele.id());
   const s = ids.reduce((a, b) => a + b);
   const h = strHash(s);
-  console.log("hash for ", ids, ":", h);
+  //console.debug("hash for ", ids, ":", h);
   return h;
 }
 
