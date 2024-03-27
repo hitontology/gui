@@ -3,6 +3,13 @@
 New GUI for HITO with better user experience.
 Under heavy development, prototype available at <https://hitontology.github.io/gui/>.
 
+## Usage/Help/Summary
+
+The new GUI automatically shows every available path between the source and target node
+and then displays all instances which fulfill one path of the users' selection.
+To select the source node, the primary mouse button is used.
+To select the target node, the secondary mouse button is used.
+
 ## Local Development
 
 `git clone` this repository, run the `scripts/diagram-prepare.sh` shell script, `npm install` and open `index.html` in a browser.
