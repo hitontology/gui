@@ -8,7 +8,7 @@
         <path d="M0 0 L1431 0 L1431 574 L0 574 L0 0 Z"/>
       </clipPath>
     </defs>
-    <g id="ApplicationSystemTypeCitation">
+    <g id="ApplicationSystemTypeCitation" class="node">
         <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
           <rect x="459" y="282" width="205" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -21,7 +21,7 @@
           </g>
         </g>
     </g>
-    <g id="Certification">
+    <g id="Certification" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="80" y="238" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -34,7 +34,7 @@
           </g>
         </g>
     </g>
-    <g id="Client">
+    <g id="Client" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="80" y="273" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -47,7 +47,7 @@
           </g>
         </g>
     </g>
-    <g id="OperatingSystem">
+    <g id="OperatingSystem" class="node">
         <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
           <rect x="80" y="451" width="195" rx="4" ry="4" height="28" stroke="none"/>
         </g>
@@ -60,7 +60,7 @@
           </g>
         </g>
     </g>
-    <g id="DatabaseManagementSystem">
+    <g id="DatabaseManagementSystem" class="node">
         <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
           <rect x="80" y="203" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -73,7 +73,7 @@
           </g>
         </g>
     </g>
-    <g id="EnterpriseFunctionCitation">
+    <g id="EnterpriseFunctionCitation" class="node">
         <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
           <rect x="741" y="282" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -86,7 +86,7 @@
           </g>
         </g>
     </g>
-    <g id="FeatureCitation">
+    <g id="FeatureCitation" class="node">
         <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
           <rect x="1033" y="283" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -99,7 +99,7 @@
           </g>
         </g>
     </g>
-    <g id="Interoperability">
+    <g id="Interoperability" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="80" y="343" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -112,7 +112,7 @@
           </g>
         </g>
     </g>
-    <g id="OrganizationalUnitCitation">
+    <g id="OrganizationalUnitCitation" class="node">
         <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
           <rect x="404" y="479" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -125,7 +125,7 @@
           </g>
         </g>
     </g>
-    <g id="ProgrammingLibrary">
+    <g id="ProgrammingLibrary" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="80" y="522" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -138,7 +138,7 @@
           </g>
         </g>
     </g>
-    <g id="SoftwareProduct">
+    <g id="SoftwareProduct" class="node">
         <g fill="silver" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="silver">
           <rect x="419" y="367" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -151,7 +151,7 @@
           </g>
         </g>
     </g>
-    <g id="UserGroupCitation">
+    <g id="UserGroupCitation" class="node">
         <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
           <rect x="664.0" y="479" width="190" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -164,7 +164,7 @@
           </g>
         </g>
     </g>
-    <g id="Language">
+    <g id="Language" class="node">
         <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
           <rect x="80" y="379" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -177,7 +177,7 @@
           </g>
         </g>
     </g>
-    <g id="License">
+    <g id="License" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="80" y="415" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -190,7 +190,7 @@
           </g>
         </g>
     </g>
-    <g id="ProgrammingLanguage">
+    <g id="ProgrammingLanguage" class="node">
         <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
           <rect x="80" y="486" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -203,7 +203,7 @@
           </g>
         </g>
     </g>
-    <g id="EnterpriseFunctionClassified">
+    <g id="EnterpriseFunctionClassified" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="741" y="212" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -216,7 +216,7 @@
           </g>
         </g>
     </g>
-    <g id="EnterpriseFunctionCatalogue">
+    <g id="EnterpriseFunctionCatalogue" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="741" y="138" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -229,7 +229,7 @@
           </g>
         </g>
     </g>
-    <g id="FeatureClassified">
+    <g id="FeatureClassified" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="1033" y="212" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -242,7 +242,7 @@
           </g>
         </g>
     </g>
-    <g id="FeatureCatalogue">
+    <g id="FeatureCatalogue" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="1033" y="141" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -255,7 +255,7 @@
           </g>
         </g>
     </g>
-    <g id="OrganizationalUnitClassified">
+    <g id="OrganizationalUnitClassified" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="429" y="550" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -268,7 +268,7 @@
           </g>
         </g>
     </g>
-    <g id="OrganizationalUnitCatalogue">
+    <g id="OrganizationalUnitCatalogue" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="429" y="622" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -281,7 +281,7 @@
           </g>
         </g>
     </g>
-    <g id="UserGroupClassified">
+    <g id="UserGroupClassified" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="679" y="550" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -294,7 +294,7 @@
           </g>
         </g>
     </g>
-    <g id="UserGroupCatalogue">
+    <g id="UserGroupCatalogue" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="679" y="622" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -307,7 +307,7 @@
           </g>
         </g>
     </g>
-    <g id="ApplicationSystemTypeClassified">
+    <g id="ApplicationSystemTypeClassified" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="459" y="209" width="205" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -320,7 +320,7 @@
           </g>
         </g>
     </g>
-    <g id="ApplicationSystemTypeCatalogue">
+    <g id="ApplicationSystemTypeCatalogue" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="459" y="137" width="205" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -359,7 +359,7 @@
         </g>
       </g>
     </g>
-    <g id="Study">
+    <g id="Study" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="1009" y="436" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -411,7 +411,7 @@
         </g>
       </g>
     </g>
-    <g id="Journal">
+    <g id="Journal" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="1172" y="637" width="103" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -424,7 +424,7 @@
           </g>
         </g>
     </g>
-    <g id="OutcomeCriteriaCitation">
+    <g id="OutcomeCriteriaCitation" class="node">
         <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
           <rect x="1309" y="325" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -437,7 +437,7 @@
           </g>
         </g>
     </g>
-    <g id="StudyMethod">
+    <g id="StudyMethod" class="node">
         <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
           <rect x="1309" y="283" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -450,7 +450,7 @@
           </g>
         </g>
     </g>
-    <g id="OutcomeCriteriaClassified">
+    <g id="OutcomeCriteriaClassified" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="1312" y="381" width="195" rx="4" ry="4" height="28" stroke="none"/>
         </g>
@@ -463,7 +463,7 @@
           </g>
         </g>
     </g>
-    <g id="ExperimentalStudyRCT">
+    <g id="ExperimentalStudyRCT" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="1315" y="479" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -476,7 +476,7 @@
           </g>
         </g>
     </g>
-    <g id="LabStudy">
+    <g id="LabStudy" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="1315" y="639" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -489,7 +489,7 @@
           </g>
         </g>
     </g>
-    <g id="NonExperimentalStudy">
+    <g id="NonExperimentalStudy" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="1315" y="519" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -502,7 +502,7 @@
           </g>
         </g>
     </g>
-    <g id="QuasiExperimentalStudy">
+    <g id="QuasiExperimentalStudy" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="1315" y="599" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -515,7 +515,7 @@
           </g>
         </g>
     </g>
-    <g id="ValidationStudy">
+    <g id="ValidationStudy" class="node">
         <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
           <rect x="1315" y="559" width="195" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -528,7 +528,7 @@
           </g>
         </g>
     </g>
-    <g id="OutcomeCriteriaCatalogue">
+    <g id="OutcomeCriteriaCatalogue" class="node">
         <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
           <rect x="1309" y="436" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
         </g>
@@ -603,7 +603,7 @@
         </g>
       </g>
     </g>
-    <g id="supportsFunction">
+    <g id="supportsFunction" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1032.9847 297 L942.2941 297" class="arrow-body" />
           <path class="arrow-head" d="M942.2941 297 L954.2941 303 L954.2941 291 Z" stroke="none"/>
@@ -624,7 +624,7 @@
           </g>
         </g>
     </g>
-    <g id="softwareProductComponent">
+    <g id="softwareProductComponent" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M423.9066 403.8288 L423.8906 403.9275 L424.1743 409.5606 L425.6222 415.4044 L426.7789 418.224 L428.2254 420.9459 L429.9628 423.5479 L431.992 426.008 L434.2587 428.2511 L436.6931 430.2165 L439.2732 431.903 L441.9767 433.3097 L447.6658 435.2797 L453.5834 436.1183 L459.5526 435.8177 L465.3965 434.3698 L468.216 433.2131 L470.9379 431.7666 L473.5399 430.0292 L476 428 L478.2431 425.7333 L480.2085 423.2989 L481.895 420.7188 L483.3017 418.0153 L485.2717 412.3262 L486.1104 406.4086 L485.8097 400.4394 L484.9613 397.0153"/>
           <path fill="white" d="M424.9582 396.9083 L428.8499 404.58 L422.855 410.7494 L418.9633 403.0777 Z" stroke="none"/>
@@ -646,7 +646,7 @@
           </g>
         </g>
     </g>
-    <g id="databaseManagementSystem">
+    <g id="databaseManagementSystem" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L388 218 L275.0156 218" class="arrow-body" />
           <path class="arrow-head" d="M275.0156 218 L287.0156 224 L287.0156 212 Z" stroke="none"/>
@@ -667,7 +667,7 @@
           </g>
         </g>
     </g>
-    <g id="spSupportsEfCit">
+    <g id="spSupportsEfCit" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M614.0276 373.7449 L841 374 L841.5032 312.0015" class="arrow-body" />
           <path class="arrow-head" d="M841.5032 312.0015 L835.406 323.9524 L847.4056 324.0498 Z" stroke="none"/>
@@ -688,7 +688,7 @@
           </g>
         </g>
     </g>
-    <g id="certification">
+    <g id="certification" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L387 253 L275.0126 253" class="arrow-body" />
           <path class="arrow-head" d="M275.0126 253 L287.0126 259 L287.0126 247 Z" stroke="none"/>
@@ -709,7 +709,7 @@
           </g>
         </g>
     </g>
-    <g id="client">
+    <g id="client" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L388 288 L275.0156 288" class="arrow-body" />
           <path class="arrow-head" d="M275.0156 288 L287.0156 294 L287.0156 282 Z" stroke="none"/>
@@ -730,7 +730,7 @@
           </g>
         </g>
     </g>
-    <g id="spUsedInOuCit">
+    <g id="spUsedInOuCit" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M537.5 397.0128 L537.5 478.9699" class="arrow-body" />
           <path class="arrow-head" d="M537.5 478.9699 L543.5 466.9699 L531.5 466.9699 Z" stroke="none"/>
@@ -751,7 +751,7 @@
           </g>
         </g>
     </g>
-    <g id="interoperability">
+    <g id="interoperability" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L388 358 L275.0156 358" class="arrow-body" />
           <path class="arrow-head" d="M275.0156 358 L287.0156 364 L287.0156 352 Z" stroke="none"/>
@@ -772,7 +772,7 @@
           </g>
         </g>
     </g>
-    <g id="operatingSystem">
+    <g id="operatingSystem" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L386 465 L275.0053 465" class="arrow-body" />
           <path class="arrow-head" d="M275.0053 465 L287.0053 471 L287.0053 459 Z" stroke="none"/>
@@ -793,7 +793,7 @@
           </g>
         </g>
     </g>
-    <g id="programmingLibrary">
+    <g id="programmingLibrary" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L385 537 L274.9936 537" class="arrow-body" />
           <path class="arrow-head" d="M274.9936 537 L286.9936 543 L286.9936 531 Z" stroke="none"/>
@@ -814,7 +814,7 @@
           </g>
         </g>
     </g>
-    <g id="spIsOfAstCit">
+    <g id="spIsOfAstCit" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M560.5 366.9924 L561.2856 312.0033" class="arrow-body" />
           <path class="arrow-head" d="M561.2856 312.0033 L555.1148 323.9163 L567.1136 324.0878 Z" stroke="none"/>
@@ -836,7 +836,7 @@
           </g>
         </g>
     </g>
-    <g id="spOffersFCit">
+    <g id="spOffersFCit" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M613.8495 394.002 L1134 397 L1133.6819 313.0337" class="arrow-body" />
           <path class="arrow-head" d="M1133.6819 313.0337 L1127.7274 325.0564 L1139.7274 325.0108 Z" stroke="none"/>
@@ -857,7 +857,7 @@
           </g>
         </g>
     </g>
-    <g id="spUsedByUserCit">
+    <g id="spUsedByUserCit" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M603.5 397 L604 434 L776 434 L776 478.9726" class="arrow-body" />
           <path class="arrow-head" d="M776 478.9726 L782 466.9726 L770 466.9726 Z" stroke="none"/>
@@ -878,7 +878,7 @@
           </g>
         </g>
     </g>
-    <g id="language">
+    <g id="language" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L381 394 L275.027 394" class="arrow-body" />
           <path class="arrow-head" d="M275.027 394 L287.027 400 L287.027 388 Z" stroke="none"/>
@@ -899,7 +899,7 @@
           </g>
         </g>
     </g>
-    <g id="license">
+    <g id="license" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L384 430 L274.9775 430" class="arrow-body" />
           <path class="arrow-head" d="M274.9775 430 L286.9775 436 L286.9775 424 Z" stroke="none"/>
@@ -920,7 +920,7 @@
           </g>
         </g>
     </g>
-    <g id="programmingLanguage">
+    <g id="programmingLanguage" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L388 501 L275.0156 501" class="arrow-body" />
           <path class="arrow-head" d="M275.0156 501 L287.0156 507 L287.0156 495 Z" stroke="none"/>
@@ -941,7 +941,7 @@
           </g>
         </g>
     </g>
-    <g id="spSupportsEfCla">
+    <g id="spSupportsEfCla" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M611.0238 367.1265 L719 368 L719 227 L741.0043 227" class="arrow-body" />
           <path class="arrow-head" d="M741.0043 227 L729.0043 221 L729.0043 233 Z" stroke="none"/>
@@ -962,7 +962,7 @@
           </g>
         </g>
     </g>
-    <g id="efCitClassifiedAs">
+    <g id="efCitClassifiedAs" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M841.625 281.9951 L841.625 242.0109" class="arrow-body" />
           <path class="arrow-head" d="M841.625 242.0109 L835.625 254.0109 L847.625 254.0109 Z" stroke="none"/>
@@ -983,7 +983,7 @@
           </g>
         </g>
     </g>
-    <g id="subFunctionOf">
+    <g id="subFunctionOf" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M915.918 242.0021 L915.8125 243.1875 L916.1754 246.4082 L917.1428 249.4007 L918.6499 252.1012 L920.6313 254.4463 L923.0222 256.3723 L925.7573 257.8156 L928.7716 258.7127 L932 259 L935.2208 258.6371 L938.2132 257.6696 L940.9138 256.1626 L943.2588 254.1811 L945.1848 251.7903 L946.6281 249.0552 L947.5252 246.0409 L947.8125 242.8125 L947.5667 240.6304 L942.2359 230.8943" class="arrow-body" />
           <path class="arrow-head" d="M942.2359 230.8943 L942.7313 244.3015 L953.2589 238.5423 Z" stroke="none"/>
@@ -1004,7 +1004,7 @@
           </g>
         </g>
     </g>
-    <g id="efClaFrom">
+    <g id="efClaFrom" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M841.625 212.0049 L841.625 168.0105" class="arrow-body" />
           <path class="arrow-head" d="M841.625 168.0105 L835.625 180.0105 L847.625 180.0105 Z" stroke="none"/>
@@ -1025,7 +1025,7 @@
           </g>
         </g>
     </g>
-    <g id="spOffersFCla">
+    <g id="spOffersFCla" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M614.027 381.9987 L1006 381 L1006 240 L1033.1171 239.0127" class="arrow-body" />
           <path class="arrow-head" d="M1033.1171 239.0127 L1020.9067 233.4533 L1021.3433 245.4453 Z" stroke="none"/>
@@ -1046,7 +1046,7 @@
           </g>
         </g>
     </g>
-    <g id="fCitClassifiedAs">
+    <g id="fCitClassifiedAs" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1133.625 282.9888 L1133.625 242.0087" class="arrow-body" />
           <path class="arrow-head" d="M1133.625 242.0087 L1127.625 254.0087 L1139.625 254.0087 Z" stroke="none"/>
@@ -1067,7 +1067,7 @@
           </g>
         </g>
     </g>
-    <g id="subFeatureOf">
+    <g id="subFeatureOf" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1212.1619 242.0217 L1212.1193 242.8902 L1212.6366 246.4697 L1213.8627 249.9372 L1215.8126 253.1875 L1218.3719 255.9832 L1221.3461 258.147 L1224.6294 259.6635 L1228.1167 260.5174 L1231.7028 260.6933 L1235.2822 260.1759 L1238.7498 258.9499 L1242.0001 257 L1244.7958 254.4406 L1246.9596 251.4665 L1248.4761 248.1832 L1249.33 244.6958 L1249.5059 241.1098 L1248.9884 237.5303 L1247.7625 234.0628 L1245.8125 230.8125 L1243.9705 228.8003 L1234.1555 223.616" class="arrow-body" />
           <path class="arrow-head" d="M1234.1555 223.616 L1241.9603 234.5286 L1247.5685 223.9197 Z" stroke="none"/>
@@ -1088,7 +1088,7 @@
           </g>
         </g>
     </g>
-    <g id="supportsFunctionClassified">
+    <g id="supportsFunctionClassified" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1033.0142 229 L942.2823 229" class="arrow-body" />
           <path class="arrow-head" d="M942.2823 229 L954.2823 235 L954.2823 223 Z" stroke="none"/>
@@ -1109,7 +1109,7 @@
           </g>
         </g>
     </g>
-    <g id="fClaFrom">
+    <g id="fClaFrom" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1133.625 211.9888 L1133.625 171.0087" class="arrow-body" />
           <path class="arrow-head" d="M1133.625 171.0087 L1127.625 183.0087 L1139.625 183.0087 Z" stroke="none"/>
@@ -1130,7 +1130,7 @@
           </g>
         </g>
     </g>
-    <g id="spUsedInOuCla">
+    <g id="spUsedInOuCla" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M561.5071 397.0195 L562 468 L612 468 L611.5 549.9731" class="arrow-body" />
           <path class="arrow-head" d="M611.5 549.9731 L617.5731 538.0099 L605.5733 537.9368 Z" stroke="none"/>
@@ -1151,7 +1151,7 @@
           </g>
         </g>
     </g>
-    <g id="ouCitClassifiedAs">
+    <g id="ouCitClassifiedAs" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M518.5077 509.0251 L518.8149 549.9881" class="arrow-body" />
           <path class="arrow-head" d="M518.8149 549.9881 L524.7247 537.9435 L512.7251 538.0334 Z" stroke="none"/>
@@ -1172,7 +1172,7 @@
           </g>
         </g>
     </g>
-    <g id="ouClaFrom">
+    <g id="ouClaFrom" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M518.9753 580 L518.9753 621.9772" class="arrow-body" />
           <path class="arrow-head" d="M518.9753 621.9772 L524.9753 609.9772 L512.9753 609.9772 Z" stroke="none"/>
@@ -1193,7 +1193,7 @@
           </g>
         </g>
     </g>
-    <g id="spUsedByUserCla">
+    <g id="spUsedByUserCla" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M588.5 397 L589 446 L659 446 L659 565 L678.9945 565" class="arrow-body" />
           <path class="arrow-head" d="M678.9945 565 L666.9945 559 L666.9945 571 Z" stroke="none"/>
@@ -1214,7 +1214,7 @@
           </g>
         </g>
     </g>
-    <g id="userCitClassifiedAs">
+    <g id="userCitClassifiedAs" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M776.5 509.0101 L776.5 549.991" class="arrow-body" />
           <path class="arrow-head" d="M776.5 549.991 L782.5 537.991 L770.5 537.991 Z" stroke="none"/>
@@ -1235,7 +1235,7 @@
           </g>
         </g>
     </g>
-    <g id="userClaFrom">
+    <g id="userClaFrom" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M776.5 580.0117 L776.5 622.0016" class="arrow-body" />
           <path class="arrow-head" d="M776.5 622.0016 L782.5 610.0016 L770.5 610.0016 Z" stroke="none"/>
@@ -1256,7 +1256,7 @@
           </g>
         </g>
     </g>
-    <g id="spIsOfAstCla">
+    <g id="spIsOfAstCla" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M443.8886 367.0064 L444 224 L459.0386 224" class="arrow-body" />
           <path class="arrow-head" d="M459.0386 224 L447.0386 218 L447.0386 230 Z" stroke="none"/>
@@ -1277,7 +1277,7 @@
           </g>
         </g>
     </g>
-    <g id="astCitClassifiedAs">
+    <g id="astCitClassifiedAs" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M561.5 281.9937 L561.5 238.9798" class="arrow-body" />
           <path class="arrow-head" d="M561.5 238.9798 L555.5 250.9798 L567.5 250.9798 Z" stroke="none"/>
@@ -1298,7 +1298,7 @@
           </g>
         </g>
     </g>
-    <g id="astClaSupportsEfCla">
+    <g id="astClaSupportsEfCla" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M664.009 223.8556 L740.9799 223.7472" class="arrow-body" />
           <path class="arrow-head" d="M740.9799 223.7472 L728.9715 217.7641 L728.9884 229.7641 Z" stroke="none"/>
@@ -1319,7 +1319,7 @@
           </g>
         </g>
     </g>
-    <g id="astClaFrom">
+    <g id="astClaFrom" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M561.5 208.9883 L561.5 166.9984" class="arrow-body" />
           <path class="arrow-head" d="M561.5 166.9984 L555.5 178.9984 L567.5 178.9984 Z" stroke="none"/>
@@ -1340,7 +1340,7 @@
           </g>
         </g>
     </g>
-    <g id="homepage">
+    <g id="homepage" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L388 323 L275 323" class="arrow-body" />
           <path class="arrow-head" d="M275 323 L287 329 L287 317 Z" stroke="none"/>
@@ -1361,7 +1361,7 @@
           </g>
         </g>
     </g>
-    <g id="repository">
+    <g id="repository" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M418.9994 382 L383 573 L275 573" class="arrow-body" />
           <path class="arrow-head" d="M275 573 L287 579 L287 567 Z" stroke="none"/>
@@ -1382,7 +1382,7 @@
           </g>
         </g>
     </g>
-    <g id="evaluatesApplicationSystemType">
+    <g id="evaluatesApplicationSystemType" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1008.9782 443.2828 L801 443 L801 407 L647 407 L646.5105 312.0366" class="arrow-body" />
           <path class="arrow-head" d="M646.5105 312.0366 L640.5724 324.0674 L652.5723 324.0055 Z" stroke="none"/>
@@ -1403,7 +1403,7 @@
           </g>
         </g>
     </g>
-    <g id="evaluatesApplicationSystemTypeHavingUserGroup">
+    <g id="evaluatesApplicationSystemTypeHavingUserGroup" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1041.8943 465.9912 L1042 494 L854.2939 494" class="arrow-body" />
           <path class="arrow-head" d="M854.2939 494 L866.2939 500 L866.2939 488 Z" stroke="none"/>
@@ -1424,7 +1424,7 @@
           </g>
         </g>
     </g>
-    <g id="evaluatesApplicationSystemTypeUsedInUnit">
+    <g id="evaluatesApplicationSystemTypeUsedInUnit" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1047.7767 466 L1048 665 L408 665 L408.4701 508.9875" class="arrow-body" />
           <path class="arrow-head" d="M408.4701 508.9875 L402.4339 520.9694 L414.4339 521.0056 Z" stroke="none"/>
@@ -1445,7 +1445,7 @@
           </g>
         </g>
     </g>
-    <g id="evaluatesProduct">
+    <g id="evaluatesProduct" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1008.9994 451 L790 451 L790 426 L613 426 L612.5181 396.1201" class="arrow-body" />
           <path class="arrow-head" d="M612.5181 396.1201 L606.7123 408.2153 L618.7108 408.0218 Z" stroke="none"/>
@@ -1466,7 +1466,7 @@
           </g>
         </g>
     </g>
-    <g id="evaluatesApplicationSystemTypeHavingFeature">
+    <g id="evaluatesApplicationSystemTypeHavingFeature" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1197.5 435.8181 L1198 413 L1197.6289 313.0356" class="arrow-body" />
           <path class="arrow-head" d="M1197.6289 313.0356 L1191.6735 325.0578 L1203.6733 325.0133 Z" stroke="none"/>
@@ -1487,7 +1487,7 @@
           </g>
         </g>
     </g>
-    <g id="firstAuthor">
+    <g id="firstAuthor" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1068.2555 465.9771 L1088 534 L1172 534" class="arrow-body" />
           <path class="arrow-head" d="M1172 534 L1160 528 L1160 540 Z" stroke="none"/>
@@ -1508,7 +1508,7 @@
           </g>
         </g>
     </g>
-    <g id="pmid">
+    <g id="pmid" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1067.4907 465.9756 L1087 573 L1172 573" class="arrow-body" />
           <path class="arrow-head" d="M1172 573 L1160 567 L1160 579 Z" stroke="none"/>
@@ -1529,7 +1529,7 @@
           </g>
         </g>
     </g>
-    <g id="publishedInYear">
+    <g id="publishedInYear" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1068.647 465.969 L1081 612 L1172 612" class="arrow-body" />
           <path class="arrow-head" d="M1172 612 L1160 606 L1160 618 Z" stroke="none"/>
@@ -1550,7 +1550,7 @@
           </g>
         </g>
     </g>
-    <g id="publishedInJournal">
+    <g id="publishedInJournal" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1068.0309 466 L1073 652 L1172.0228 652" class="arrow-body" />
           <path class="arrow-head" d="M1172.0228 652 L1160.0228 646 L1160.0228 658 Z" stroke="none"/>
@@ -1571,7 +1571,7 @@
           </g>
         </g>
     </g>
-    <g id="ocEvaluatesOcCit">
+    <g id="ocEvaluatesOcCit" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1204.0201 451 L1291 451 L1291 426 L1291 394 L1291 368 L1291 340 L1308.9849 340" class="arrow-body" />
           <path class="arrow-head" d="M1308.9849 340 L1296.9849 334 L1296.9849 346 Z" stroke="none"/>
@@ -1592,7 +1592,7 @@
           </g>
         </g>
     </g>
-    <g id="studyMethod">
+    <g id="studyMethod" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1203.9733 440.4896 L1285 440 L1285 298 L1309.0061 298" class="arrow-body" />
           <path class="arrow-head" d="M1309.0061 298 L1297.0061 292 L1297.0061 304 Z" stroke="none"/>
@@ -1613,7 +1613,7 @@
           </g>
         </g>
     </g>
-    <g id="ocCitClassifiedAs">
+    <g id="ocCitClassifiedAs" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1409.5908 355.0122 L1409.5319 380.9808" class="arrow-body" />
           <path class="arrow-head" d="M1409.5319 380.9808 L1415.5592 368.9945 L1403.5592 368.9672 Z" stroke="none"/>
@@ -1674,7 +1674,7 @@
         </g>
       </g>
     </g>
-    <g id="ocClaFrom">
+    <g id="ocClaFrom" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1409.5312 408.9727 L1409.5916 436.0196" class="arrow-body" />
           <path class="arrow-head" d="M1409.5916 436.0196 L1415.5648 424.0062 L1403.5648 424.033 Z" stroke="none"/>
