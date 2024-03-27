@@ -5,20 +5,25 @@ svg {
 .source > g:first-child {
   fill: rgb(120, 120, 200) !important;
 }
+.source > g:nth-child(2) {
+  stroke-width: 5px !important;
+}
 
 .target > g:first-child {
   fill: rgb(100, 160, 200) !important;
 }
+.target > g:nth-child(2) {
+  stroke-width: 5px !important;
+}
 
-.path > g:first-child {
+.path.node > g:first-child {
   fill: rgb(200, 200, 100) !important;
 }
 
-.path > g:first-child > .arrow-body {
-  stroke: rgb(170, 170, 85) !important;
-  stroke-width: 5px !important;
+.path .arrow-body {
+  stroke-width: 5px;
 }
-.path > g:first-child > .arrow-head {
+.path .arrow-head {
   stroke: none !important;
   fill: none !important;
 }
