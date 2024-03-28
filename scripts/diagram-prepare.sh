@@ -4,7 +4,8 @@ SCRIPTPATH=`dirname "$0"`
 SCRIPTPATH=`( cd "$SCRIPTPATH" && pwd )`
 IMGPATH=`( cd "$SCRIPTPATH/../img" && pwd )`
 
-wget https://hitontology.eu/public/2024-03-hito_diagram.svg -O $IMGPATH/diagram.svg
+wget -nc https://hitontology.eu/public/2024-03-hito_diagram.svg -O $IMGPATH/tmp.svg
+cp $IMGPATH/tmp.svg $IMGPATH/diagram.svg
 
 echo "modifying $IMGPATH/diagram.svg..."
 # Preprocessing
