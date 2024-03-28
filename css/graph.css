@@ -31,3 +31,28 @@ svg {
 .isolated {
   fill: rgb(200, 200, 200) !important;
 }
+
+.path0 {
+  stroke: gold !important;
+}
+.path1 {
+  stroke: red !important;
+}
+.path2 {
+  stroke: blue !important;
+}
+.path3 {
+  stroke: darkgreen !important;
+}
+.path4 {
+  stroke: orange !important;
+}
+.path5 {
+  stroke: deeppink !important;
+}
+.path6 {
+  stroke: cyan !important;
+}
+.path7 {
+  stroke: green !important;
+}

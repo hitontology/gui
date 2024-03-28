@@ -36,7 +36,10 @@ function showPath(validPaths) {
       path.forEach((ele) => {
         const domEle = document.getElementById(ele.id());
         domEle.classList.remove("path");
-        domEle.classList.remove("path" + i);
+        const arrowBodyEle = document.getElementById(ele.id() + "ArrowBody");
+        if (arrowBodyEle) {
+          arrowBodyEle.classList.remove("path" + i);
+        }
       });
     }
   }
@@ -46,8 +49,11 @@ function showPath(validPaths) {
     for (let j = 0; j < path.size(); j++) {
       const id = path[j].id();
       const domEle = document.getElementById(id);
-      domEle.classList.add("path" + i);
       domEle.classList.add("path");
+      const arrowBodyEle = document.getElementById(id + "ArrowBody");
+      if (arrowBodyEle) {
+        arrowBodyEle.classList.add("path" + i);
+      }
     }
   }
   //table(path);
