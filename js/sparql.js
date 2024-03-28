@@ -2,7 +2,7 @@ const HITO = {
   //GRAPH: "",
   PREFIX: "http://hitontology.eu/ontology/",
   ENDPOINT: "https://hitontology.eu/sparql",
- // ENDPOINT: "http://127.0.0.1:8102/sparql", // local HITO Docker Compose for faster preprocessing
+  // ENDPOINT: "http://127.0.0.1:8102/sparql", // local HITO Docker Compose for faster preprocessing
 };
 
 /** Query public HITO SPARQL endpoint with a SELECT query.

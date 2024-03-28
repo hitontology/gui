@@ -14,7 +14,6 @@ To select the target node, the secondary mouse button is used.
 
 `git clone` this repository, run the `scripts/diagram-prepare.sh` shell script, `npm install` and open `index.html` in a browser.
 You need a webserver, for example locally with `python -m http.server` and then open <http://0.0.0.0:8000/>.
-We use plain JavaScript with ES6 modules, no fancy framework, build tool or TypeScript.
 
     git clone git@github.com:hitontology/gui.git
     cd gui
@@ -27,7 +26,7 @@ We use plain JavaScript with ES6 modules, no fancy framework, build tool or Type
 Pull requests are encouraged.
 Please use [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) prefixes: fix, feat, build, chore, ci, docs, style, refactor, perf, test...
 For example: `git commit -m "fix: useful commit message, resolves #123"`.
-Format before committing: `npm run fmt`.
+Format before committing: `npm run fmt` or `prettier -w .`.
 
 ## Background
 
@@ -74,3 +73,18 @@ Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
     > firstAuthor>FirstAuthor
 
 - A search string can now be entered for the first column. In the first column, all instances of the corresponding class containing the search string are listed. In column n (n=2,...,LastColumn), all instances of the corresponding class are listed that are related to an entry from column n-1 via the specified edge.
+
+## Technologies Used
+
+- **JavaScript:** Vanilla JS with ES6 modules
+- **Compatibility** latest versions of Firefox and Chrome (earlier probably work a long while back but aren't targeted or explicitly tested)
+- **Testing:** Vitest for unit testing
+- **Formatting:** Prettier
+- **Linting** Oxlint
+- **Dependencies:**
+  Directly imported from CDNs for easy deployment to GitHub Pages (no build step needed)
+  _ AG Grid (results table)
+  _ svg.js (SVG manipulation)
+  _ Cytoscape.js (graph functionality)
+  _ Micromodal (for path selection, currently being replaced) \* notyf (pop-up notifications)
+- **Build:** No bundling process involved
