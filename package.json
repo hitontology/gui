@@ -27,12 +27,5 @@
     "prettier": "^3.2.5",
     "vitest": "^1.4.0"
   },
-  "dependencies": {
-    "@ag-grid-community/client-side-row-model": "^31.1.1",
-    "@ag-grid-community/core": "^31.1.1",
-    "@ag-grid-community/styles": "^31.1.1",
-    "@svgdotjs/svg.js": "^3.2.0",
-    "cytoscape": "^3.28.1",
-    "micromodal": "^0.4.10"
-  }
+  "dependencies": {}
 }
