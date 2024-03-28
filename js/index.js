@@ -49,10 +49,24 @@ function showPath(validPaths) {
     for (let j = 0; j < path.size(); j++) {
       const id = path[j].id();
       const domEle = document.getElementById(id);
+      const duplicate = domEle.classList.contains("path");
       domEle.classList.add("path");
-      const arrowBodyEle = document.getElementById(id + "ArrowBody");
+      let arrowBodyEle = document.getElementById(id + "ArrowBody");
       if (arrowBodyEle) {
-        arrowBodyEle.classList.add("path" + i);
+        if (duplicate) {
+          console.log("cloning");
+          const clone = SVG(arrowBodyEle).clone();
+          clone.addClass("clone");
+          for (let i = validPaths.length - 1; i >= 0; i--) {
+            clone.removeClass("path" + i);
+          }
+          clone.addClass("path" + i);
+          // todo: determine shift direction based on line direction
+          clone.translate(7, 7);
+          SVG(arrowBodyEle.parentElement).add(clone);
+        } else {
+          arrowBodyEle.classList.add("path" + i);
+        }
       }
     }
   }
