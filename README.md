@@ -13,13 +13,14 @@ To select the target node, the secondary mouse button is used.
 ## Local Development
 
 `git clone` this repository, run the `scripts/diagram-prepare.sh` shell script, `npm install` and open `index.html` in a browser.
-You need a webserver, for example locally with `python -m http.server` and then open <http://0.0.0.0:8000/>.
+You need a webserver, for example locally with serve, `npm run dev` and then open <http://localhost:3000/>.
+We recommend against `python -m http.server` because this will cache local files and can thus show you outdated versions.
 
     git clone git@github.com:hitontology/gui.git
     cd gui
     scripts/downloadimage
     npm install
-    python -m http.server
+    npm run dev
 
 ## Contribute
 

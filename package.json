@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "serve",
     "fmt": "prettier -w .",
     "lint": "oxlint js",
     "test": "vitest"
@@ -25,7 +26,7 @@
   "devDependencies": {
     "oxlint": "^0.2.14",
     "prettier": "^3.2.5",
+    "serve": "^14.2.1",
     "vitest": "^1.4.0"
-  },
-  "dependencies": {}
+  }
 }
