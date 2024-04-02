@@ -50,13 +50,13 @@ function showPath(validPaths) {
     for (let j = 0; j < path.size(); j++) {
       const id = path[j].id();
       const domEle = document.getElementById(id);
-      const pathCount = (pathCounts.get(id) || 0) + 1;
+      const pathCount = (pathCounts.get(id) ?? -1) + 1;
       pathCounts.set(id, pathCount);
 
       domEle.classList.add("path");
       let arrowBodyEle = document.getElementById(id + "ArrowBody");
       if (arrowBodyEle) {
-        if (duplicate) {
+        if (pathCount > 0) {
           console.log("cloning");
           const clone = SVG(arrowBodyEle).clone();
           clone.addClass("clone");
@@ -64,9 +64,25 @@ function showPath(validPaths) {
             clone.removeClass("path" + i);
           }
           clone.addClass("path" + i);
-          // todo: determine shift direction based on line direction
-          // todo: shift additional clones further and in the other direction as well
-          clone.translate(7, 7);
+          // determine shift direction based on path direction
+          const d = arrowBodyEle
+            .getAttribute("d")
+            .replaceAll(/[^0-9. ]/g, "")
+            .split(" ");
+          console.log("d", d);
+          // vector between first and last point in the path
+          const [x, y] = [d.at(-2) - d[0], d.at(-1) - d[1]];
+          const norm = Math.hypot(x, y);
+          const [xn, yn] = [x / norm, y / norm];
+          // normal vector is (-y, x)
+          // shift additional clones further and in the other direction as well
+          // function from 0,1,2,3,4,... to 0,1,-1,2,-2,...
+          // bitwise and of a number with 1 returns 1 if it is even, 0 otherwise
+          const f = (x) => Math.floor((x + 1) / 2) * ((x & 1) * 2 - 1);
+          const multiplier = f(pathCount);
+          clone.translate(-7 * multiplier * yn, 7 * multiplier * xn);
+          // todo: this works perfectly well for single-line paths but is not optimal for multi-line paths
+          // shift each part of the path separately and adapt the connecting points?
           SVG(arrowBodyEle.parentElement).add(clone);
         } else {
           arrowBodyEle.classList.add("path" + i);
