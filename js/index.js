@@ -44,12 +44,15 @@ function showPath(validPaths) {
     }
   }
   lastPath = validPaths;
+  const pathCounts = new Map();
   for (let i = validPaths.length - 1; i >= 0; i--) {
     const path = validPaths[i];
     for (let j = 0; j < path.size(); j++) {
       const id = path[j].id();
       const domEle = document.getElementById(id);
-      const duplicate = domEle.classList.contains("path");
+      const pathCount = (pathCounts.get(id) || 0) + 1;
+      pathCounts.set(id, pathCount);
+
       domEle.classList.add("path");
       let arrowBodyEle = document.getElementById(id + "ArrowBody");
       if (arrowBodyEle) {
@@ -62,6 +65,7 @@ function showPath(validPaths) {
           }
           clone.addClass("path" + i);
           // todo: determine shift direction based on line direction
+          // todo: shift additional clones further and in the other direction as well
           clone.translate(7, 7);
           SVG(arrowBodyEle.parentElement).add(clone);
         } else {
