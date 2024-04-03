@@ -8,6 +8,10 @@ import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.
 import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
 const notyf = new Notyf();
 
+const BASE_SEPARATION = 9;
+const COMPLEX_PATH_MULTIPLIER = 1.2;
+const MIN_TRANSLATION = 8;
+
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */
 async function main() {
@@ -30,6 +34,14 @@ let cy;
 let lastPath = null;
 
 function showPath(validPaths) {
+  Array.from(document.getElementsByClassName("clone")).forEach((c) => c.remove()); // clear previously shown paths
+
+  // 2d vector math and point representations:
+  // Vectors are two-element arrays [x,y], which allows easier manipulation of both dimensions in the same way using map and so on.
+  // Points are represented as Objects {x: ..., y: ...} instead for more intuitive formulas and easier SVG path splitting.
+  // It doesn't seem worth the time, effort and space to use a library or refactor it out because we don't use this anywhere else in the code.
+  // However if it becomes used elsewhere or it becomes a maintenance problem in the future, this could be refactored.
+
   if (lastPath) {
     for (let i = 0; i < lastPath.length; i++) {
       const path = lastPath[i];
@@ -56,36 +68,72 @@ function showPath(validPaths) {
       domEle.classList.add("path");
       let arrowBodyEle = document.getElementById(id + "ArrowBody");
       if (arrowBodyEle) {
-        if (pathCount > 0) {
+        if (pathCount === 0) {
+          console.log("keep original path");
+          arrowBodyEle.classList.add("path" + i);
+        } else {
           console.log("cloning");
+          // we need both svg.js and DOM element functionality so we need to convert between the two
+          // there is some overlap in functionality but often different syntax
+          // see https://svgjs.dev/docs/3.1/referencing-creating-elements/#existing-dom-elements
+          // convert to svg.js element so we get the clone function
+          // arrowBodyEle is still available for DOM functionality
           const clone = SVG(arrowBodyEle).clone();
           clone.addClass("clone");
           for (let i = validPaths.length - 1; i >= 0; i--) {
             clone.removeClass("path" + i);
           }
           clone.addClass("path" + i);
+          clone.addClass("clone");
           // determine shift direction based on path direction
-          const d = arrowBodyEle
-            .getAttribute("d")
-            .replaceAll(/[^0-9. ]/g, "")
-            .split(" ");
-          console.log("d", d);
+          const points = [];
+          {
+            const dParts = arrowBodyEle
+              .getAttribute("d")
+              .replaceAll(/[^0-9. ]/g, "")
+              .split(" ");
+            for (let k = 0; k < dParts.length / 2; k++) {
+              points.push({ x: Number(dParts[k * 2]), y: Number(dParts[k * 2 + 1]) });
+            }
+          }
+          //console.log("d", points);
           // vector between first and last point in the path
-          const [x, y] = [d.at(-2) - d[0], d.at(-1) - d[1]];
-          const norm = Math.hypot(x, y);
-          const [xn, yn] = [x / norm, y / norm];
-          // normal vector is (-y, x)
+          let [vx, vy] = [points.at(-1).x - points[0].x, points.at(-1).y - points[0].y];
+          // normalize
+          const norm = Math.hypot(vx, vy);
+          [vx, vy] = [vx / norm, vy / norm];
           // shift additional clones further and in the other direction as well
           // function from 0,1,2,3,4,... to 0,1,-1,2,-2,...
           // bitwise and of a number with 1 returns 1 if it is even, 0 otherwise
-          const f = (x) => Math.floor((x + 1) / 2) * ((x & 1) * 2 - 1);
+          const f = (n) => Math.floor((n + 1) / 2) * ((n & 1) * 2 - 1);
           const multiplier = f(pathCount);
-          clone.translate(-7 * multiplier * yn, 7 * multiplier * xn);
-          // todo: this works perfectly well for single-line paths but is not optimal for multi-line paths
-          // shift each part of the path separately and adapt the connecting points?
+          // normal vector is (-y, x)
+          // translation vector
+          let vt = [-vy, vx].map((r) => r * BASE_SEPARATION * multiplier);
+          // Single line, as those are orthagonal to the nodes in our image, a translation will keep the source and origin points in a good spot.
+          if (points.length <= 2) {
+            clone.translate(vt[0], vt[1]);
+          } else {
+            // To improve visual separation we increase translation.
+            // Also ensure minimum translation in each direction.
+            const absMax = (x, max) => Math.max(Math.abs(x), max) * Math.sign(x);
+            vt = vt.map((r) => absMax(r * COMPLEX_PATH_MULTIPLIER, MIN_TRANSLATION));
+            // translate each part of the path separately so we can fix source and target points
+            const newPoints = points.map((p) => ({ x: p.x + vt[0], y: p.y + vt[1] }));
+            // work around badly positioned source and target points
+            const n = points.length;
+            // replace first and last new points with the original ones, first and last line will not be axis parallel anymore
+            /*newPoints[0] = points[0];
+            newPoints[n - 1] = points[n - 1];*/
+            // add first and last original points
+            // this to covers missing connections nicely but may produce artifacts if the new connections push too far in
+            newPoints.unshift(points[0]);
+            newPoints.push(points.at(-1));
+            const newD = "M" + newPoints.map((p) => p.x + " " + p.y).reduce((a, b) => a + " L" + b);
+            //console.log(newD);
+            clone.attr("d", newD);
+          }
           SVG(arrowBodyEle.parentElement).add(clone);
-        } else {
-          arrowBodyEle.classList.add("path" + i);
         }
       }
     }
