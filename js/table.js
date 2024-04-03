@@ -1,6 +1,7 @@
 import { select } from "./sparql.js";
 import { getPath } from "./index.js";
 import { pathQuery } from "./path.js";
+import { Spinner } from "https://cdn.jsdelivr.net/npm/spin.js@4.1.1/spin.min.js";
 import { createGrid, ModuleRegistry } from "https://cdn.jsdelivr.net/npm/@ag-grid-community/core/dist/core.esm.min.js";
 // don't use minified version: https://github.com/ag-grid/ag-grid/issues/7755
 import { ClientSideRowModelModule } from "https://cdn.jsdelivr.net/npm/@ag-grid-community/client-side-row-model/dist/client-side-row-model.esm.js";
@@ -16,13 +17,15 @@ var grid = null;
  * @param {Cytoscape.Collection} path alternation of nodes and edges with nodes at both ends
  */
 export async function showTable(path) {
-  console.log(path);
+  const spinner = new Spinner({ color: "black", lines: 12 });
+  spinner.spin(document.body);
+  //console.log(path);
   const eles = path.toArray();
   const pathNodes = path.nodes().toArray();
-  console.debug(
+  /*console.debug(
     "generating table for path",
     eles.map((ele) => ele.id())
-  );
+  );*/
   const columnDefs = [];
   //const columns = pathNodes.map((node) => node.id());
   const cellRenderer = function (params) {
@@ -91,4 +94,5 @@ export async function showTable(path) {
     grid.destroy();
   }
   grid = createGrid(gridEle, gridOptions);
+  spinner.stop();
 }

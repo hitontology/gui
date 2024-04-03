@@ -4,6 +4,7 @@ import { showTable } from "./table.js";
 import { pathHashes } from "./pathHashes.js";
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
+import { Spinner } from "https://cdn.jsdelivr.net/npm/spin.js@4.1.1/spin.min.js";
 
 import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
 const notyf = new Notyf();
@@ -15,6 +16,8 @@ const MIN_TRANSLATION = 8;
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */
 async function main() {
+  const spinner = new Spinner({ color: "black", lines: 12 });
+  spinner.spin(document.body);
   console.log(SVG);
   MicroModal.init({ onShow: (modal) => console.info(`${modal.id} is shown`) });
   const graphCall = graph(); // parallel processing to save time
@@ -26,6 +29,7 @@ async function main() {
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
   g.each(addListeners, false);
+  spinner.stop();
 }
 
 let sourceElement = null;
