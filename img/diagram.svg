@@ -8,601 +8,6 @@
         <path d="M0 0 L1431 0 L1431 574 L0 574 L0 0 Z"/>
       </clipPath>
     </defs>
-    <g id="ApplicationSystemTypeCitation" class="node">
-        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
-          <rect x="459" y="282" width="205" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="459" y="282" fill="none" width="205" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="467.0" xml:space="preserve" y="301.0" stroke="none">ApplicationSystemTypeCitation</text>
-          </g>
-        </g>
-    </g>
-    <g id="Certification" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="80" y="238" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="238" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="140.0" xml:space="preserve" y="257.0" stroke="none">Certification</text>
-          </g>
-        </g>
-    </g>
-    <g id="Client" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="80" y="273" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="273" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="160.0" xml:space="preserve" y="292.0" stroke="none">Client</text>
-          </g>
-        </g>
-    </g>
-    <g id="OperatingSystem" class="node">
-        <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
-          <rect x="80" y="451" width="195" rx="4" ry="4" height="28" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="451" fill="none" width="195" rx="4" ry="4" height="28"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="125.0" xml:space="preserve" y="469.0" stroke="none">OperatingSystem</text>
-          </g>
-        </g>
-    </g>
-    <g id="DatabaseManagementSystem" class="node">
-        <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
-          <rect x="80" y="203" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="203" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="86.0" xml:space="preserve" y="222.0" stroke="none">DatabaseManagementSystem</text>
-          </g>
-        </g>
-    </g>
-    <g id="EnterpriseFunctionCitation" class="node">
-        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
-          <rect x="741" y="282" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="741" y="282" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="761.0" xml:space="preserve" y="301.0" stroke="none">EnterpriseFunctionCitation</text>
-          </g>
-        </g>
-    </g>
-    <g id="FeatureCitation" class="node">
-        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
-          <rect x="1033" y="283" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1033" y="283" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1087.0" xml:space="preserve" y="302.0" stroke="none">FeatureCitation</text>
-          </g>
-        </g>
-    </g>
-    <g id="Interoperability" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="80" y="343" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="343" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="131.0" xml:space="preserve" y="362.0" stroke="none">Interoperability</text>
-          </g>
-        </g>
-    </g>
-    <g id="OrganizationalUnitCitation" class="node">
-        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
-          <rect x="404" y="479" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="404" y="479" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="422.0" xml:space="preserve" y="498.0" stroke="none">OrganizationalUnitCitation</text>
-          </g>
-        </g>
-    </g>
-    <g id="ProgrammingLibrary" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="80" y="522" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="522" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="115.0" xml:space="preserve" y="541.0" stroke="none">ProgrammingLibrary</text>
-          </g>
-        </g>
-    </g>
-    <g id="SoftwareProduct" class="node">
-        <g fill="silver" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="silver">
-          <rect x="419" y="367" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="419" y="367" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g font-size="14px" stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" font-family="sans-serif" shape-rendering="geometricPrecision" font-weight="bold" stroke-miterlimit="1.0">
-            <text x="449.0" xml:space="preserve" y="386.0" stroke="none">SoftwareProduct</text>
-          </g>
-        </g>
-    </g>
-    <g id="UserGroupCitation" class="node">
-        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
-          <rect x="664.0" y="479" width="190" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="664.0" y="479" fill="none" width="190" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="703.0" xml:space="preserve" y="498.0" stroke="none">UserGroupCitation</text>
-          </g>
-        </g>
-    </g>
-    <g id="Language" class="node">
-        <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
-          <rect x="80" y="379" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="379" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="147.0" xml:space="preserve" y="398.0" stroke="none">Language</text>
-          </g>
-        </g>
-    </g>
-    <g id="License" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="80" y="415" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="415" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="154.0" xml:space="preserve" y="434.0" stroke="none">License</text>
-          </g>
-        </g>
-    </g>
-    <g id="ProgrammingLanguage" class="node">
-        <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
-          <rect x="80" y="486" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="80" y="486" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="107.0" xml:space="preserve" y="505.0" stroke="none">ProgrammingLanguage</text>
-          </g>
-        </g>
-    </g>
-    <g id="EnterpriseFunctionClassified" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="741" y="212" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="741" y="212" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="756.0" xml:space="preserve" y="231.0" stroke="none">EnterpriseFunctionClassified</text>
-          </g>
-        </g>
-    </g>
-    <g id="EnterpriseFunctionCatalogue" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="741" y="138" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="741" y="138" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="754.0" xml:space="preserve" y="157.0" stroke="none">EnterpriseFunctionCatalogue</text>
-          </g>
-        </g>
-    </g>
-    <g id="FeatureClassified" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="1033" y="212" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1033" y="212" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1081.0" xml:space="preserve" y="231.0" stroke="none">FeatureClassified</text>
-          </g>
-        </g>
-    </g>
-    <g id="FeatureCatalogue" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="1033" y="141" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1033" y="141" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1079.0" xml:space="preserve" y="160.0" stroke="none">FeatureCatalogue</text>
-          </g>
-        </g>
-    </g>
-    <g id="OrganizationalUnitClassified" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="429" y="550" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="429" y="550" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="441.0" xml:space="preserve" y="569.0" stroke="none">OrganizationalUnitClassified</text>
-          </g>
-        </g>
-    </g>
-    <g id="OrganizationalUnitCatalogue" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="429" y="622" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="429" y="622" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="439.0" xml:space="preserve" y="641.0" stroke="none">OrganizationalUnitCatalogue</text>
-          </g>
-        </g>
-    </g>
-    <g id="UserGroupClassified" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="679" y="550" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="679" y="550" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="715.0" xml:space="preserve" y="569.0" stroke="none">UserGroupClassified</text>
-          </g>
-        </g>
-    </g>
-    <g id="UserGroupCatalogue" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="679" y="622" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="679" y="622" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="713.0" xml:space="preserve" y="641.0" stroke="none">UserGroupCatalogue</text>
-          </g>
-        </g>
-    </g>
-    <g id="ApplicationSystemTypeClassified" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="459" y="209" width="205" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="459" y="209" fill="none" width="205" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="462.0" xml:space="preserve" y="228.0" stroke="none">ApplicationSystemTypeClassified</text>
-          </g>
-        </g>
-    </g>
-    <g id="ApplicationSystemTypeCatalogue" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="459" y="137" width="205" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="459" y="137" fill="none" width="205" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="460.0" xml:space="preserve" y="156.0" stroke="none">ApplicationSystemTypeCatalogue</text>
-          </g>
-        </g>
-    </g>
-    <g id="y.node.25">
-      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-        <rect x="80" width="195" height="30" y="308" stroke="none"/>
-      </g>
-      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
-        <rect fill="none" x="80" width="195" height="30" y="308"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="144.0" xml:space="preserve" y="327.0" stroke="none">Homepage</text>
-        </g>
-      </g>
-    </g>
-    <g id="y.node.26">
-      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-        <rect x="80" width="195" height="30" y="558" stroke="none"/>
-      </g>
-      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
-        <rect fill="none" x="80" width="195" height="30" y="558"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="145.0" xml:space="preserve" y="577.0" stroke="none">Repository</text>
-        </g>
-      </g>
-    </g>
-    <g id="Study" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="1009" y="436" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1009" y="436" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1089.0" xml:space="preserve" y="455.0" stroke="none">Study</text>
-          </g>
-        </g>
-    </g>
-    <g id="y.node.28">
-      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-        <rect x="1172" width="103" height="30" y="519" stroke="none"/>
-      </g>
-      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
-        <rect fill="none" x="1172" width="103" height="30" y="519"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="1191.0" xml:space="preserve" y="538.0" stroke="none">firstAuthor</text>
-        </g>
-      </g>
-    </g>
-    <g id="y.node.29">
-      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-        <rect x="1172" width="103" height="30" y="558" stroke="none"/>
-      </g>
-      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
-        <rect fill="none" x="1172" width="103" height="30" y="558"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="1208.0" xml:space="preserve" y="577.0" stroke="none">pmid</text>
-        </g>
-      </g>
-    </g>
-    <g id="y.node.30">
-      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-        <rect x="1172" width="103" height="30" y="597" stroke="none"/>
-      </g>
-      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
-        <rect fill="none" x="1172" width="103" height="30" y="597"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="1175.0" xml:space="preserve" y="616.0" stroke="none">publishedInYear</text>
-        </g>
-      </g>
-    </g>
-    <g id="Journal" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="1172" y="637" width="103" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1172" y="637" fill="none" width="103" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1202.0" xml:space="preserve" y="656.0" stroke="none">Journal</text>
-          </g>
-        </g>
-    </g>
-    <g id="OutcomeCriteriaCitation" class="node">
-        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
-          <rect x="1309" y="325" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1309" y="325" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1336.0" xml:space="preserve" y="344.0" stroke="none">OutcomeCriteriaCitation</text>
-          </g>
-        </g>
-    </g>
-    <g id="StudyMethod" class="node">
-        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
-          <rect x="1309" y="283" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1309" y="283" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1369.0" xml:space="preserve" y="302.0" stroke="none">StudyMethod</text>
-          </g>
-        </g>
-    </g>
-    <g id="OutcomeCriteriaClassified" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="1312" y="381" width="195" rx="4" ry="4" height="28" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1312" y="381" fill="none" width="195" rx="4" ry="4" height="28"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1331.0" xml:space="preserve" y="399.0" stroke="none">OutcomeCriteriaClassified</text>
-          </g>
-        </g>
-    </g>
-    <g id="ExperimentalStudyRCT" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="1315" y="479" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1315" y="479" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1343.0" xml:space="preserve" y="498.0" stroke="none">ExperimentalStudyRCT</text>
-          </g>
-        </g>
-    </g>
-    <g id="LabStudy" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="1315" y="639" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1315" y="639" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1384.0" xml:space="preserve" y="658.0" stroke="none">LabStudy</text>
-          </g>
-        </g>
-    </g>
-    <g id="NonExperimentalStudy" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="1315" y="519" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1315" y="519" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1343.0" xml:space="preserve" y="538.0" stroke="none">NonExperimentalStudy</text>
-          </g>
-        </g>
-    </g>
-    <g id="QuasiExperimentalStudy" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="1315" y="599" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1315" y="599" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1338.0" xml:space="preserve" y="618.0" stroke="none">QuasiExperimentalStudy</text>
-          </g>
-        </g>
-    </g>
-    <g id="ValidationStudy" class="node">
-        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-          <rect x="1315" y="559" width="195" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1315" y="559" fill="none" width="195" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1365.0" xml:space="preserve" y="578.0" stroke="none">ValidationStudy</text>
-          </g>
-        </g>
-    </g>
-    <g id="OutcomeCriteriaCatalogue" class="node">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-          <rect x="1309" y="436" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
-        </g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <rect x="1309" y="436" fill="none" width="201.0" rx="4" ry="4" height="30"/>
-        </g>
-        <g>
-          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-            <text x="1329.0" xml:space="preserve" y="455.0" stroke="none">OutcomeCriteriaCatalogue</text>
-          </g>
-        </g>
-    </g>
-    <g id="y.node.45">
-      <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-        <rect fill="none" x="1311.0" width="198.0" height="175.0" y="95.0"/>
-      </g>
-      <g>
-        <g font-size="9px" stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" font-family="sans-serif" shape-rendering="geometricPrecision" stroke-miterlimit="1.0">
-          <text x="1452.0" xml:space="preserve" y="266.0" stroke="none">HITO v24.03</text>
-        </g>
-      </g>
-    </g>
-    <g id="y.node.41">
-      <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
-        <rect x="1315.0" width="190" height="30" y="100.0" stroke="none"/>
-      </g>
-      <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-        <rect fill="none" x="1315.0" width="190" height="30" y="100.0"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="1385.0" xml:space="preserve" y="119.0" stroke="none">DBpedia</text>
-        </g>
-      </g>
-    </g>
-    <g id="y.node.42">
-      <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
-        <rect x="1315.0" width="190" height="30" y="142.0" stroke="none"/>
-      </g>
-      <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-        <rect fill="none" x="1315.0" width="190" height="30" y="142.0"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="1374.0" xml:space="preserve" y="161.0" stroke="none">Folksonomy</text>
-        </g>
-      </g>
-    </g>
-    <g id="y.node.43">
-      <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
-        <rect x="1315.0" width="190" height="30" y="183.0" stroke="none"/>
-      </g>
-      <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-        <rect fill="none" x="1315.0" width="190" height="30" y="183.0"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="1317.0" xml:space="preserve" y="202.0" stroke="none">Health-IT related terminologies</text>
-        </g>
-      </g>
-    </g>
-    <g id="y.node.44">
-      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
-        <rect x="1315.0" width="190" height="30" y="224.0" stroke="none"/>
-      </g>
-      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
-        <rect fill="none" x="1315.0" width="190" height="30" y="224.0"/>
-      </g>
-      <g>
-        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-          <text x="1384.0" xml:space="preserve" y="243.0" stroke="none">Attribute</text>
-        </g>
-      </g>
-    </g>
     <g id="supportsFunction" class="edge">
         <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
           <path fill="none" d="M1032.9847 297 L942.2941 297" class="arrow-body" id="supportsFunctionArrowBody" />
@@ -1696,6 +1101,601 @@
             <text x="1417.0" xml:space="preserve" y="426.0" stroke="none">from catalogue</text>
           </g>
         </g>
+    </g>
+    <g id="ApplicationSystemTypeCitation" class="node">
+        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
+          <rect x="459" y="282" width="205" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="459" y="282" fill="none" width="205" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="467.0" xml:space="preserve" y="301.0" stroke="none">ApplicationSystemTypeCitation</text>
+          </g>
+        </g>
+    </g>
+    <g id="Certification" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="80" y="238" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="238" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="140.0" xml:space="preserve" y="257.0" stroke="none">Certification</text>
+          </g>
+        </g>
+    </g>
+    <g id="Client" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="80" y="273" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="273" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="160.0" xml:space="preserve" y="292.0" stroke="none">Client</text>
+          </g>
+        </g>
+    </g>
+    <g id="OperatingSystem" class="node">
+        <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
+          <rect x="80" y="451" width="195" rx="4" ry="4" height="28" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="451" fill="none" width="195" rx="4" ry="4" height="28"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="125.0" xml:space="preserve" y="469.0" stroke="none">OperatingSystem</text>
+          </g>
+        </g>
+    </g>
+    <g id="DatabaseManagementSystem" class="node">
+        <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
+          <rect x="80" y="203" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="203" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="86.0" xml:space="preserve" y="222.0" stroke="none">DatabaseManagementSystem</text>
+          </g>
+        </g>
+    </g>
+    <g id="EnterpriseFunctionCitation" class="node">
+        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
+          <rect x="741" y="282" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="741" y="282" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="761.0" xml:space="preserve" y="301.0" stroke="none">EnterpriseFunctionCitation</text>
+          </g>
+        </g>
+    </g>
+    <g id="FeatureCitation" class="node">
+        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
+          <rect x="1033" y="283" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1033" y="283" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1087.0" xml:space="preserve" y="302.0" stroke="none">FeatureCitation</text>
+          </g>
+        </g>
+    </g>
+    <g id="Interoperability" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="80" y="343" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="343" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="131.0" xml:space="preserve" y="362.0" stroke="none">Interoperability</text>
+          </g>
+        </g>
+    </g>
+    <g id="OrganizationalUnitCitation" class="node">
+        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
+          <rect x="404" y="479" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="404" y="479" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="422.0" xml:space="preserve" y="498.0" stroke="none">OrganizationalUnitCitation</text>
+          </g>
+        </g>
+    </g>
+    <g id="ProgrammingLibrary" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="80" y="522" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="522" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="115.0" xml:space="preserve" y="541.0" stroke="none">ProgrammingLibrary</text>
+          </g>
+        </g>
+    </g>
+    <g id="SoftwareProduct" class="node">
+        <g fill="silver" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="silver">
+          <rect x="419" y="367" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="419" y="367" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g font-size="14px" stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" font-family="sans-serif" shape-rendering="geometricPrecision" font-weight="bold" stroke-miterlimit="1.0">
+            <text x="449.0" xml:space="preserve" y="386.0" stroke="none">SoftwareProduct</text>
+          </g>
+        </g>
+    </g>
+    <g id="UserGroupCitation" class="node">
+        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
+          <rect x="664.0" y="479" width="190" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="664.0" y="479" fill="none" width="190" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="703.0" xml:space="preserve" y="498.0" stroke="none">UserGroupCitation</text>
+          </g>
+        </g>
+    </g>
+    <g id="Language" class="node">
+        <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
+          <rect x="80" y="379" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="379" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="147.0" xml:space="preserve" y="398.0" stroke="none">Language</text>
+          </g>
+        </g>
+    </g>
+    <g id="License" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="80" y="415" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="415" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="154.0" xml:space="preserve" y="434.0" stroke="none">License</text>
+          </g>
+        </g>
+    </g>
+    <g id="ProgrammingLanguage" class="node">
+        <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
+          <rect x="80" y="486" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="80" y="486" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="107.0" xml:space="preserve" y="505.0" stroke="none">ProgrammingLanguage</text>
+          </g>
+        </g>
+    </g>
+    <g id="EnterpriseFunctionClassified" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="741" y="212" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="741" y="212" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="756.0" xml:space="preserve" y="231.0" stroke="none">EnterpriseFunctionClassified</text>
+          </g>
+        </g>
+    </g>
+    <g id="EnterpriseFunctionCatalogue" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="741" y="138" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="741" y="138" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="754.0" xml:space="preserve" y="157.0" stroke="none">EnterpriseFunctionCatalogue</text>
+          </g>
+        </g>
+    </g>
+    <g id="FeatureClassified" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="1033" y="212" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1033" y="212" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1081.0" xml:space="preserve" y="231.0" stroke="none">FeatureClassified</text>
+          </g>
+        </g>
+    </g>
+    <g id="FeatureCatalogue" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="1033" y="141" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1033" y="141" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1079.0" xml:space="preserve" y="160.0" stroke="none">FeatureCatalogue</text>
+          </g>
+        </g>
+    </g>
+    <g id="OrganizationalUnitClassified" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="429" y="550" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="429" y="550" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="441.0" xml:space="preserve" y="569.0" stroke="none">OrganizationalUnitClassified</text>
+          </g>
+        </g>
+    </g>
+    <g id="OrganizationalUnitCatalogue" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="429" y="622" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="429" y="622" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="439.0" xml:space="preserve" y="641.0" stroke="none">OrganizationalUnitCatalogue</text>
+          </g>
+        </g>
+    </g>
+    <g id="UserGroupClassified" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="679" y="550" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="679" y="550" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="715.0" xml:space="preserve" y="569.0" stroke="none">UserGroupClassified</text>
+          </g>
+        </g>
+    </g>
+    <g id="UserGroupCatalogue" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="679" y="622" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="679" y="622" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="713.0" xml:space="preserve" y="641.0" stroke="none">UserGroupCatalogue</text>
+          </g>
+        </g>
+    </g>
+    <g id="ApplicationSystemTypeClassified" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="459" y="209" width="205" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="459" y="209" fill="none" width="205" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="462.0" xml:space="preserve" y="228.0" stroke="none">ApplicationSystemTypeClassified</text>
+          </g>
+        </g>
+    </g>
+    <g id="ApplicationSystemTypeCatalogue" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="459" y="137" width="205" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="459" y="137" fill="none" width="205" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="460.0" xml:space="preserve" y="156.0" stroke="none">ApplicationSystemTypeCatalogue</text>
+          </g>
+        </g>
+    </g>
+    <g id="y.node.25">
+      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+        <rect x="80" width="195" height="30" y="308" stroke="none"/>
+      </g>
+      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
+        <rect fill="none" x="80" width="195" height="30" y="308"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="144.0" xml:space="preserve" y="327.0" stroke="none">Homepage</text>
+        </g>
+      </g>
+    </g>
+    <g id="y.node.26">
+      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+        <rect x="80" width="195" height="30" y="558" stroke="none"/>
+      </g>
+      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
+        <rect fill="none" x="80" width="195" height="30" y="558"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="145.0" xml:space="preserve" y="577.0" stroke="none">Repository</text>
+        </g>
+      </g>
+    </g>
+    <g id="Study" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="1009" y="436" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1009" y="436" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1089.0" xml:space="preserve" y="455.0" stroke="none">Study</text>
+          </g>
+        </g>
+    </g>
+    <g id="y.node.28">
+      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+        <rect x="1172" width="103" height="30" y="519" stroke="none"/>
+      </g>
+      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
+        <rect fill="none" x="1172" width="103" height="30" y="519"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="1191.0" xml:space="preserve" y="538.0" stroke="none">firstAuthor</text>
+        </g>
+      </g>
+    </g>
+    <g id="y.node.29">
+      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+        <rect x="1172" width="103" height="30" y="558" stroke="none"/>
+      </g>
+      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
+        <rect fill="none" x="1172" width="103" height="30" y="558"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="1208.0" xml:space="preserve" y="577.0" stroke="none">pmid</text>
+        </g>
+      </g>
+    </g>
+    <g id="y.node.30">
+      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+        <rect x="1172" width="103" height="30" y="597" stroke="none"/>
+      </g>
+      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
+        <rect fill="none" x="1172" width="103" height="30" y="597"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="1175.0" xml:space="preserve" y="616.0" stroke="none">publishedInYear</text>
+        </g>
+      </g>
+    </g>
+    <g id="Journal" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="1172" y="637" width="103" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1172" y="637" fill="none" width="103" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1202.0" xml:space="preserve" y="656.0" stroke="none">Journal</text>
+          </g>
+        </g>
+    </g>
+    <g id="OutcomeCriteriaCitation" class="node">
+        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
+          <rect x="1309" y="325" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1309" y="325" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1336.0" xml:space="preserve" y="344.0" stroke="none">OutcomeCriteriaCitation</text>
+          </g>
+        </g>
+    </g>
+    <g id="StudyMethod" class="node">
+        <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
+          <rect x="1309" y="283" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1309" y="283" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1369.0" xml:space="preserve" y="302.0" stroke="none">StudyMethod</text>
+          </g>
+        </g>
+    </g>
+    <g id="OutcomeCriteriaClassified" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="1312" y="381" width="195" rx="4" ry="4" height="28" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1312" y="381" fill="none" width="195" rx="4" ry="4" height="28"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1331.0" xml:space="preserve" y="399.0" stroke="none">OutcomeCriteriaClassified</text>
+          </g>
+        </g>
+    </g>
+    <g id="ExperimentalStudyRCT" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="1315" y="479" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1315" y="479" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1343.0" xml:space="preserve" y="498.0" stroke="none">ExperimentalStudyRCT</text>
+          </g>
+        </g>
+    </g>
+    <g id="LabStudy" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="1315" y="639" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1315" y="639" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1384.0" xml:space="preserve" y="658.0" stroke="none">LabStudy</text>
+          </g>
+        </g>
+    </g>
+    <g id="NonExperimentalStudy" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="1315" y="519" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1315" y="519" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1343.0" xml:space="preserve" y="538.0" stroke="none">NonExperimentalStudy</text>
+          </g>
+        </g>
+    </g>
+    <g id="QuasiExperimentalStudy" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="1315" y="599" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1315" y="599" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1338.0" xml:space="preserve" y="618.0" stroke="none">QuasiExperimentalStudy</text>
+          </g>
+        </g>
+    </g>
+    <g id="ValidationStudy" class="node">
+        <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+          <rect x="1315" y="559" width="195" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1315" y="559" fill="none" width="195" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1365.0" xml:space="preserve" y="578.0" stroke="none">ValidationStudy</text>
+          </g>
+        </g>
+    </g>
+    <g id="OutcomeCriteriaCatalogue" class="node">
+        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+          <rect x="1309" y="436" width="201.0" rx="4" ry="4" height="30" stroke="none"/>
+        </g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <rect x="1309" y="436" fill="none" width="201.0" rx="4" ry="4" height="30"/>
+        </g>
+        <g>
+          <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+            <text x="1329.0" xml:space="preserve" y="455.0" stroke="none">OutcomeCriteriaCatalogue</text>
+          </g>
+        </g>
+    </g>
+    <g id="y.node.45">
+      <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+        <rect fill="none" x="1311.0" width="198.0" height="175.0" y="95.0"/>
+      </g>
+      <g>
+        <g font-size="9px" stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" font-family="sans-serif" shape-rendering="geometricPrecision" stroke-miterlimit="1.0">
+          <text x="1452.0" xml:space="preserve" y="266.0" stroke="none">HITO v24.03</text>
+        </g>
+      </g>
+    </g>
+    <g id="y.node.41">
+      <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
+        <rect x="1315.0" width="190" height="30" y="100.0" stroke="none"/>
+      </g>
+      <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+        <rect fill="none" x="1315.0" width="190" height="30" y="100.0"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="1385.0" xml:space="preserve" y="119.0" stroke="none">DBpedia</text>
+        </g>
+      </g>
+    </g>
+    <g id="y.node.42">
+      <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
+        <rect x="1315.0" width="190" height="30" y="142.0" stroke="none"/>
+      </g>
+      <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+        <rect fill="none" x="1315.0" width="190" height="30" y="142.0"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="1374.0" xml:space="preserve" y="161.0" stroke="none">Folksonomy</text>
+        </g>
+      </g>
+    </g>
+    <g id="y.node.43">
+      <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
+        <rect x="1315.0" width="190" height="30" y="183.0" stroke="none"/>
+      </g>
+      <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+        <rect fill="none" x="1315.0" width="190" height="30" y="183.0"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="1317.0" xml:space="preserve" y="202.0" stroke="none">Health-IT related terminologies</text>
+        </g>
+      </g>
+    </g>
+    <g id="y.node.44">
+      <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
+        <rect x="1315.0" width="190" height="30" y="224.0" stroke="none"/>
+      </g>
+      <g stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" stroke-dasharray="12,4" stroke-width="2" stroke-miterlimit="1.0">
+        <rect fill="none" x="1315.0" width="190" height="30" y="224.0"/>
+      </g>
+      <g>
+        <g text-rendering="geometricPrecision" stroke-miterlimit="1.0" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
+          <text x="1384.0" xml:space="preserve" y="243.0" stroke="none">Attribute</text>
+        </g>
+      </g>
     </g>
   </g>
 </svg>
