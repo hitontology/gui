@@ -1,6 +1,6 @@
 import { graph } from "./graph.js";
 import { paths, pathHash } from "./path.js";
-import { table } from "./table.js";
+import { showTable } from "./table.js";
 import { pathHashes } from "./pathHashes.js";
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
@@ -67,18 +67,20 @@ function showPath(validPaths) {
 
       domEle.classList.add("path");
       let arrowBodyEle = document.getElementById(id + "ArrowBody");
+      let eventEle = arrowBodyEle;
       if (arrowBodyEle) {
         if (pathCount === 0) {
-          console.log("keep original path");
+          //console.log("keep original path");
           arrowBodyEle.classList.add("path" + i);
         } else {
-          console.log("cloning");
+          //console.log("cloning");
           // we need both svg.js and DOM element functionality so we need to convert between the two
           // there is some overlap in functionality but often different syntax
           // see https://svgjs.dev/docs/3.1/referencing-creating-elements/#existing-dom-elements
           // convert to svg.js element so we get the clone function
           // arrowBodyEle is still available for DOM functionality
           const clone = SVG(arrowBodyEle).clone();
+          eventEle = clone.node;
           clone.addClass("clone");
           for (let i = validPaths.length - 1; i >= 0; i--) {
             clone.removeClass("path" + i);
@@ -135,10 +137,13 @@ function showPath(validPaths) {
           }
           SVG(arrowBodyEle.parentElement).add(clone);
         }
+        eventEle.addEventListener("click", () => {
+          showTable(path);
+        });
       }
     }
   }
-  //table(path);
+  //showTable(path);
   /*
   for (let i = 0; i < path.size() / 2 - 1; i++) {
     const node = path[i * 2];
@@ -154,7 +159,7 @@ function selectSource(e, id) {
   if (sourceElement) {
     sourceElement.classList.remove("source");
   }
-  console.log(id);
+  //console.log(id);
   sourceElement = document.getElementById(id);
   sourceElement.classList.add("source");
   console.log("set source to", sourceElement);
@@ -165,7 +170,7 @@ function selectTarget(e, id) {
   if (targetElement) {
     targetElement.classList.remove("target");
   }
-  console.log(id);
+  //console.log(id);
   targetElement = document.getElementById(id);
   targetElement.classList.add("target");
   console.log("set target to", targetElement);
@@ -188,10 +193,11 @@ function selectTarget(e, id) {
     const legend = document.getElementById("legend");
     legend.classList.add("legend-hidden");
 
-    /*if (validPaths.length == 1) {
-      showPath(validPaths[0]);
+    if (validPaths.length == 1) {
+      showPath(validPaths);
+      showTable(validPaths[0]);
       return;
-    }*/
+    }
     showPath(validPaths);
     return;
     MicroModal.show("modal-choose-path");
@@ -221,7 +227,7 @@ function addListeners() {
     return;
   }
   const id = this.attr("id");
-  if (!id.startsWith("y.")) {
+  if (this.hasClass("node")) {
     this.on("click", (e) => selectSource(e, id));
     this.on("contextmenu", (e) => selectTarget(e, id));
   }

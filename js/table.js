@@ -15,7 +15,7 @@ var grid = null;
  * Displays all instances of classes along a given path in a table with search and filter options.
  * @param {Cytoscape.Collection} path alternation of nodes and edges with nodes at both ends
  */
-export async function table(path) {
+export async function showTable(path) {
   console.log(path);
   const eles = path.toArray();
   const pathNodes = path.nodes().toArray();
@@ -48,10 +48,12 @@ export async function table(path) {
   const query = pathQuery(path);
   const result = await select(query);
   // if new path was selected while waiting for SPARQL query to finish
+  /* does not work correctly, disabling
   if (path !== getPath()) {
     notyf.error("New path was selected while SPARQL query was run. Not displaying old path results now.");
     return;
   }
+  */
   // display SPARQL query results in table
   let rowData = [];
   for (let binding of result) {
