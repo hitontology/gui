@@ -37,7 +37,7 @@ let targetElement = null;
 let cy;
 let lastPath = null;
 
-function showPath(validPaths) {
+function showPaths(validPaths) {
   Array.from(document.getElementsByClassName("clone")).forEach((c) => c.remove()); // clear previously shown paths
 
   // 2d vector math and point representations:
@@ -198,11 +198,11 @@ function selectTarget(e, id) {
     legend.classList.add("legend-hidden");
 
     if (validPaths.length == 1) {
-      showPath(validPaths);
+      showPaths(validPaths);
       showTable(validPaths[0]);
       return;
     }
-    showPath(validPaths);
+    showPaths(validPaths);
     return;
     MicroModal.show("modal-choose-path");
     const table = document.getElementById("choose-path-table");
@@ -210,7 +210,7 @@ function selectTarget(e, id) {
     for (const path of validPaths) {
       const tr = document.createElement("tr");
       tr.addEventListener("click", () => {
-        showPath(path);
+        showPaths(path);
         MicroModal.close("modal-choose-path");
       });
 
