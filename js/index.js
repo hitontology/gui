@@ -1,10 +1,11 @@
 import { graph } from "./graph.js";
-import { paths, pathHash } from "./path.js";
+import { paths, pathHash, toString } from "./path.js";
 import { showTable } from "./table.js";
 import { pathHashes } from "./pathHashes.js";
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
 import { Spinner } from "https://cdn.jsdelivr.net/npm/spin.js@4.1.1/spin.min.js";
+import { edges } from "./edges.js";
 
 import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
 const notyf = new Notyf();
@@ -12,6 +13,7 @@ const notyf = new Notyf();
 const BASE_SEPARATION = 9;
 const COMPLEX_PATH_MULTIPLIER = 1.2;
 const MIN_TRANSLATION = 8;
+const TEST_PATH_COUNT = 7;
 
 /** Prototype. Deactivate CORS restrictions e.g. with the CORS Everywhere Firefox addon for local testing or it won't work.
  */
@@ -29,6 +31,7 @@ async function main() {
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
   g.each(addListeners, false);
+  if (window.location.search.substr(1).includes("testpath")) testPaths(); // "testpath" in the get parameters
   spinner.stop();
 }
 
@@ -37,8 +40,23 @@ let targetElement = null;
 let cy;
 let lastPath = null;
 
-function showPaths(validPaths) {
-  Array.from(document.getElementsByClassName("clone")).forEach((c) => c.remove()); // clear previously shown paths
+function testPaths() {
+  for (let id in edges) {
+    const edgeObj = edges[id];
+    const sourceNode = cy.getElementById(edgeObj.source);
+    const cyEdge = cy.getElementById(id);
+    const targetNode = cy.getElementById(edgeObj.target);
+    const collection = cy.collection([sourceNode, cyEdge, targetNode]);
+    const paths = Array(TEST_PATH_COUNT).fill(collection);
+    showPaths(paths, true);
+  }
+}
+
+/** @param validPaths: the paths to show the user for selection
+@ @param keep: optional boolean indicating whether to keep previous paths for testing purposes
+*/
+function showPaths(validPaths, keep) {
+  if (!keep) Array.from(document.getElementsByClassName("clone")).forEach((c) => c.remove()); // clear previously shown paths
 
   // 2d vector math and point representations:
   // Vectors are two-element arrays [x,y], which allows easier manipulation of both dimensions in the same way using map and so on.
@@ -46,7 +64,7 @@ function showPaths(validPaths) {
   // It doesn't seem worth the time, effort and space to use a library or refactor it out because we don't use this anywhere else in the code.
   // However if it becomes used elsewhere or it becomes a maintenance problem in the future, this could be refactored.
 
-  if (lastPath) {
+  if (lastPath && !keep) {
     for (let i = 0; i < lastPath.length; i++) {
       const path = lastPath[i];
       path.forEach((ele) => {
@@ -66,6 +84,10 @@ function showPaths(validPaths) {
     for (let j = 0; j < path.size(); j++) {
       const id = path[j].id();
       const domEle = document.getElementById(id);
+      if (!domEle) {
+        console.error("DOM element with ID", id, "not found, cannot draw path", toString(path));
+        continue;
+      }
       const pathCount = (pathCounts.get(id) ?? -1) + 1;
       pathCounts.set(id, pathCount);
 
@@ -127,7 +149,7 @@ function showPaths(validPaths) {
             // translate each part of the path separately so we can fix source and target points
             const newPoints = points.map((p) => ({ x: p.x + vt[0], y: p.y + vt[1] }));
             // work around badly positioned source and target points
-            const n = points.length;
+            // const n = points.length;
             // replace first and last new points with the original ones, first and last line will not be axis parallel anymore
             /*newPoints[0] = points[0];
             newPoints[n - 1] = points[n - 1];*/
