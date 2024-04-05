@@ -84,8 +84,8 @@ Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
 - **Linting** Oxlint
 - **Dependencies:**
   Directly imported from CDNs for easy deployment to GitHub Pages (no build step needed)
-  _ AG Grid (results table)
-  _ svg.js (SVG manipulation)
-  _ Cytoscape.js (graph functionality)
-  _ Micromodal (for path selection, currently being replaced) \* notyf (pop-up notifications)
+  - AG Grid (results table)
+  - svg.js (SVG manipulation)
+  - Cytoscape.js (graph functionality)
+  - notyf (pop-up notifications)
 - **Build:** No bundling process involved

@@ -2,7 +2,6 @@ import { graph } from "./graph.js";
 import { paths, pathHash, toString } from "./path.js";
 import { showTable } from "./table.js";
 import { pathHashes } from "./pathHashes.js";
-import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
 import { Spinner } from "https://cdn.jsdelivr.net/npm/spin.js@4.1.1/spin.min.js";
 import { edges } from "./edges.js";
@@ -21,7 +20,6 @@ async function main() {
   const spinner = new Spinner({ color: "black", lines: 12 });
   spinner.spin(document.body);
   console.log(SVG);
-  MicroModal.init({ onShow: (modal) => console.info(`${modal.id} is shown`) });
   const graphCall = graph(); // parallel processing to save time
   const response = await fetch("./img/diagram.svg");
   const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
@@ -225,25 +223,6 @@ function selectTarget(e, id) {
       return;
     }
     showPaths(validPaths);
-    return;
-    MicroModal.show("modal-choose-path");
-    const table = document.getElementById("choose-path-table");
-    table.innerHTML = "";
-    for (const path of validPaths) {
-      const tr = document.createElement("tr");
-      tr.addEventListener("click", () => {
-        showPaths(path);
-        MicroModal.close("modal-choose-path");
-      });
-
-      path.forEach((ele) => {
-        const td = document.createElement("td");
-        tr.appendChild(td);
-        td.innerText = ele.id();
-      });
-
-      table.appendChild(tr);
-    }
   }
 }
 

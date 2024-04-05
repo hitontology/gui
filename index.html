@@ -6,7 +6,6 @@
     <title>HITO Search with SVG & Cytoscape</title>
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/graph.css" />
-    <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/legend.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ag-grid-community/styles/ag-grid.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ag-grid-community/styles/ag-theme-quartz.min.css" />
@@ -54,23 +53,5 @@
         </div>
       </div>
     </main>
-    <div class="modal micromodal-slide" id="modal-choose-path" aria-hidden="true">
-      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-choose-path-title">
-          <header class="modal__header">
-            <h2 class="modal__title" id="modal-choose-path-title">Choose path</h2>
-            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-          </header>
-          <div class="modal__content" id="modal-choose-path-content">
-            <b>There are multiple valid paths between the selected source and target. Click on a table row to choose one.</b>
-            <table id="choose-path-table"></table>
-          </div>
-          <footer class="modal__footer">
-            <!--<button class="modal__btn modal__btn-primary">Continue</button>-->
-            <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-          </footer>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
