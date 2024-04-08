@@ -1,6 +1,6 @@
 import { select } from "./sparql.js";
 import { getPath } from "./index.js";
-import { pathQuery } from "./path.js";
+import { pathQuery, pathHash } from "./path.js";
 import { Spinner } from "https://cdn.jsdelivr.net/npm/spin.js@4.1.1/spin.min.js";
 import { createGrid, ModuleRegistry } from "https://cdn.jsdelivr.net/npm/@ag-grid-community/core/dist/core.esm.min.js";
 // don't use minified version: https://github.com/ag-grid/ag-grid/issues/7755
@@ -11,12 +11,19 @@ import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
 const notyf = new Notyf();
 
 var grid = null;
+var lastPathHash = null;
 
 /**
  * Displays all instances of classes along a given path in a table with search and filter options.
  * @param {Cytoscape.Collection} path alternation of nodes and edges with nodes at both ends
  */
 export async function showTable(path) {
+  const hash = pathHash(path);
+  if (lastPathHash === hash) {
+    notyf.success("Already showing this path.");
+    return;
+  }
+  lastPathHash = hash;
   const spinner = new Spinner({ color: "black", lines: 12 });
   spinner.spin(document.body);
   //console.log(path);
