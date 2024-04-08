@@ -83,7 +83,7 @@ export async function showTable(path) {
     rowData.push(row);
   }
   //console.log(columnDefs);
-  //console.log(rowData);
+  console.table(rowData);
 
   const defaultColDef = {
     editable: false,
