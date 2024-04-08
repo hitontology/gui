@@ -194,9 +194,9 @@ function selectSource(e, id) {
 function selectTarget(e, id) {
   e.preventDefault();
   if (targetElement) {
-    if(oldSourceId == sourceElement.id && id == targetElement.id) {
+    if (oldSourceId == sourceElement.id && id == targetElement.id) {
       notyf.success("All non-empty paths for this source and target are already shown.");
-    } else if(oldSourceId == id && targetElement.id == sourceElement.id) {
+    } else if (oldSourceId == id && targetElement.id == sourceElement.id) {
       notyf.success("Paths are already shown.<br />Hint: The direction of the arrows does not matter.");
     }
     targetElement.classList.remove("target");
