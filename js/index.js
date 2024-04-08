@@ -33,6 +33,7 @@ async function main() {
   spinner.stop();
 }
 
+let oldSourceId = null;
 let sourceElement = null;
 let targetElement = null;
 let cy;
@@ -181,6 +182,7 @@ function showPaths(validPaths, keep) {
 function selectSource(e, id) {
   e.preventDefault();
   if (sourceElement) {
+    oldSourceId = sourceElement.id;
     sourceElement.classList.remove("source");
   }
   //console.log(id);
@@ -192,6 +194,11 @@ function selectSource(e, id) {
 function selectTarget(e, id) {
   e.preventDefault();
   if (targetElement) {
+    if(oldSourceId == sourceElement.id && id == targetElement.id) {
+      notyf.success("All non-empty paths for this source and target are already shown.");
+    } else if(oldSourceId == id && targetElement.id == sourceElement.id) {
+      notyf.success("Paths are already shown.<br />Hint: The direction of the arrows does not matter.");
+    }
     targetElement.classList.remove("target");
   }
   //console.log(id);
