@@ -18,9 +18,14 @@ We recommend against `python -m http.server` because this will cache local files
 
     git clone git@github.com:hitontology/gui.git
     cd gui
-    scripts/downloadimage
     npm install
     npm run dev
+
+### In case of an updated Metamodel
+
+If the metamodel is updated on [the website](https://hitontology.eu/), run `scripts/diagram-prepare.sh`.
+Then move all edges in front of all nodes in the [svg file](img/diagram.svg), so the nodes are displayed in front of the edges.
+This is not automated because maintaining it would take too much work for too little gain (metamodel is not frequently updated).
 
 ## Contribute
 
