@@ -4,11 +4,8 @@
   padding: 10px;
 }
 
-.legend-hidden {
-  width: 0% !important;
-  height: 0% !important;
-  background-color: none !important;
-  opacity: 0;
+.hidden {
+  display: none;
 }
 
 .svg-text-wrapper {

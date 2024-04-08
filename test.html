@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      #container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+      }
+      #top,
+      #bottom {
+        width: 100vw;
+      }
+      #top {
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top">
+        <svg viewbox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+          <circle cx="50" cy="50" r="50" style="fill: red" />
+        </svg>
+      </div>
+      <div id="bottom"></div>
+    </div>
+    <script>
+      // fill bottom div with random "words"
+      const bottom = document.getElementById("bottom");
+      for (let i = 0; i < 1000; i++) {
+        bottom.innerText += " " + Math.random().toString(36).substr(7);
+      }
+    </script>
+  </body>
+</html>

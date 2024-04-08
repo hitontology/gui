@@ -19,11 +19,10 @@ const TEST_PATH_COUNT = 7;
 async function main() {
   const spinner = new Spinner({ color: "black", lines: 12 });
   spinner.spin(document.body);
-  console.log(SVG);
   const graphCall = graph(); // parallel processing to save time
   const response = await fetch("./img/diagram.svg");
   const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
-  const draw = SVG().addTo("#svgContainer").size("100%", "100%");
+  const draw = SVG().size("100vw").addTo("#svgContainer").size("100vw", "100%");
   draw.svg(s);
   cy = await graphCall;
   // object 0 is a white background rectangle
@@ -224,8 +223,7 @@ function selectTarget(e, id) {
     }
 
     const legend = document.getElementById("legend");
-    legend.classList.add("legend-hidden");
-
+    legend.classList.add("hidden");
     oldSourceId = sourceElement.id;
 
     if (validPaths.length == 1) {

@@ -18,7 +18,6 @@ main {
 .bottom {
   width: 100%;
   border: none;
-  overflow: scroll;
 }
 
 .top {
@@ -27,10 +26,12 @@ main {
   width: 100vw;
   max-height: 90vh;
   flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .bottom {
   border-top: 1px solid #000;
+  overflow: scroll;
 }
 
 .grid {
