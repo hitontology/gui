@@ -196,8 +196,10 @@ function selectTarget(e, id) {
   if (targetElement) {
     if (oldSourceId == sourceElement.id && id == targetElement.id) {
       notyf.success("All non-empty paths for this source and target are already shown.");
+      return;
     } else if (oldSourceId == id && targetElement.id == sourceElement.id) {
       notyf.success("Paths are already shown.<br />Hint: The direction of the arrows does not matter.");
+      return;
     }
     targetElement.classList.remove("target");
   }
@@ -223,6 +225,8 @@ function selectTarget(e, id) {
 
     const legend = document.getElementById("legend");
     legend.classList.add("legend-hidden");
+
+    oldSourceId = sourceElement.id;
 
     if (validPaths.length == 1) {
       showPaths(validPaths);
