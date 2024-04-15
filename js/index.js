@@ -37,6 +37,7 @@ let sourceElement = null;
 let targetElement = null;
 let cy;
 let lastPath = null;
+let controller = new AbortController();
 
 function testPaths() {
   for (let id in edges) {
@@ -51,10 +52,13 @@ function testPaths() {
 }
 
 /** @param validPaths: the paths to show the user for selection
-@ @param keep: optional boolean indicating whether to keep previous paths for testing purposes
-*/
+ * @param keep: optional boolean indicating whether to keep previous paths for testing purposes
+ */
 function showPaths(validPaths, keep) {
   if (!keep) Array.from(document.getElementsByClassName("clone")).forEach((c) => c.remove()); // clear previously shown paths
+  controller.abort(); // clear existing event listeners
+  controller = new AbortController();
+  const listenerOptions = { signal: controller.signal };
 
   // 2d vector math and point representations:
   // Vectors are two-element arrays [x,y], which allows easier manipulation of both dimensions in the same way using map and so on.
@@ -161,9 +165,7 @@ function showPaths(validPaths, keep) {
           }
           SVG(arrowBodyEle.parentElement).add(clone);
         }
-        eventEle.addEventListener("click", () => {
-          showTable(path);
-        });
+        eventEle.addEventListener("click", () => showTable(path), listenerOptions);
       }
     }
   }
