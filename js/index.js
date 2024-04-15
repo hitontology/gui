@@ -22,7 +22,7 @@ async function main() {
   const graphCall = graph(); // parallel processing to save time
   const response = await fetch("./img/diagram.svg");
   const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
-  const draw = SVG().size("100vw").addTo("#svgContainer").size("100vw", "100%");
+  const draw = SVG().size("100vw").addTo("#top").size("100vw", "100%");
   draw.svg(s);
   cy = await graphCall;
   // object 0 is a white background rectangle
@@ -180,6 +180,7 @@ function showPaths(validPaths, keep) {
 
 function selectSource(e, id) {
   e.preventDefault();
+  document.getElementById("source-label").innerText = id;
   if (sourceElement) {
     oldSourceId = sourceElement.id;
     sourceElement.classList.remove("source");
@@ -192,6 +193,7 @@ function selectSource(e, id) {
 
 function selectTarget(e, id) {
   e.preventDefault();
+  document.getElementById("target-label").innerText = id;
   if (targetElement) {
     if (oldSourceId == sourceElement.id && id == targetElement.id) {
       notyf.success(`All non-empty paths between ${oldSourceId} and ${id} are already shown.`);
@@ -229,6 +231,7 @@ function selectTarget(e, id) {
       showTable(validPaths[0]);
       return;
     }
+    document.getElementById("paths-label").innerText = `Showing all ${validPaths.length} paths between ${sourceElement.id} and ${id}, please select one.`;
     showPaths(validPaths);
   }
 }

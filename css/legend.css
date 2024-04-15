@@ -11,10 +11,14 @@
 .svg-text-wrapper {
   position: relative;
 }
+
 .svg-label {
   font-size: 16pt;
 }
+
 div > span {
   display: inline-block;
   margin: 10px 0;
 }
+
+/*#source-label, #target-label {font-weight: bold;}*/

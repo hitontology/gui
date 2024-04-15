@@ -17,8 +17,8 @@
   <body>
     <main>
       <div class="container">
-        <div id="svgContainer" class="top" style="z-index: 0; width: 100vw; object-fit: cover"></div>
-        <div class="bottom">
+        <div id="top" style="z-index: 0; width: 100vw; object-fit: cover"></div>
+        <div id="bottom">
           <div id="aggrid" class="ag-theme-quartz grid hidden"></div>
           <div id="legend">
             <div class="svg-text-wrapper">
@@ -28,7 +28,8 @@
                 <path name="rmb" d="M32 24 L16 24 L16 0 C32 0, 33 0, 32 24" fill="lightgrey" />
                 <rect name="mmb" width="6" height="12" rx="5" x="13" y="6" fill="darkslategrey" />
               </svg>
-              <span class="svg-label">Click (primary mouse button, with touch: short tap) to select source node</span>
+              <span class="svg-label">Click (primary mouse button, with touch: short tap) to select source node, currently:</span>
+              <span class="svg-label" id="source-label">None</span>
             </div>
             <div class="svg-text-wrapper">
               <svg width="32" height="48" id="rightclick">
@@ -37,7 +38,11 @@
                 <path name="rmb" d="M32 24 L16 24 L16 0 C32 0, 33 0, 32 24" fill="cyan" />
                 <rect name="mmb" width="6" height="12" rx="5" x="13" y="6" fill="darkslategrey" />
               </svg>
-              <span class="svg-label">Context Menu (secondary mouse button, with touch: long tap) to select target node</span>
+              <span class="svg-label">Context Menu (secondary mouse button, with touch: long tap) to select target node, currently:</span>
+              <span class="svg-label" id="target-label">None</span>
+            </div>
+            <div class="svg-text-wrapper">
+              <span class="svg-label" id="paths-label"></span>
             </div>
             <div class="legend-explanation">
               <span>

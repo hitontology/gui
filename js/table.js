@@ -20,6 +20,7 @@ var lastPathHash = null;
 export async function showTable(path) {
   document.getElementById("legend").classList.add("hidden");
   document.getElementById("aggrid").classList.remove("hidden");
+  document.getElementById("bottom").classList.add("grow");
   const hash = pathHash(path);
   if (lastPathHash === hash) {
     notyf.success("Already showing this path.");
