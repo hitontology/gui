@@ -222,8 +222,6 @@ function selectTarget(e, id) {
       console.table(validPaths.map((p) => p.toArray().map((x) => x.id())));
     }
 
-    const legend = document.getElementById("legend");
-    legend.classList.add("hidden");
     oldSourceId = sourceElement.id;
 
     if (validPaths.length == 1) {

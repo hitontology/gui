@@ -18,6 +18,8 @@ var lastPathHash = null;
  * @param {Cytoscape.Collection} path alternation of nodes and edges with nodes at both ends
  */
 export async function showTable(path) {
+  document.getElementById("legend").classList.add("hidden");
+  document.getElementById("aggrid").classList.remove("hidden");
   const hash = pathHash(path);
   if (lastPathHash === hash) {
     notyf.success("Already showing this path.");
