@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "serve",
-    "fmt": "prettier -w .",
+    "fmt": "prettier -w . --cache",
     "lint": "oxlint js",
     "test": "vitest"
   },
