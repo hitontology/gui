@@ -1,5 +1,6 @@
 import { select } from "./sparql.js";
 import { getPath } from "./index.js";
+import { edges } from "./edges.js";
 import { pathQuery, pathHash } from "./path.js";
 import { Spinner } from "https://cdn.jsdelivr.net/npm/spin.js@4.1.1/spin.min.js";
 import { createGrid, ModuleRegistry } from "https://cdn.jsdelivr.net/npm/@ag-grid-community/core/dist/core.esm.min.js";
@@ -55,8 +56,13 @@ export async function showTable(path) {
   let i = 0;
   for (let node of pathNodes) {
     let headerName = node.id();
-    if (i < pathEdges.length) headerName += " " + pathEdges[i].id();
-    i++;
+    if (i < pathEdges.length) {
+      const edge = edges[pathEdges[i].id()];
+      const reverse = edge.target == node.id();
+      headerName += reverse ? " ←" : " →";
+      headerName += " " + edge.name;
+      i++;
+    }
     columnDefs.push({
       field: node.id(),
       headerName,
