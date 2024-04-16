@@ -46,15 +46,21 @@ export async function showTable(path) {
     return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
   };
 
-  const valueFormatter = function (params) {
+  /*  const valueFormatter = function (params) {
     const [suffix, label] = params.value;
     return suffix + " " + label;
-  };
+  };*/
 
+  const pathEdges = path.edges().toArray();
+  let i = 0;
   for (let node of pathNodes) {
+    let headerName = node.id();
+    if (i < pathEdges.length) headerName += " " + pathEdges[i].id();
+    i++;
     columnDefs.push({
       field: node.id(),
-      valueFormatter, // does not work in defaultColDef
+      headerName,
+      //valueFormatter,
     });
   }
 
@@ -85,7 +91,7 @@ export async function showTable(path) {
     }
     rowData.push(row);
   }
-  //console.log(columnDefs);
+  console.table(columnDefs);
   console.table(rowData);
 
   const defaultColDef = {
