@@ -27,7 +27,13 @@ async function main() {
   cy = await graphCall;
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
+
+  // add listeners
+  disableNodes(["ExperimentalStudyRCT","NonExperimentalStudy","ValidationStudy","QuasiExperimentalStudy","LabStudy"]);
+  disableEdges(["y.edge.47","y.edge.48","y.edge.49","y.edge.50","y.edge.51"]);
   g.each(addListeners, false);
+
+  // test paths
   if (window.location.search.substr(1).includes("testpath")) testPaths(); // "testpath" in the get parameters
   spinner.stop();
 }
@@ -248,6 +254,30 @@ function addListeners() {
     this.on("click", (e) => selectSource(e, id));
     this.on("contextmenu", (e) => selectTarget(e, id));
   }
+}
+
+/**
+ * Disabled a specified set of nodes (makes them unclickable and greyed out)
+ * @param {Array} nodeIds array of node ids
+ */
+function disableNodes(nodeIds) {
+  nodeIds.forEach(id => {
+    const node = document.getElementById(id);
+    node.classList.remove("node");
+    node.classList.add("disabled-node");
+  });
+}
+
+/**
+ * Disabled a specified set of edges (makes them greyed out)
+ * @param {Array} edgeIds array of edge ids
+ */
+function disableEdges(edgeIds) {
+  edgeIds.forEach(id => {
+    const node = document.getElementById(id);
+    node.classList.remove("edge");
+    node.classList.add("disabled-edge");
+  });
 }
 
 export function getPath() {

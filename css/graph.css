@@ -56,3 +56,12 @@ svg {
 .path7 {
   stroke: green !important;
 }
+
+.disabled-node {
+  opacity: 0.5;
+  background-color: gray;
+}
+.disabled-edge {
+  opacity: 0.5;
+  stroke: gray;
+}
