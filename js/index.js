@@ -29,8 +29,8 @@ async function main() {
   const g = draw.get(0).findOne("g");
 
   // add listeners
-  disableNodes(["ExperimentalStudyRCT","NonExperimentalStudy","ValidationStudy","QuasiExperimentalStudy","LabStudy"]);
-  disableEdges(["y.edge.47","y.edge.48","y.edge.49","y.edge.50","y.edge.51"]);
+  disableNodes(["ExperimentalStudyRCT", "NonExperimentalStudy", "ValidationStudy", "QuasiExperimentalStudy", "LabStudy"]);
+  disableEdges(["y.edge.47", "y.edge.48", "y.edge.49", "y.edge.50", "y.edge.51"]);
   g.each(addListeners, false);
 
   // test paths
@@ -261,7 +261,7 @@ function addListeners() {
  * @param {Array} nodeIds array of node ids
  */
 function disableNodes(nodeIds) {
-  nodeIds.forEach(id => {
+  nodeIds.forEach((id) => {
     const node = document.getElementById(id);
     node.classList.remove("node");
     node.classList.add("disabled-node");
@@ -273,7 +273,7 @@ function disableNodes(nodeIds) {
  * @param {Array} edgeIds array of edge ids
  */
 function disableEdges(edgeIds) {
-  edgeIds.forEach(id => {
+  edgeIds.forEach((id) => {
     const node = document.getElementById(id);
     node.classList.remove("edge");
     node.classList.add("disabled-edge");

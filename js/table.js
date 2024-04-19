@@ -58,15 +58,17 @@ export async function showTable(path) {
     let headerName = node.id();
     if (i < pathEdges.length) {
       const edge = edges[pathEdges[i].id()];
-      const reverse = edge.target == node.id();
-      headerName += reverse ? " ←" : " →";
-      headerName += " " + edge.name;
+      const inverse = edge.target == node.id();
+      const s = inverse ? edge.iname : edge.name;
+      //const COL_MIN_WIDTH = 30;
+      //headerName = headerName.padEnd(COL_MIN_WIDTH - s.length - 1, " "); // Not a space because multiples of those aren't shown but U+2002!
+      //headerName += inverse ? " ←" : " →";
+      headerName += " " + s;
       i++;
     }
     columnDefs.push({
       field: node.id(),
       headerName,
-      //valueFormatter,
     });
   }
 
