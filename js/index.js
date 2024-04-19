@@ -5,6 +5,7 @@ import { pathHashes } from "./pathHashes.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
 import { Spinner } from "https://cdn.jsdelivr.net/npm/spin.js@4.1.1/spin.min.js";
 import { edges } from "./edges.js";
+import { transform } from "./terminologies.js";
 
 import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
 const notyf = new Notyf();
@@ -24,6 +25,7 @@ async function main() {
   const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
   const draw = SVG().size("100vw").addTo("#top").size("100vw", "100%");
   draw.svg(s);
+  transform();
   cy = await graphCall;
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
