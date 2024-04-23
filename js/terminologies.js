@@ -1,3 +1,5 @@
+import { select } from "./sparql.js";
+
 /** Terminologies with catalogue, classified and citation items. */
 export const terminologies = [
   {
@@ -29,7 +31,23 @@ for (let t of Object.values(terminologies)) {
   t.citation = t.base + "Citation";
 }
 
-export function transform() {
+/** @returns an map from class ID to definition "def".
+ * Example: const def = (await nodeDefinitions()).get("SoftwareProduct"); */
+// If we need more class attributes from the endpoint in the future, generalize this, so we only use a single query for better performance.
+async function selectClassDefs() {
+  const query = `SELECT DISTINCT
+  (REPLACE(STR(?c), "http://hitontology.eu/ontology/", "") as ?c)
+  (STR(SAMPLE(?def)) as ?def)
+  {
+    ?c a owl:Class; rdfs:comment ?def.
+    FILTER(LANGMATCHES(LANG(?def),"en"))
+  } GROUP BY ?c`;
+  const result = await select(query);
+  return new Map(result.map((b) => [b.c.value, b.def.value]));
+}
+
+export async function transform() {
+  const classDefs = await selectClassDefs();
   for (let t of terminologies) {
     for (let x of [
       ["catalogue", "terminologies"],
@@ -43,4 +61,12 @@ export function transform() {
       text.innerHTML = x[1];
     }
   }
+  classDefs.forEach((def, id) => {
+    const g = document.getElementById(id);
+    if (!g) return;
+    const titleEle = document.createElementNS("http://www.w3.org/2000/svg", "title");
+    const txtNode = document.createTextNode(def);
+    titleEle.appendChild(txtNode);
+    g.prepend(titleEle);
+  });
 }

@@ -32,7 +32,9 @@ function edgeObject(id, count) {
  */
 export async function graph(visualize) {
   const options = visualize ? { container: document.getElementById("cy"), style } : {};
+  //const [edgeCounts, classDefs] = await Promise.all([selectEdgeCounts(), selectClassDefs()]);
   const edgeCounts = await selectEdgeCounts();
+
   const cy = cytoscape(options);
   for (const [id, node] of Object.entries(nodes)) {
     cy.add({
@@ -40,6 +42,7 @@ export async function graph(visualize) {
       data: {
         id,
         name: node.name,
+        //def: classDefs.get(id) // may be undefined
       },
     });
   }
