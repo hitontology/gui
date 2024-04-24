@@ -30,42 +30,29 @@ export async function showTable(path) {
   lastPathHash = hash;
   const spinner = new Spinner({ color: "black", lines: 12 });
   spinner.spin(document.body);
-  //console.log(path);
   const eles = path.toArray();
   const pathNodes = path.nodes().toArray();
-  /*console.debug(
-    "generating table for path",
-    eles.map((ele) => ele.id())
-  );*/
   const columnDefs = [];
   //const columns = pathNodes.map((node) => node.id());
   const cellRenderer = function (params) {
     const [suffix, label] = params.value;
-    //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${suffix}</a>`;
-    //return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
-    //return `<a href="${uri}" target="_blank">${label}</a>`;
     return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
   };
-
-  /*  const valueFormatter = function (params) {
-    const [suffix, label] = params.value;
-    return suffix + " " + label;
-  };*/
 
   const pathEdges = path.edges().toArray();
   let i = 0;
   for (let node of pathNodes) {
     let headerName = node.id();
-    if (i < pathEdges.length) {
-      const edge = edges[pathEdges[i].id()];
+    if (i > 0 && i <= pathEdges.length) {
+      const edge = edges[pathEdges[i - 1].id()];
       const inverse = edge.target == node.id();
       const s = inverse ? edge.iname : edge.name;
       //const COL_MIN_WIDTH = 30;
       //headerName = headerName.padEnd(COL_MIN_WIDTH - s.length - 1, " "); // Not a space because multiples of those aren't shown but U+2002!
       //headerName += inverse ? " ←" : " →";
-      headerName += " " + s;
-      i++;
+      headerName = s + " " + headerName;
     }
+    i++;
     columnDefs.push({
       field: node.id(),
       headerName,
