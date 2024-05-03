@@ -15,19 +15,15 @@
     </svg>
   </xsl:template>
   <!--
-	round coordinate values to two decimal places
+	round numerical values to two decimal places
 	-->
   <xsl:template match="(@height|@width|@x|@y)">
-    <xsl:choose>
-      <xsl:when test="number(.)">
-        <xsl:attribute name="{name()}">
-          <xsl:value-of select="round(number(.) * 100) div 100"/>
-        </xsl:attribute>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:copy/>
-      </xsl:otherwise>
-    </xsl:choose>
+    <xsl:copy/>
+    <xsl:if test="number(.)">
+      <xsl:attribute name="{name()}">
+        <xsl:value-of select="round(number(.) * 100) div 100"/>
+      </xsl:attribute>
+    </xsl:if>
   </xsl:template>
   <!--
 	edges first, nodes last
