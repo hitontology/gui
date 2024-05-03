@@ -40,7 +40,7 @@
           <xsl:call-template name="hyperlinktoid"/>
         </g>
       </xsl:for-each>
-      <!-- There are some nodes like firstAuthor this assigns an empty ID, investigate if this is problematic. -->
+      <!-- There are some nodes, like firstAuthor, which this assigns an empty ID to, investigate if this is problematic. -->
       <xsl:for-each select="g[contains(@id,'node')]">
         <g class="node">
           <xsl:call-template name="hyperlinktoid"/>
@@ -49,20 +49,19 @@
     </g>
   </xsl:template>
   <!--
-	generic defs set y=5 @HRB do we actually need this?
-	-->
-  <xsl:template match="defs[@id='genericDefs']">
-    <defs id="genericDefs" y="5"/>
-  </xsl:template>
-  <!--
 	hyperlinks to ids
 	-->
-  <!--<xsl:template match="g[matches(@id,'^y')]">-->
   <xsl:template name="hyperlinktoid">
     <xsl:attribute name="id">
       <xsl:value-of select="replace(a/@xlink:href,'https://hitontology.eu/ontology/','')"/>
     </xsl:attribute>
     <xsl:apply-templates select="node()"/>
+  </xsl:template>
+  <!--
+	generic defs set y=5 @HRB do we actually need this?
+	-->
+  <xsl:template match="defs[@id='genericDefs']">
+    <defs id="genericDefs" y="5"/>
   </xsl:template>
   <!---
 	remove links and add arrow classes and IDs
@@ -95,13 +94,9 @@
     </xsl:for-each>
   </xsl:template>
   <!--
+  rename catalogues, classifieds and citations
 	-->
-  <!--
-  <xsl:template>
+  <xsl:template match="text/text()">
+    <xsl:value-of select="replace(replace(replace(.,'.*Catalogue','terminologies'),'.*Classified','terminology items'),'.*Citation','folks` terms')"/>
   </xsl:template>
-	-->
-  <!---
-# Preprocessing
-# 
--->
 </xsl:transform>
