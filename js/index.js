@@ -32,7 +32,7 @@ async function main() {
 
   // add listeners
   disableNodes(["ExperimentalStudyRCT", "NonExperimentalStudy", "ValidationStudy", "QuasiExperimentalStudy", "LabStudy"]);
-  disableEdges(["y.edge.47", "y.edge.48", "y.edge.49", "y.edge.50", "y.edge.51"]);
+  //disableEdges(["y.edge.47", "y.edge.48", "y.edge.49", "y.edge.50", "y.edge.51"]);
   g.each(addListeners, false);
 
   // test paths

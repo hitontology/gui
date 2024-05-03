@@ -32,9 +32,10 @@
     <g>
       <xsl:copy-of select="defs"/>
       <xsl:for-each select="g[contains(@id,'edge')]">
-        <g class="edge">
+        <xsl:copy>
+          <xsl:attribute name="class">edge</xsl:attribute>
           <xsl:call-template name="hyperlinktoid"/>
-        </g>
+        </xsl:copy>
       </xsl:for-each>
       <!-- There are some nodes, like firstAuthor, which this assigns an empty ID to, investigate if this is problematic. -->
       <xsl:for-each select="g[contains(@id,'node')]">
@@ -52,12 +53,6 @@
       <xsl:value-of select="replace(a/@xlink:href,'https://hitontology.eu/ontology/','')"/>
     </xsl:attribute>
     <xsl:apply-templates select="node()"/>
-  </xsl:template>
-  <!--
-	generic defs set y=5 @HRB do we actually need this?
-	-->
-  <xsl:template match="defs[@id='genericDefs']">
-    <defs id="genericDefs" y="5"/>
   </xsl:template>
   <!---
 	remove links and add arrow classes and IDs
