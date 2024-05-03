@@ -15,6 +15,21 @@
     </svg>
   </xsl:template>
   <!--
+	round coordinate values to two decimal places
+	-->
+  <xsl:template match="(@height|@width|@x|@y)">
+    <xsl:choose>
+      <xsl:when test="number(.)">
+        <xsl:attribute name="{name()}">
+          <xsl:value-of select="round(number(.) * 100) div 100"/>
+        </xsl:attribute>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <!--
 	edges first, nodes last
 	-->
   <xsl:template match="/svg/g">
@@ -79,12 +94,14 @@
       </xsl:copy>
     </xsl:for-each>
   </xsl:template>
+  <!--
+	-->
+  <!--
+  <xsl:template>
+  </xsl:template>
+	-->
   <!---
 # Preprocessing
-# 2. arrow head/body declaration
-# 7. add arrow body id = edgeId + "ArrowBody"
-	-e 's/([xyth]\="[0-9]+)\.[0-9]+/\1.0/g' \
-	-e 's/(<path fill="none" d="[0-9A-Z. ]* L)[0-9.]+ [0-9.]+"(\/>[\r\n]+[[:blank:]]*<path )(d="M)([0-9.]+ [0-9.]+)/\1\4" class="arrow-body" \2class="arrow-head" \3\4/g' \
-	-e 's/id="([^"]+)"( class="edge">\n[[:blank:]]*<g[^\n]*\n[[:blank:]]*<path[^\n]*class="arrow-body")/id="\1"\2 id="\1ArrowBody"/g' \
+# 
 -->
 </xsl:transform>
