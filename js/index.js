@@ -25,7 +25,7 @@ async function main() {
   const s = (await response.text()).replaceAll(/\n[ ]*/g, "");
   const draw = SVG().size("100vw").addTo("#top").size("100vw", "100%");
   draw.svg(s);
-  transform();
+  //transform();
   cy = await graphCall;
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
@@ -265,6 +265,10 @@ function addListeners() {
 function disableNodes(nodeIds) {
   nodeIds.forEach((id) => {
     const node = document.getElementById(id);
+    if (!node) {
+      console.error(`cannot disable node ${id}, element doesn't exist`);
+      return;
+    }
     node.classList.remove("node");
     node.classList.add("disabled-node");
   });

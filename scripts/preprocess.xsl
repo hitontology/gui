@@ -17,10 +17,16 @@
             text-anchor: middle;
             font-weight: bold;
           }
-				</style>
+          .grouprect {
+          stroke-dasharray: 5,10; stroke:black; fill:none;
+          }
+        </style>
+        <!-- Overriding width does not work in Firefox when loaded with SVG.js, no fix found so we use a class instead. -->
+        <!--
         <symbol id="grouprect" preserveAspectRatio="xMinYMin" viewbox="0 0 220 215">
           <rect width="100%" height="100%" stroke-dasharray="5,10" stroke="black" fill="none"/>
         </symbol>
+          -->
       </defs>
       <xsl:apply-templates select="node()"/>
       <!-- manually add group overlays -->
@@ -29,27 +35,27 @@
       <g font-family="sans-serif">
         <g transform="translate(370 10)">
           <text x="110" y="10" class="grouptext">application system types</text>
-          <use width="220" height="215" href="#grouprect"/>
+          <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(651 10)">
           <text x="110" y="15" class="grouptext">functions</text>
-          <use width="220" height="215" href="#grouprect"/>
+          <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(941 10)">
           <text x="110" y="15" class="grouptext">features</text>
-          <use width="220" height="215" href="#grouprect"/>
+          <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(320 378)">
-          <use href="#grouprect" width="237" height="210"/>
+          <rect class="grouprect" width="237" height="210"/>
           <text x="118" y="205" class="grouptext">organizational units</text>
         </g>
         <g transform="translate(575 378)">
-          <use href="#grouprect" width="223" height="215"/>
+          <rect class="grouprect" width="223" height="215"/>
           <text x="111" y="205" class="grouptext">roles</text>
         </g>
         <g transform="translate(1220 218)">
           <text x="111" y="10" class="grouptext">outcome criteria</text>
-          <use href="#grouprect" width="217" height="160"/>
+          <rect class="grouprect" width="217" height="160"/>
         </g>
       </g>
       <!-- identity transform child elements -->
