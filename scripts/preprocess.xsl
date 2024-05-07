@@ -34,7 +34,7 @@
       <!-- text x = half rect width-->
       <g font-family="sans-serif">
         <g transform="translate(370 10)">
-          <text x="110" y="10" class="grouptext">application system types</text>
+          <text x="110" y="15" class="grouptext">application system types</text>
           <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(651 10)">
@@ -46,16 +46,16 @@
           <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(320 378)">
-          <rect class="grouprect" width="237" height="210"/>
-          <text x="118" y="205" class="grouptext">organizational units</text>
+          <rect class="grouprect" width="237" height="205"/>
+          <text x="118" y="203" class="grouptext">organizational units</text>
         </g>
         <g transform="translate(575 378)">
-          <rect class="grouprect" width="223" height="215"/>
-          <text x="111" y="205" class="grouptext">roles</text>
+          <rect class="grouprect" width="223" height="205"/>
+          <text x="111" y="203" class="grouptext">roles</text>
         </g>
-        <g transform="translate(1220 218)">
+        <g transform="translate(1220 220)">
           <text x="111" y="10" class="grouptext">outcome criteria</text>
-          <rect class="grouprect" width="217" height="160"/>
+          <rect class="grouprect" width="215" height="160"/>
         </g>
       </g>
       <!-- identity transform child elements -->
@@ -99,7 +99,7 @@
   -->
   <xsl:template name="hyperlinktoid">
     <xsl:attribute name="id">
-      <xsl:value-of select="replace(a/@href,'https://hitontology.eu/ontology/','')"/>
+      <xsl:value-of select="replace(a/@xlink:href,'https://hitontology.eu/ontology/','')"/>
     </xsl:attribute>
     <xsl:apply-templates select="node()"/>
   </xsl:template>
@@ -107,7 +107,7 @@
   remove links and add arrow classes and IDs
   -->
   <xsl:template match="a">
-    <xsl:variable name="suffix" select="replace(@href,'https://hitontology.eu/ontology/','')"/>
+    <xsl:variable name="suffix" select="replace(@xlink:href,'https://hitontology.eu/ontology/','')"/>
     <xsl:for-each select="g">
       <xsl:copy>
         <xsl:apply-templates select="node()[not(name() = 'path')] | @*"/>
@@ -117,9 +117,7 @@
             <xsl:choose>
               <xsl:when test="position() = 1">
                 <xsl:attribute name="class">arrow-body</xsl:attribute>
-                <xsl:attribute name="id">
-                  <xsl:value-of select="$suffix"/>
-                </xsl:attribute>
+                <xsl:attribute name="id"><xsl:value-of select="$suffix"/>ArrowBody</xsl:attribute>
               </xsl:when>
               <xsl:when test="position() = 2">
                 <xsl:attribute name="class">arrow-head</xsl:attribute>

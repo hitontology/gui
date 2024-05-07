@@ -91,7 +91,8 @@ function showPaths(validPaths, keep) {
   const pathCounts = new Map();
   for (let i = validPaths.length - 1; i >= 0; i--) {
     const path = validPaths[i];
-    for (let j = 0; j < path.size(); j++) {
+    // edges in path
+    for (let j = 1; j < path.size() - 1; j += 2) {
       const id = path[j].id();
       const domEle = document.getElementById(id);
       if (!domEle) {
@@ -103,6 +104,7 @@ function showPaths(validPaths, keep) {
 
       domEle.classList.add("path");
       let arrowBodyEle = document.getElementById(id + "ArrowBody");
+      if (!arrowBodyEle) console.warn("cannot find arrow body of " + id);
       let eventEle = arrowBodyEle;
       if (arrowBodyEle) {
         if (pathCount === 0) {
