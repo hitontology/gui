@@ -118,6 +118,13 @@
               <xsl:when test="position() = 1">
                 <xsl:attribute name="class">arrow-body</xsl:attribute>
                 <xsl:attribute name="id"><xsl:value-of select="$suffix"/>ArrowBody</xsl:attribute>
+                <!-- use the last coordinate of the arrow head as replacement for the last coordinate of the arrow body -->
+                <!-- this allows hiding the arrow head -->
+                <xsl:variable name="headd" select="../path[2]/@d"/>
+                <xsl:variable name="headstart" select="replace($headd,&quot;M([0-9. ]*) L.*&quot;,&quot;$1&quot;)"/>
+                <xsl:attribute name="d">
+                  <xsl:value-of select="replace(@d,&quot;[^L]+$&quot;,$headstart)"/>
+                </xsl:attribute>
               </xsl:when>
               <xsl:when test="position() = 2">
                 <xsl:attribute name="class">arrow-head</xsl:attribute>
