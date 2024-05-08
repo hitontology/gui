@@ -34,27 +34,33 @@
       <!-- text x = half rect width-->
       <g font-family="sans-serif">
         <g transform="translate(370 10)">
-          <text x="110" y="15" class="grouptext">application system types</text>
+          <title>Application system: Installation of a certain application software product on a certain computer system.</title>
+          <text x="110" y="15" class="grouptext" id="ApplicationSystemType">application system types</text>
           <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(651 10)">
-          <text x="110" y="15" class="grouptext">functions</text>
+          <title>Information processing function (short: function): Directive in a health care setting on how to use data on entity types and how to update data on entity types.</title>
+          <text x="110" y="15" class="grouptext" id="EnterpriseFunction">functions</text>
           <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(941 10)">
-          <text x="110" y="15" class="grouptext">features</text>
+          <title>Feature: Functionality offered by the application software product of an application system which directly contributes to the fulfillment of one or more functions.</title>
+          <text x="110" y="15" class="grouptext" id="Feature">features</text>
           <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(320 378)">
+          <title>Organizational unit: Part of a health care facility which can be defined by responsibilities.</title>
           <rect class="grouprect" width="237" height="205"/>
-          <text x="118" y="203" class="grouptext">organizational units</text>
+          <text x="118" y="203" class="grouptext" id="OrganizationalUnit">organizational units</text>
         </g>
         <g transform="translate(575 378)">
+          <title>User group of an application system.</title>
           <rect class="grouprect" width="223" height="205"/>
-          <text x="111" y="203" class="grouptext">roles</text>
+          <text x="111" y="203" class="grouptext" id="UserGroup">roles</text>
         </g>
         <g transform="translate(1220 220)">
-          <text x="111" y="10" class="grouptext">outcome criteria</text>
+          <title>Outcome criteria of an evaluation study.</title>
+          <text x="111" y="10" class="grouptext" id="OutcomeCriteria">outcome criteria</text>
           <rect class="grouprect" width="215" height="160"/>
         </g>
       </g>
