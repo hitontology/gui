@@ -1,4 +1,5 @@
 import { select } from "./sparql.js";
+import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
 
 /** Terminologies with catalogue, classified and citation items. */
 export const terminologies = [
@@ -46,27 +47,22 @@ async function selectClassDefs() {
   return new Map(result.map((b) => [b.c.value, b.def.value]));
 }
 
-export async function transform() {
+export async function addTooltips() {
   const classDefs = await selectClassDefs();
-  for (let t of terminologies) {
-    for (let x of [
-      ["catalogue", "terminologies"],
-      ["classified", "terminology items"],
-      ["citation", "folks' terms"],
-    ]) {
-      const g = document.getElementById(t[x[0]]);
-      // Tooltip on mouseover not shown in Firefox, not tested in other browsers, TODO: fix.
-      g.setAttribute("title", t.tooltip);
-      const text = g.lastChild.lastChild.lastChild;
-      text.innerHTML = x[1];
+  /*  for (let t of terminologies) {
+    for (let x of ["catalogue", "classified", "citation"]) {
+      const g = document.getElementById(t[x]);
+      // Title attribute doesn't seem to work in the browser, use title element instead in SVG.
+      //g.setAttribute("title", t.tooltip);
     }
   }
+  */
   classDefs.forEach((def, id) => {
     const g = document.getElementById(id);
     if (!g) return;
     const titleEle = document.createElementNS("http://www.w3.org/2000/svg", "title");
     const txtNode = document.createTextNode(def);
     titleEle.appendChild(txtNode);
-    g.prepend(titleEle);
+    g.append(titleEle);
   });
 }

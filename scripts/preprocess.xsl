@@ -40,7 +40,7 @@
         </g>
         <g transform="translate(651 10)">
           <title>Information processing function (short: function): Directive in a health care setting on how to use data on entity types and how to update data on entity types.</title>
-          <text x="110" y="15" class="grouptext" id="EnterpriseFunction">functions</text>
+          <text x="110" y="15" class="grouptext" id="EnterpriseFunction">enterprise functions</text>
           <rect width="220" height="215" class="grouprect"/>
         </g>
         <g transform="translate(941 10)">
@@ -54,7 +54,7 @@
           <text x="118" y="203" class="grouptext" id="OrganizationalUnit">organizational units</text>
         </g>
         <g transform="translate(575 378)">
-          <title>User group of an application system.</title>
+          <title>Role: Sum of expectations addressed to persons or groups of persons.</title>
           <rect class="grouprect" width="223" height="205"/>
           <text x="111" y="203" class="grouptext" id="UserGroup">roles</text>
         </g>
