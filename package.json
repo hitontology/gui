@@ -8,9 +8,8 @@
     "dev": "serve",
     "fmt": "prettier -w . --cache && xmllint --format scripts/preprocess.xsl -o scripts/preprocess.xsl",
     "lint": "oxlint js node",
-    "download": "curl -s -f --no-clobber https://hitontology.eu/public/2024-03-hito_diagram.svg -o img/input.svg",
-    "preprocess": "xslt3 -s:img/input.svg -xsl:scripts/preprocess.xsl -o:img/diagram.svg",
-    "downloadandpreprocess": "curl -s --no-clobber https://hitontology.eu/public/2024-03-hito_diagram.svg -o img/input.svg && xslt3 -s:img/input.svg -xsl:scripts/preprocess.xsl -o:img/test.svg",
+    "download": "wget -N https://hitontology.eu/public/2024-03-hito_diagram.svg -P img --no-verbose",
+    "preproc": "xslt3 -s:img/2024-03-hito_diagram.svg -xsl:scripts/preprocess.xsl -o:img/diagram.svg",
     "test": "vitest"
   },
   "repository": {
