@@ -1,7 +1,6 @@
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 import { select } from "./sparql.js";
-import { style } from "./style.js";
 import cytoscape from "https://cdn.jsdelivr.net/npm/cytoscape/dist/cytoscape.esm.min.js";
 
 /** returns a map from HITO properties to counts */
@@ -28,14 +27,12 @@ function edgeObject(id, count) {
 }
 
 /** Cytoscape.js graph with HITO classes as nodes and connecting properties as edges.
- * Can optionally be displayed as well.
  */
 export async function graph(visualize) {
-  const options = visualize ? { container: document.getElementById("cy"), style } : {};
   //const [edgeCounts, classDefs] = await Promise.all([selectEdgeCounts(), selectClassDefs()]);
   const edgeCounts = await selectEdgeCounts();
 
-  const cy = cytoscape(options);
+  const cy = cytoscape();
   for (const [id, node] of Object.entries(nodes)) {
     cy.add({
       group: "nodes",
