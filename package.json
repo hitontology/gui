@@ -11,7 +11,7 @@
     "doc": "jsdoc js README.md -d doc",
     "download": "wget -N https://hitontology.eu/public/2024-03-hito_diagram.svg -P img --no-verbose",
     "preproc": "xslt3 -s:img/2024-03-hito_diagram.svg -xsl:scripts/preprocess.xsl -o:img/diagram.svg",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
