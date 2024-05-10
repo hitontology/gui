@@ -2,7 +2,7 @@
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 
-/** @returns a string representation of a Cytoscape path */
+/** @returns a skring representation of a Cytoscape path */
 export function toString(path) {
   return path
     .toArray()

@@ -42,6 +42,7 @@ export const edges = {
   fCitClassifiedAs: { source: "FeatureCitation", target: "FeatureClassified", name: "classified as", iname: "classifies" },
   fClaFrom: { source: "FeatureClassified", target: "FeatureCatalogue", name: "from catalogue", iname: "contains" },
   ocCitClassifiedAs: { source: "OutcomeCriteriaCitation", target: "OutcomeCriteriaClassified", name: "classified as", iname: "classifies" },
+  ocClaFrom: { source: "OutcomeCriteriaClassified", target: "OutcomeCriteriaCatalogue", name: "from catalogue", iname: "contains" },
   ouCitClassifiedAs: { source: "OrganizationalUnitCitation", target: "OrganizationalUnitClassified", name: "classified as", iname: "classifies" },
   ouClaFrom: { source: "OrganizationalUnitClassified", target: "OrganizationalUnitCatalogue", name: "classified as", iname: "classifies" },
   userCitClassifiedAs: { source: "UserGroupCitation", target: "UserGroupClassified", name: "classified as", iname: "classifies" },

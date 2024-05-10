@@ -2,7 +2,7 @@
 
 /** Entrypoint to show stats and preprocessing results. */
 import { graph } from "./graph.js";
-import { paths, pathHash, pathQuery } from "./path.js";
+import { paths, pathHash, pathQuery, toString } from "./path.js";
 import { select } from "./sparql.js";
 
 /** Returns an array of all paths in the graph.
@@ -26,7 +26,6 @@ export function allPaths(cy) {
 /** Return whether the path has at least one row of data. */
 export async function validate(path) {
   const query = pathQuery(path) + " LIMIT 1";
-  // todo: "parallelize" i.e. Promise.all
   const bindings = await select(query, false, 3);
   return bindings.length > 0;
 }

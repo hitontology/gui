@@ -23,6 +23,7 @@ export const nodes = {
   FeatureCatalogue: { name: "Feature Catalogue", x: 20, y: 30 },
   OutcomeCriteriaCitation: { name: "Outcome Criteria Citation", x: 35, y: 10 },
   OutcomeCriteriaClassified: { name: "Outcome Criteria Classified", x: 35, y: 20 },
+  OutcomeCriteriaCatalogue: { name: "Outcome Criteria Catalogue", x: 0, y: 0 },
   OrganizationalUnitCitation: { name: "Organizational Unit Citation", x: 0, y: -10 },
   OrganizationalUnitClassified: { name: "Organizational Unit Classified", x: 0, y: -20 },
   OrganizationalUnitCatalogue: { name: "Organizational Unit Catalogue", x: 0, y: -30 },
