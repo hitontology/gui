@@ -1,3 +1,4 @@
+/** @module graph */
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 import { select } from "./sparql.js";

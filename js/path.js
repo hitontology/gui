@@ -1,3 +1,4 @@
+/** @module path */
 import { nodes } from "./nodes.js";
 import { edges } from "./edges.js";
 
@@ -10,11 +11,11 @@ export function toString(path) {
 }
 
 /**
- * @returns an array of paths without cycles from source to target treating all edges as undirected.
+ * @returns An array of paths without cycles from source to target treating all edges as undirected.
  * Each path is an ordered Cytoscape collection with alternating nodes and edges, nodes being at both endpoints.
- * @param {Cytoscape collection} visited all visited nodes
- * @param {Cytoscape collection} path all visited nodes and edges
- * @param {Cytoscape node} target last node of the path
+ * @param {cytoscape.collection} visited all visited nodes
+ * @param {cytoscape.collection} path all visited nodes and edges
+ * @param {cycape.node} target last node of the path
  */
 function pathsRec(visited, path, target) {
   const cursor = visited.last();
@@ -49,8 +50,8 @@ function pathsRec(visited, path, target) {
 
 /**
  * @returns an array of paths without cycles from source to target treating all edges as undirected
- * @param {Cytoscape node} source first node of the path
- * @param {Cytoscape node} target last node of the path
+ * @param {cytoscape.node} source first node of the path
+ * @param {cytoscape.node} target last node of the path
  */
 export function paths(cy, source, target) {
   return pathsRec(cy.collection(source), cy.collection(source), target);

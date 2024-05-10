@@ -1,4 +1,15 @@
-/** HITO classes along with positions for the Cytoscape based display */
+/** @module nodes */
+
+/**  @typedef {Object} NodeObject
+ * @property {string} name English label of the class, such as "Software Product"
+ * @property {number} x x coordinate where the class should be displayed, formerly used with a Cytoscape display but not with the new SVG approach.
+ * @property {number} y y coordinate where the class should be displayed, formerly used with a Cytoscape display but not with the new SVG approach.
+ */
+
+/** HITO classes along with positions for the Cytoscape based display as
+ * object map from a HITO class suffix, such as "SoftwareProduct" for hito:SoftwareProduct, to NodeObject values.
+ * @type {Object.<string, NodeObject>}
+ */
 export const nodes = {
   SoftwareProduct: { name: "Software Product", x: 0, y: 0 },
   EnterpriseFunctionClassified: { name: "Enterprise Function Classified", x: 10, y: 20 },

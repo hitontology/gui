@@ -1,3 +1,4 @@
+/** @module tooltip */
 import { select } from "./sparql.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
 

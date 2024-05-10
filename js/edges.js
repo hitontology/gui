@@ -1,3 +1,16 @@
+/** @module edges */
+
+/**  @typedef {Object} EdgeObject
+ * @property {string} source suffix of the RDFS domain of the property, such as "SoftwareProduct"
+ * @property {string} target suffix of the RDFS range of the property, such as "EnterpriseFunctionCitation"
+ * @property {string} name English label of the property, such as "supports"
+ * @property {string} iname Inverse formulation of the label for when an edge is followed in reverse direction.
+ * Mostly through passive voice, for example "supports" -> "is supported by".
+ */
+
+/** Object map from a HITO property suffix, such as "spSupportsEfCit" for hito:spSupportsEfCit, to EdgeObject values.
+ * @type {Object.<string, EdgeObject>}
+ */
 export const edges = {
   spIsOfAstCit: { source: "SoftwareProduct", target: "ApplicationSystemTypeCitation", name: "is of", iname: "is type of" },
   spSupportsEfCit: { source: "SoftwareProduct", target: "EnterpriseFunctionCitation", name: "supports", iname: "is supported by" },

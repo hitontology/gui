@@ -1,3 +1,5 @@
+/** Unit tests for the {@link stats} module.*/
+
 import { graph } from "./graph.js";
 import { validate, asyncFilter, allPaths } from "./stats.js";
 import { paths, pathHash, toString } from "./path.js";

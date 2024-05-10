@@ -1,3 +1,5 @@
+/** @module stats */
+
 /** Entrypoint to show stats and preprocessing results. */
 import { graph } from "./graph.js";
 import { paths, pathHash, pathQuery } from "./path.js";

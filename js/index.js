@@ -1,3 +1,4 @@
+/** @module index */
 import { graph } from "./graph.js";
 import { paths, pathHash, toString } from "./path.js";
 import { showTable } from "./table.js";

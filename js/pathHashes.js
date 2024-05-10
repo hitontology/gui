@@ -1,4 +1,7 @@
-/** Pregenerated hashes of all paths with at least one row of results. */
+/** @module pathHashes */
+/** Pregenerated hashes of all paths with at least one row of results.
+If the ontology changes, recreate with the output of stats.html.
+@see {@link stats} */
 export const pathHashes = new Set([
   -1555650214, 108206878, -1603003575, 1759138490, -397275580, 899819509, 1181347540, 1514189993, -1203334035, 1928862488, 1004744201, 408619086, -876231787, -1048130835,
   700613254, -363917571, -972981866, -1974905031, 1743391735, 1295687453, -1611605552, 578884803, 744124357, -2124457633, 24891936, -1083694895, 185984914, -1917920108,

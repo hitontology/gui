@@ -1,3 +1,4 @@
+/** @module sparql */
 const HITO = {
   //GRAPH: "",
   PREFIX: "http://hitontology.eu/ontology/",

@@ -1,3 +1,4 @@
+/** @module table */
 import { select } from "./sparql.js";
 import { getPath } from "./index.js";
 import { edges } from "./edges.js";
