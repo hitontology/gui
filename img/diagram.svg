@@ -1441,7 +1441,7 @@
           </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="Homepage">
          <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
             <rect x="80" width="195" height="30" y="308" stroke="none"/>
          </g>
@@ -1454,7 +1454,7 @@
         </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="Repository">
          <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
             <rect x="80" width="195" height="30" y="558" stroke="none"/>
          </g>
@@ -1480,7 +1480,7 @@
           </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="firstAuthor">
          <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
             <rect x="1172" width="103" height="30" y="519" stroke="none"/>
          </g>
@@ -1493,7 +1493,7 @@
         </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="pmid">
          <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
             <rect x="1172" width="103" height="30" y="558" stroke="none"/>
          </g>
@@ -1506,7 +1506,7 @@
         </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="publishedInYear">
          <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
             <rect x="1172" width="103" height="30" y="597" stroke="none"/>
          </g>
@@ -1659,7 +1659,7 @@
         </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="DBpedia">
          <g fill="rgb(204,255,255)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,255)">
             <rect x="1315.92" width="190" height="30" y="100.29" stroke="none"/>
          </g>
@@ -1672,7 +1672,7 @@
         </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="Folksonomy">
          <g fill="rgb(204,255,204)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(204,255,204)">
             <rect x="1315.92" width="190" height="30" y="142.29" stroke="none"/>
          </g>
@@ -1685,7 +1685,7 @@
         </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="Health-IT related terminologies">
          <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="rgb(255,204,153)">
             <rect x="1315.92" width="190" height="30" y="183.29" stroke="none"/>
          </g>
@@ -1698,7 +1698,7 @@
         </g>
          </g>
       </g>
-      <g class="node" id="">
+      <g class="node" id="Attribute">
          <g fill="white" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-80,-95)" stroke="white">
             <rect x="1315.92" width="190" height="30" y="224.29" stroke="none"/>
          </g>

@@ -92,7 +92,6 @@
           <xsl:call-template name="hyperlinktoid"/>
         </xsl:copy>
       </xsl:for-each>
-      <!-- There are some nodes, like firstAuthor, which this assigns an empty ID to, investigate if this is problematic. -->
       <xsl:for-each select="g[contains(@id,'node')]">
         <g class="node">
           <xsl:call-template name="hyperlinktoid"/>
@@ -105,7 +104,15 @@
   -->
   <xsl:template name="hyperlinktoid">
     <xsl:attribute name="id">
-      <xsl:value-of select="replace(a/@xlink:href,'https://hitontology.eu/ontology/','')"/>
+      <xsl:choose>
+        <xsl:when test="a">
+          <xsl:value-of select="replace(a/@xlink:href,'https://hitontology.eu/ontology/','')"/>
+        </xsl:when>
+        <!-- HITO nodes representing literal ranges don't have links, use box label -->
+        <xsl:otherwise>
+          <xsl:value-of select="g[3]/g[1]/text"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:attribute>
     <xsl:apply-templates select="node()"/>
   </xsl:template>
