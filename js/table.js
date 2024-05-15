@@ -44,9 +44,9 @@ export async function showTable(path) {
   let i = 0;
   for (let node of pathNodes) {
     let headerName = node.id();
-    if (i > 0 && i <= pathEdges.length) {
+    if (i > 0) {
       const edge = edges[pathEdges[i - 1].id()];
-      const inverse = edge.target == node.id();
+      const inverse = edge.source === node.id();
       const s = inverse ? edge.iname : edge.name;
       //const COL_MIN_WIDTH = 30;
       //headerName = headerName.padEnd(COL_MIN_WIDTH - s.length - 1, " "); // Not a space because multiples of those aren't shown but U+2002!
