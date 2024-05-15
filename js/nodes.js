@@ -37,12 +37,12 @@ export const nodes = {
   Certification: { name: "Certification", x: -20, y: -30 },
   Client: { name: "Client", x: -15, y: 25 },
   Interoperability: { name: "Interoperability Standard", x: -15, y: 20 },
-  Language: { name: "Language", x: -15, y: 15 },
+  Language: { name: "Language", external: "<http://dbpedia.org/ontology/Language>", x: -15, y: 15 },
   License: { name: "License", x: -15, y: 10 },
   ProgrammingLibrary: { name: "Programming Library", x: -15, y: 5 },
   OperatingSystem: { name: "Operating System", x: -15, y: 0 },
-  //ProgrammingLanguage: { name: "Programming Language", x: -15, y: -5 }, // external DBPedia class
-  PMID: { name: "PMID", x: 35, y: -15 },
+  ProgrammingLanguage: { name: "Programming Language", external: "<http://dbpedia.org/ontology/ProgrammingLanguage>", x: -15, y: -5 }, // external DBPedia class
+  PMID: { name: "PMID", type: "string", x: 35, y: -15 },
   gYear: { name: "Year", type: "string", x: 35, y: -20 },
   Journal: { name: "Journal", x: 35, y: -25 },
 };

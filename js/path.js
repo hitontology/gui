@@ -99,7 +99,8 @@ export function pathQuery(path) {
       continue;
     }
     //console.log("node", nodeId, node.type, node);
-    query += `?n${i + 1} a hito:${nodeId}. `;
+    const clazz = nodes[nodeId].external || "hito:" + nodeId;
+    query += `?n${i + 1} a ${clazz}. `;
     query += `?n${i + 1} rdfs:label ?l${i + 1}. `;
   }
 
