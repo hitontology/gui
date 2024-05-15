@@ -27,6 +27,10 @@ test("all paths", () => {
 });
 
 test.each([
+  [study, "PMID", 1, 1, 3],
+  [study, "FirstAuthor", 1, 1, 3],
+  [swp, "Language", 1, 1, 3],
+  [swp, "ProgrammingLanguage", 1, 1, 3],
   [ocCla, ocCat, 1, 1, 3],
   [astCit, astCat, 26, 1, 5],
   [swp, study, 13, 1, 3],
@@ -47,7 +51,7 @@ test.each([
     expect(pa[0]).toBe(source);
     expect(pa[pa.length - 1]).toBe(target);
     const hash = pathHash(p);
-    expect(pathHashes.has(hash)).toBeTruthy();
+    expect(pathHashes.has(hash), "does not contain hash " + hash).toBeTruthy();
   },
   20000
 );
