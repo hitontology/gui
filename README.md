@@ -1,31 +1,32 @@
 # HITO GUI
 
 New GUI for HITO with better user experience.
-Under heavy development, prototype available at <https://hitontology.github.io/gui/>.
+Available at <https://hitontology.github.io/gui/>.
 
 ## Usage/Help/Summary
 
-The new GUI automatically shows every available path between the source and target node
-and then displays all instances which fulfill one path of the users' selection.
-To select the source node, the primary mouse button is used.
-To select the target node, the secondary mouse button is used.
+The GUI automatically shows every available path between the source and target node and then displays all instances which fulfill one path of the users' selection.
+Select the source node with the primary mouse button.
+Select the target node with the secondary mouse button.
 
 ## Local Development
-
-`git clone` this repository, run the `scripts/diagram-prepare.sh` shell script, `npm install` and open `index.html` in a browser.
-You need a webserver, for example locally with serve, `npm run dev` and then open <http://localhost:3000/>.
-We recommend against `python -m http.server` because this will cache local files and can thus show you outdated versions.
 
     git clone git@github.com:hitontology/gui.git
     cd gui
     npm install
     npm run dev
 
-### In case of an updated Metamodel
+Open <http://localhost:3000> in a browser.
 
-If the metamodel is updated on [the website](https://hitontology.eu/), run `scripts/diagram-prepare.sh`.
-Then move all edges in front of all nodes in the [svg file](img/diagram.svg), so the nodes are displayed in front of the edges.
-This is not automated because maintaining it would take too much work for too little gain (metamodel is not frequently updated).
+### Preprocessing
+
+Perform the appropriate actions when the inputs change.
+
+| task              | inputs                                                    | output                         | required action                        |
+| ----------------- | --------------------------------------------------------- | ------------------------------ | -------------------------------------- |
+| download diagram  | `https://hitontology.eu/public/2024-03-hito_diagram.svg`  | `img/2024-03-hito_diagram.svg` | `npm run download`                     |
+| transform diagram | `img/2024-03-hito\_diagram.svg`, `scripts/preprocess.xsl` | `img/diagram.svg`              | `npm run pre`                          |
+| generate hashes   | HITO SPARQL endpoint `https://hitontology.eu/sparql`      | `js/pathHashes.js`             | open `stats.html` and copy into output |
 
 ## Contribute
 
