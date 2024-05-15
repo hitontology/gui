@@ -56,12 +56,14 @@ export const edges = {
   databaseManagementSystem: { source: "SoftwareProduct", target: "DatabaseManagementSystem", name: "uses DBMS", iname: "is used by" },
   certification: { source: "SoftwareProduct", target: "Certification", name: "certified by", iname: "certifies" },
   language: { source: "SoftwareProduct", target: "Language", name: "available in", iname: "is language of" },
+  homepage: { source: "SoftwareProduct", target: "Homepage", name: "has homepage", iname: "is homepage of" },
+  repository: { source: "SoftwareProduct", target: "Repository", name: "has repository", iname: "is repository of" },
   license: { source: "SoftwareProduct", target: "License", name: "uses license", iname: "governs the use of" },
   client: { source: "SoftwareProduct", target: "Client", name: "available for", iname: "can use" },
   operatingSystem: { source: "SoftwareProduct", target: "OperatingSystem", name: "available for", iname: "runs" },
   programmingLanguage: { source: "SoftwareProduct", target: "ProgrammingLanguage", name: "written in", iname: "is programming language of" }, // external DBpedia class
   programmingLibrary: { source: "SoftwareProduct", target: "ProgrammingLibrary", name: "uses library", iname: "is integrated into" },
   pmid: { source: "Study", target: "PMID", name: "has PMID", iname: "is PMID of" },
-  publishedInYear: { source: "Study", target: "gYear", name: "published in year", iname: "year of publication of" },
+  publishedInYear: { source: "Study", target: "PublishedInYear", name: "published in year", iname: "year of publication of" },
   publishedInJournal: { source: "Study", target: "Journal", name: "published in journal", iname: "published" },
 };
