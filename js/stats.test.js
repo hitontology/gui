@@ -27,6 +27,11 @@ test("all paths", () => {
 });
 
 test.each([
+  [swp, "Repository", 1, 1, 3],
+  [swp, "Homepage", 1, 1, 3],
+  [swp, "firstAuthor", 1, 1, 3],
+  [swp, "pmid", 1, 1, 3],
+  [swp, "publishedInYear", 1, 1, 3],
   [study, "PMID", 1, 1, 3],
   [study, "FirstAuthor", 1, 1, 3],
   [swp, "Language", 1, 1, 3],
