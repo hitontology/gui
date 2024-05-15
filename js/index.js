@@ -1,6 +1,6 @@
 /** @module index */
 import { graph } from "./graph.js";
-import { paths, pathHash, toString } from "./path.js";
+import { paths, pathHash, edgeHash, toString } from "./path.js";
 import { showTable } from "./table.js";
 import { pathHashes } from "./pathHashes.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
@@ -31,10 +31,12 @@ async function main() {
   // object 0 is a white background rectangle
   const g = draw.get(0).findOne("g");
 
-  // add listeners
+  // handling study subclasses separately would yield too few results, only use superclass Study
   disableNodes(["ExperimentalStudyRCT", "NonExperimentalStudy", "ValidationStudy", "QuasiExperimentalStudy", "LabStudy"]);
+  // disable edges that are never used
+  disableEdges(Object.keys(edges).filter((eid) => !pathHashes.has(edgeHash(eid))));
   //disableEdges(["y.edge.47", "y.edge.48", "y.edge.49", "y.edge.50", "y.edge.51"]);
-  g.each(addListeners, false);
+  g.each(addListeners);
 
   // test paths
   if (window.location.search.substr(1).includes("testpath")) testPaths(); // "testpath" in the get parameters

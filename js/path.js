@@ -61,12 +61,25 @@ function strHash(str) {
   return str.split("").reduce((prevHash, currVal) => ((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0, 0);
 }
 
+/** @returns the hash value for the given path, which is used to check whether a path existed in the SPARQL endpoint when the pathHashes set was generated.
+ * @param path An ordered Cytoscape collection with alternating nodes and edges, nodes being at both endpoints.
+ */
 export function pathHash(path) {
   const ids = path.map((ele) => ele.id());
   const s = ids.reduce((a, b) => a + b);
   const h = strHash(s);
   //console.debug("hash for ", ids, ":", h);
   return h;
+}
+
+/** Utility function to get a hash for a single edge.
+ * Used to check whether a given edge actually has had any data in the SPARQL endpoint at pathHashes generation time.
+ * @returns the pathHash for the path consisting solely of the edge and its source and target
+ * @param edgeId the HITO property suffix, such as "spIsOfAstCit"
+ */
+export function edgeHash(edgeId) {
+  const edge = edges[edgeId];
+  return strHash(edge.source + edgeId + edge.target);
 }
 
 /** returns a SPARQL select query for a given path */
