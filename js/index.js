@@ -6,6 +6,7 @@ import { pathHashes } from "./pathHashes.js";
 import { SVG } from "https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js/dist/svg.esm.js";
 import { Spinner } from "https://cdn.jsdelivr.net/npm/spin.js@4.1.1/spin.min.js";
 import { edges } from "./edges.js";
+import { nodes } from "./nodes.js";
 import { addTooltips } from "./tooltip.js";
 
 import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
@@ -35,6 +36,8 @@ async function main() {
   disableNodes(["ExperimentalStudyRCT", "NonExperimentalStudy", "ValidationStudy", "QuasiExperimentalStudy", "LabStudy"]);
   // disable edges that are never used
   disableEdges(Object.keys(edges).filter((eid) => !pathHashes.has(edgeHash(eid))));
+  // disable nodes that only have connected edges that are never used
+  disableNodes(Object.keys(nodes).filter((nid) => Object.values(edges).filter((edge) => !edge.disabled && (edge.source === nid || edge.target === nid)).length === 0));
   //disableEdges(["y.edge.47", "y.edge.48", "y.edge.49", "y.edge.50", "y.edge.51"]);
   g.each(addListeners);
 
@@ -285,6 +288,7 @@ function disableNodes(nodeIds) {
  */
 function disableEdges(edgeIds) {
   edgeIds.forEach((id) => {
+    edges[id].disabled = true;
     const node = document.getElementById(id);
     node.classList.remove("edge");
     node.classList.add("disabled-edge");
