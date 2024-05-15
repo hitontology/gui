@@ -34,6 +34,8 @@ export async function validate(path) {
 export async function asyncFilter(arr, predicate) {
   const promises = arr.map(async (element) => {
     const result = await predicate(element);
+    // progress indicator for path validation
+    if (result && typeof document !== "undefined") document.write(".");
     return result;
   });
 
@@ -46,7 +48,7 @@ async function validHashes(cy, ps) {
   // ps = ps.slice(0, 1000); // for faster testing
   const validPaths = await asyncFilter(ps, validate);
   const reversePaths = validPaths.map((p) => cy.collection(p.toArray().reverse()));
-  const hashes = [...validPaths, ...reversePaths].map(pathHash);
+  const hashes = [...validPaths, ...reversePaths].map(pathHash).sort(); // sort to reduce diffs
   return hashes;
 }
 
@@ -64,6 +66,7 @@ export async function main() {
   const swp = cy.getElementById("SoftwareProduct");
   const study = cy.getElementById("Study");
   document.write(ps.length + " (symmetric), " + ps.length * 2 + " (total) <br>");
+  document.write(`Please wait up to an hour while ${ps.length} hashes are validated`);
   const hashes = await validHashes(cy, ps);
   document.write(hashes.length + " valid hashes<br>");
   document.write("hashes: <br>[" + hashes + "]");
