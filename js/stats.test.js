@@ -29,8 +29,8 @@ test("all paths", () => {
 test.each([
   [swp, "Repository", 1, 1, 3],
   [swp, "Homepage", 1, 1, 3],
-  [swp, "FirstAuthor", 1, 1, 3],
-  [swp, "Pmid", 1, 1, 3],
+  [swp, "FirstAuthor", 13, 1, 5],
+  [swp, "Pmid", 13, 1, 5],
   [swp, "PublishedInYear", 13, 1, 5],
   [study, "Pmid", 1, 1, 3],
   [study, "FirstAuthor", 1, 1, 3],

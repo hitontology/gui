@@ -43,7 +43,7 @@ export async function showTable(path) {
   const pathEdges = path.edges().toArray();
   let i = 0;
   for (let node of pathNodes) {
-    let headerName = node.id();
+    let headerName = node.data("name");
     if (i > 0) {
       const edge = edges[pathEdges[i - 1].id()];
       const inverse = edge.source === node.id();
@@ -80,7 +80,7 @@ export async function showTable(path) {
       //row[node.id()] = `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
       const uri = binding["n" + (i + 1)].value;
       const suffix = uri.replaceAll("http://hitontology.eu/ontology/", "");
-      const label = binding["l" + (i + 1)].value;
+      const label = binding["l" + (i + 1)]?.value || suffix;
       row[node.id()] = [suffix, label];
       //row[node.id()] = [uri,label];
       //row[node.id()] = suffix + "|" + label;
