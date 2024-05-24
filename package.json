@@ -9,8 +9,8 @@
     "fmt": "prettier -w *.md *.html js css scripts --cache && xmllint --format scripts/preprocess.xsl -o scripts/preprocess.xsl",
     "lint": "oxlint js node",
     "doc": "jsdoc js README.md -d doc",
-    "download": "wget -N https://hitontology.eu/public/2024-03-hito_diagram.svg -P img --no-verbose",
-    "pre": "xslt3 -s:img/2024-03-hito_diagram.svg -xsl:scripts/preprocess.xsl -o:img/diagram.svg",
+    "download": "wget -N https://hitontology.eu/public/2024-05-hito_diagram.svg -P img --no-verbose",
+    "pre": "xslt3 -s:img/2024-05-hito_diagram.svg -xsl:scripts/preprocess.xsl -o:img/diagram.svg",
     "test": "vitest run"
   },
   "repository": {

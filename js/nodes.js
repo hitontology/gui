@@ -21,6 +21,7 @@ export const nodes = {
   FeatureCitation: { name: "Feature Citation", x: 20, y: 10 },
   FeatureClassified: { name: "Feature Classified", x: 20, y: 20 },
   FeatureCatalogue: { name: "Feature Catalogue", x: 20, y: 30 },
+  Homepage: { name: "Homepage", type: "string", x: 25, y: 35 },
   OutcomeCriteriaCitation: { name: "Outcome Criteria Citation", x: 35, y: 10 },
   OutcomeCriteriaClassified: { name: "Outcome Criteria Classified", x: 35, y: 20 },
   OutcomeCriteriaCatalogue: { name: "Outcome Criteria Catalogue", x: 0, y: 0 },
@@ -39,10 +40,12 @@ export const nodes = {
   Interoperability: { name: "Interoperability Standard", x: -15, y: 20 },
   Language: { name: "Language", external: "<http://dbpedia.org/ontology/Language>", x: -15, y: 15 },
   License: { name: "License", x: -15, y: 10 },
-  ProgrammingLibrary: { name: "Programming Library", x: -15, y: 5 },
   OperatingSystem: { name: "Operating System", x: -15, y: 0 },
+  PublishedInYear: { name: "Published In Year", type: "string", x: -15, y: -5 }, // external DBPedia class
   ProgrammingLanguage: { name: "Programming Language", external: "<http://dbpedia.org/ontology/ProgrammingLanguage>", x: -15, y: -5 }, // external DBPedia class
-  PMID: { name: "PMID", type: "string", x: 35, y: -15 },
-  gYear: { name: "Year", type: "string", x: 35, y: -20 },
+  ProgrammingLibrary: { name: "Programming Library", x: -15, y: 5 },
+  Pmid: { name: "PMID", type: "string", x: 35, y: -15 },
+  Repository: { name: "Repository", type: "string", x: 35, y: -15 },
+  //gYear: { name: "Year", type: "string", x: 35, y: -20 },
   Journal: { name: "Journal", x: 35, y: -25 },
 };

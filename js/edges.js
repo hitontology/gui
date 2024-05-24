@@ -63,7 +63,7 @@ export const edges = {
   operatingSystem: { source: "SoftwareProduct", target: "OperatingSystem", name: "available for", iname: "runs" },
   programmingLanguage: { source: "SoftwareProduct", target: "ProgrammingLanguage", name: "written in", iname: "is programming language of" }, // external DBpedia class
   programmingLibrary: { source: "SoftwareProduct", target: "ProgrammingLibrary", name: "uses library", iname: "is integrated into" },
-  pmid: { source: "Study", target: "PMID", name: "has PMID", iname: "is PMID of" },
+  pmid: { source: "Study", target: "Pmid", name: "has PMID", iname: "is PMID of" },
   publishedInYear: { source: "Study", target: "PublishedInYear", name: "published in year", iname: "year of publication of" },
   publishedInJournal: { source: "Study", target: "Journal", name: "published in journal", iname: "published" },
 };

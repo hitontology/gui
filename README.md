@@ -24,8 +24,8 @@ Perform the appropriate actions when the inputs change.
 
 | task              | inputs                                                    | output                         | required action                        |
 | ----------------- | --------------------------------------------------------- | ------------------------------ | -------------------------------------- |
-| download diagram  | `https://hitontology.eu/public/2024-03-hito_diagram.svg`  | `img/2024-03-hito_diagram.svg` | `npm run download`                     |
-| transform diagram | `img/2024-03-hito\_diagram.svg`, `scripts/preprocess.xsl` | `img/diagram.svg`              | `npm run pre`                          |
+| download diagram  | `https://hitontology.eu/public/2024-05-hito_diagram.svg`  | `img/2024-05-hito_diagram.svg` | `npm run download`                     |
+| transform diagram | `img/2024-05-hito\_diagram.svg`, `scripts/preprocess.xsl` | `img/diagram.svg`              | `npm run pre`                          |
 | generate hashes   | HITO SPARQL endpoint `https://hitontology.eu/sparql`      | `js/pathHashes.js`             | open `stats.html` and copy into output |
 
 ## Contribute
@@ -37,7 +37,7 @@ Format before committing: `npm run fmt` or `prettier -w .`.
 
 ## Background
 
-![HITO ontology diagram v24.03](https://hitontology.eu/public/2024-03-hito_diagram.svg)
+![HITO ontology diagram v24.03](https://hitontology.eu/public/2024-05-hito_diagram.svg)
 
 The [Health IT Ontology (HITO)](https://hitontology.eu/) is used to describe software products and application systems in health environments and studies describing them.
 HITO offers an [RickView RDF browser](https://hitontology.eu/ontology/), a [SPARQL endpoint](https://hitontology.eu/sparql/) and faceted search for [studies](https://hitontology.eu/search/) and [software](https://hitontology.eu/search/softwareproduct.html),
