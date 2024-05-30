@@ -44,7 +44,7 @@ export const edges = {
   ocCitClassifiedAs: { source: "OutcomeCriteriaCitation", target: "OutcomeCriteriaClassified", name: "classified as", iname: "classifies" },
   ocClaFrom: { source: "OutcomeCriteriaClassified", target: "OutcomeCriteriaCatalogue", name: "from catalogue", iname: "contains" },
   ouCitClassifiedAs: { source: "OrganizationalUnitCitation", target: "OrganizationalUnitClassified", name: "classified as", iname: "classifies" },
-  ouClaFrom: { source: "OrganizationalUnitClassified", target: "OrganizationalUnitCatalogue", name: "classified as", iname: "classifies" },
+  ouClaFrom: { source: "OrganizationalUnitClassified", target: "OrganizationalUnitCatalogue", name: "from catalogue", iname: "classifies" },
   userCitClassifiedAs: { source: "UserGroupCitation", target: "UserGroupClassified", name: "classified as", iname: "classifies" },
   userClaFrom: { source: "UserGroupClassified", target: "UserGroupCatalogue", name: "from catalogue", iname: "contains" },
   supportsFunction: { source: "FeatureCitation", target: "EnterpriseFunctionCitation", name: "supports function citation", iname: "is supported by" },
