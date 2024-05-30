@@ -37,7 +37,7 @@ export async function showTable(path) {
   //const columns = pathNodes.map((node) => node.id());
   const cellRenderer = function (params) {
     const [suffix, label] = params.value;
-    return `<a href="https:/hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
+    return `<a href="https://hitontology.eu/ontology/${suffix}" target="_blank">${label}</a>`;
   };
 
   const pathEdges = path.edges().toArray();
