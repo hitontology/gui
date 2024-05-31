@@ -104,15 +104,9 @@
   -->
   <xsl:template name="hyperlinktoid">
     <xsl:attribute name="id">
-      <xsl:choose>
-        <xsl:when test="a">
-          <xsl:value-of select="replace(a/@xlink:href,'https://hitontology.eu/ontology/','')"/>
-        </xsl:when>
-        <!-- HITO nodes representing literal ranges don't have links, use box label -->
-        <xsl:otherwise>
-          <xsl:value-of select="g[3]/g[1]/text"/>
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:if test="a">
+        <xsl:value-of select="replace(a/@xlink:href,'https://hitontology.eu/ontology/','')"/>
+      </xsl:if>
     </xsl:attribute>
     <xsl:apply-templates select="node()"/>
   </xsl:template>
