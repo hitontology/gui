@@ -1,5 +1,5 @@
 ---
-title: 'Visualizing Paths for Exploratory Search in Health IT Ontologies'
+title: 'Visualizing Paths for Exploratory Search in the Health IT Ontology'
 tags:
   - Semantic Web
   - faceted search
@@ -27,7 +27,11 @@ bibliography: paper.bib
 
 ![HITOM](img/hitogui.pdf)
 
-The [Health IT Ontology (HITO)](https://hitontology.eu/) is used to describe software products and application systems in health environments and studies describing them.
+HITOM is a web application designed to interactively explore complex relationships between different classes in the Health IT Ontology (HITO) and their instances.
+
+
+
+
 The [master's thesis of Andreea Somesan](https://hitontology.eu/public/studenttheses/Masterarbeit_Andreea_Somesan.pdf) presents mockups and wireframes for improving the user interface for the existing HITO faceted search,
 but we ultimately aim to explore a more expressive and intuitive search approaches to satisfy more complex information needs, such as which authors wrote studies concerning a given enterprise function.
 In contrast to keyword search and question answering, where users enter a query into a text field, our goal is to visualize the paths two given classes in HITO are connected and to allow faceted search on a path, showing the individuals along the way and letting users filter them.
@@ -37,12 +41,19 @@ While the RDF graph is directed, the edge direction is sometimes arbitrary (e.g.
 Andreea Somesan ... analyzing the user experience. @andreeama
 
 # Statement of need
-HITO offers an [RickView RDF browser](https://hitontology.eu/ontology/), a [SPARQL endpoint](https://hitontology.eu/sparql/) and faceted search for [studies](https://hitontology.eu/search/) and [software](https://hitontology.eu/search/softwareproduct.html),
+Information systems in hospitals typically consist of hundreds of connected application systems, which are installations of different software products.
+Due to a lack of systematization and unbiased information, finding the optimal combination of software products for a particular use case is a challenging endeavour.
+The [Health IT Ontology (HITO)](https://hitontology.eu/) allows a precise description and comparation of application systems and software products in health IT, but satisfying the information need of typical users is difficult because they don't have expertise in formal RDF query languages like SPARQL.
+
+describe software products and application systems in health environments and studies describing them.
+Properties of software products, such as features, enterprise functions and 
+However typical information for HITO are not covered by existing exploration and search methods.
+
+
+
+The HITO project offers an [RickView RDF browser](https://hitontology.eu/ontology/), a [SPARQL endpoint](https://hitontology.eu/sparql/) and faceted search for [studies](https://hitontology.eu/search/) and [software](https://hitontology.eu/search/softwareproduct.html), but none of those 
 but we weren't satisified with the search and exploration user experience.
 
-While initial enthusiasm in the Semantic Web field has led to a large amount of published knowledge bases, mainstream adoption has stagnated due to a lack of freely available performant, accessible, robust and adaptable tools [@semanticwebreview]. 
-Instead, limited duration research grants motivate the proliferation of countless research prototypes, which are not optimized for any of those criteria, are not maintained after the project ends and compete for resources on crowded servers if they do not break down completely.
-While there are are several existing RDF browsers, they are not optimized for performance.
 
 
 # Acknowledgements
