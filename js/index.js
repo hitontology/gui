@@ -10,7 +10,19 @@ import { nodes } from "./nodes.js";
 import { addTooltips } from "./tooltip.js";
 
 import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
-const notyf = new Notyf();
+const notyf = new Notyf({
+  types: [
+    {
+      type: "warning",
+      background: "orange",
+      icon: {
+        className: "material-icons",
+        tagName: "i",
+      },
+    },
+  ],
+});
+notyf.warning = (message) => notyf.open({ type: "warning", message });
 
 const BASE_SEPARATION = 9;
 const COMPLEX_PATH_MULTIPLIER = 1.2;
@@ -214,10 +226,10 @@ function selectTarget(e, id) {
   document.getElementById("target-label").innerText = id;
   if (targetElement) {
     if (oldSourceId == sourceElement.id && id == targetElement.id) {
-      notyf.success(`All non-empty paths between ${oldSourceId} and ${id} are already shown.`);
+      notyf.warning(`All non-empty paths between ${oldSourceId} and ${id} are already shown.`);
       return;
     } else if (oldSourceId == id && targetElement.id == sourceElement.id) {
-      notyf.success("Paths are already shown.<br />Hint: The direction of the arrows does not matter.");
+      notyf.warning("Paths are already shown.<br />Hint: The direction of the arrows does not matter.");
       return;
     }
     targetElement.classList.remove("target");
@@ -235,7 +247,7 @@ function selectTarget(e, id) {
     const allPaths = paths(cy, sourceNode, targetNode);
     const validPaths = allPaths.filter((p) => pathHashes.has(pathHash(p)));
     if (validPaths.length === 0) {
-      notyf.error(`No valid paths found between ${sourceId} and ${targetId}`);
+      notyf.warning(`Sorry, we currently do not have any data for paths between ${sourceId} and ${targetId}`);
       break breakme;
     } else {
       console.info(allPaths.length, "paths found,", validPaths.length, " of them valid");
