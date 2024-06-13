@@ -10,8 +10,11 @@ import { nodes } from "./nodes.js";
 import { addTooltips } from "./tooltip.js";
 
 import { Notyf } from "https://cdn.jsdelivr.net/npm/notyf@3/notyf.es.js";
+const NOTYF_DEFAULTS = { duration: 10000, dismissible: true };
 const notyf = new Notyf({
   types: [
+    { type: "success", ...NOTYF_DEFAULTS },
+    { type: "error", ...NOTYF_DEFAULTS },
     {
       type: "warning",
       background: "orange",
@@ -19,6 +22,7 @@ const notyf = new Notyf({
         className: "material-icons",
         tagName: "i",
       },
+      ...NOTYF_DEFAULTS,
     },
   ],
 });
