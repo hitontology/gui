@@ -229,14 +229,16 @@ function selectTarget(e, id) {
   e.preventDefault();
   document.getElementById("target-label").innerText = id;
   if (targetElement) {
-    if (oldSourceId == sourceElement.id && id == targetElement.id) {
-      notyf.warning(`All non-empty paths between ${oldSourceId} and ${id} are already shown.`);
-      return;
-    } else if (oldSourceId == id && targetElement.id == sourceElement.id) {
-      notyf.success("Swapped source and target: paths remains the same in reverse.");
-      //return;
-    }
     targetElement.classList.remove("target");
+    if (sourceElement) {
+      if (oldSourceId == sourceElement.id && id == targetElement.id) {
+        notyf.warning(`All non-empty paths between ${oldSourceId} and ${id} are already shown.`);
+        return;
+      } else if (oldSourceId == id && targetElement.id == sourceElement.id) {
+        notyf.success("Swapped source and target: paths remains the same in reverse.");
+        //return;
+      }
+    }
   }
   //console.log(id);
   targetElement = document.getElementById(id);
