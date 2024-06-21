@@ -147,8 +147,11 @@
   </xsl:template>
   <!--
   rename catalogues, classifieds and citations
+  Multiple templates with the same match priority are an error according to the XSLT spec, so we have to nest the replace function, even though it is hard to read.
+  The inserted spaces are a workaround to somewhat center the labels as their positions are hardcoded in the yEd SVG export, see <https://yed.yworks.com/support/qa/28414/center-text-the-elegant-way-in-svg-export>.
+  In case they fix this in the future we may remove that part.
   -->
   <xsl:template match="text/text()">
-    <xsl:value-of select="replace(replace(replace(.,'.*Catalogue','terminologies'),'.*Classified','terminology items'),'.*Citation','folks` terms')"/>
+    <xsl:value-of select="replace(replace(replace(replace(.,'EnterpriseFunction|OrganizationalUnit|ApplicationSystemType|OutcomeCriteria','            '),'[^ ]*Catalogue','terminologies'),'[^ ]*Classified','terminology items'),'[^ ]*Citation','folks` terms')"/>
   </xsl:template>
 </xsl:transform>
