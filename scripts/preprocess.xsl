@@ -19,10 +19,10 @@
             font-weight: bold;
           }
           .grouprect {
-          stroke-dasharray: 5,10; stroke:black; fill:none;
+          stroke-dasharray: 5,10; stroke: black; fill: rgb(248,248,248);
           }
           .rect {
-          stroke:black; fill:none;
+          stroke:black; fill: none;
           }
         </style>
         <!-- Overriding width does not work in Firefox when loaded with SVG.js, no fix found so we use a class instead. -->
@@ -32,25 +32,24 @@
         </symbol>
           -->
       </defs>
-      <xsl:apply-templates select="node()"/>
       <!-- manually add group overlays -->
       <!-- can SVG extract common attributes to shorten the code? -->
       <!-- text x = half rect width-->
       <g font-family="sans-serif">
         <g transform="translate(370 10)">
           <title>Application system: Installation of a certain application software product on a certain computer system.</title>
-          <text x="110" y="15" class="grouptext" id="ApplicationSystemType">application system types</text>
           <rect width="220" height="215" class="grouprect"/>
+          <text x="110" y="15" class="grouptext" id="ApplicationSystemType">application system types</text>
         </g>
         <g transform="translate(651 10)">
           <title>Information processing function (short: function): Directive in a health care setting on how to use data on entity types and how to update data on entity types.</title>
-          <text x="110" y="15" class="grouptext" id="EnterpriseFunction">enterprise functions</text>
           <rect width="220" height="215" class="grouprect"/>
+          <text x="110" y="15" class="grouptext" id="EnterpriseFunction">enterprise functions</text>
         </g>
         <g transform="translate(941 10)">
           <title>Feature: Functionality offered by the application software product of an application system which directly contributes to the fulfillment of one or more functions.</title>
-          <text x="110" y="15" class="grouptext" id="Feature">features</text>
           <rect width="220" height="215" class="grouprect"/>
+          <text x="110" y="15" class="grouptext" id="Feature">features</text>
         </g>
         <g transform="translate(320 378)">
           <title>Organizational unit: Part of a health care facility which can be defined by responsibilities.</title>
@@ -64,8 +63,8 @@
         </g>
         <g transform="translate(1220 220)">
           <title>Outcome criteria of an evaluation study.</title>
-          <text x="111" y="5" class="grouptext" id="OutcomeCriteria">outcome criteria</text>
           <rect class="grouprect" width="215" height="160"/>
+          <text x="111" y="5" class="grouptext" id="OutcomeCriteria">outcome criteria</text>
         </g>
         <!-- reset button -->
         <g transform="translate(0 0)" id="reset">
@@ -74,6 +73,7 @@
           <rect class="rect" width="100" height="20" rx="4" ry="4"/>
         </g>
         <!-- identity transform child elements -->
+        <xsl:apply-templates select="node()"/>
       </g>
     </svg>
   </xsl:template>
