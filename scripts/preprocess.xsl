@@ -15,10 +15,14 @@
             font-family: sans-serif;
             stroke: none;
             text-anchor: middle;
+            dominant-baseline: middle;
             font-weight: bold;
           }
           .grouprect {
           stroke-dasharray: 5,10; stroke:black; fill:none;
+          }
+          .rect {
+          stroke:black; fill:none;
           }
         </style>
         <!-- Overriding width does not work in Firefox when loaded with SVG.js, no fix found so we use a class instead. -->
@@ -51,20 +55,26 @@
         <g transform="translate(320 378)">
           <title>Organizational unit: Part of a health care facility which can be defined by responsibilities.</title>
           <rect class="grouprect" width="237" height="205"/>
-          <text x="118" y="203" class="grouptext" id="OrganizationalUnit">organizational units</text>
+          <text x="118" y="200" class="grouptext" id="OrganizationalUnit">organizational units</text>
         </g>
         <g transform="translate(575 378)">
           <title>Role: Sum of expectations addressed to persons or groups of persons.</title>
           <rect class="grouprect" width="223" height="205"/>
-          <text x="111" y="203" class="grouptext" id="UserGroup">roles</text>
+          <text x="111" y="200" class="grouptext" id="UserGroup">roles</text>
         </g>
         <g transform="translate(1220 220)">
           <title>Outcome criteria of an evaluation study.</title>
-          <text x="111" y="10" class="grouptext" id="OutcomeCriteria">outcome criteria</text>
+          <text x="111" y="5" class="grouptext" id="OutcomeCriteria">outcome criteria</text>
           <rect class="grouprect" width="215" height="160"/>
         </g>
+        <!-- reset button -->
+        <g transform="translate(0 0)" id="reset">
+          <title>Reset</title>
+          <text x="50" y="10" class="grouptext">Reset</text>
+          <rect class="rect" width="100" height="20" rx="4" ry="4"/>
+        </g>
+        <!-- identity transform child elements -->
       </g>
-      <!-- identity transform child elements -->
     </svg>
   </xsl:template>
   <xsl:template match="/svg/g[1]">

@@ -56,6 +56,7 @@ async function main() {
   disableNodes(Object.keys(nodes).filter((nid) => Object.values(edges).filter((edge) => !edge.disabled && (edge.source === nid || edge.target === nid)).length === 0));
   //disableEdges(["y.edge.47", "y.edge.48", "y.edge.49", "y.edge.50", "y.edge.51"]);
   g.each(addListeners);
+  draw.findOne("#reset").on("click", (e) => reset());
 
   // test paths
   if (window.location.search.substr(1).includes("testpath")) testPaths(); // "testpath" in the get parameters
@@ -68,6 +69,33 @@ let targetElement = null;
 let cy;
 let lastPath = null;
 let controller = new AbortController();
+
+function reset() {
+  if (sourceElement) sourceElement.classList.remove("source");
+  if (targetElement) targetElement.classList.remove("target");
+  controller.abort(); // clear existing event listeners
+  oldSourceId = null;
+  sourceElement = null;
+  targetElement = null;
+  Array.from(document.getElementsByClassName("clone")).forEach((c) => c.remove()); // previously shown paths
+  if (lastPath) {
+    for (let i = 0; i < lastPath.length; i++) {
+      const path = lastPath[i];
+      path.forEach((ele) => {
+        const domEle = document.getElementById(ele.id());
+        domEle.classList.remove("path");
+        const arrowBodyEle = document.getElementById(ele.id() + "ArrowBody");
+        if (arrowBodyEle) {
+          arrowBodyEle.classList.remove("path" + i);
+        }
+      });
+    }
+  }
+  lastPath = null;
+  document.getElementById("legend").classList.remove("hidden");
+  document.getElementById("aggrid").classList.add("hidden");
+  document.getElementById("bottom").classList.remove("grow");
+}
 
 function testPaths() {
   for (let id in edges) {
