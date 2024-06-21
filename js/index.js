@@ -233,8 +233,8 @@ function selectTarget(e, id) {
       notyf.warning(`All non-empty paths between ${oldSourceId} and ${id} are already shown.`);
       return;
     } else if (oldSourceId == id && targetElement.id == sourceElement.id) {
-      notyf.warning("Paths are already shown.<br />Hint: The direction of the arrows does not matter.");
-      return;
+      notyf.success("Swapped source and target: paths remains the same in reverse.");
+      //return;
     }
     targetElement.classList.remove("target");
   }
