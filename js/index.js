@@ -83,7 +83,7 @@ function reset() {
       const path = lastPath[i];
       path.forEach((ele) => {
         const domEle = document.getElementById(ele.id());
-        domEle.classList.remove("path");
+        domEle.classList.remove("highlighted");
         const arrowBodyEle = document.getElementById(ele.id() + "ArrowBody");
         if (arrowBodyEle) {
           arrowBodyEle.classList.remove("path" + i);
@@ -129,7 +129,7 @@ function showPaths(validPaths, keep) {
       const path = lastPath[i];
       path.forEach((ele) => {
         const domEle = document.getElementById(ele.id());
-        domEle.classList.remove("path");
+        domEle.classList.remove("highlighted");
         const arrowBodyEle = document.getElementById(ele.id() + "ArrowBody");
         if (arrowBodyEle) {
           arrowBodyEle.classList.remove("path" + i);
@@ -152,7 +152,7 @@ function showPaths(validPaths, keep) {
       const pathCount = (pathCounts.get(id) ?? -1) + 1;
       pathCounts.set(id, pathCount);
 
-      domEle.classList.add("path");
+      domEle.classList.add("highlighted");
       let arrowBodyEle = document.getElementById(id + "ArrowBody");
       if (!arrowBodyEle) console.warn("cannot find arrow body of " + id);
       let eventEle = arrowBodyEle;
