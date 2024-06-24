@@ -55,7 +55,7 @@ async function main() {
   // disable nodes that only have connected edges that are never used
   disableNodes(Object.keys(nodes).filter((nid) => Object.values(edges).filter((edge) => !edge.disabled && (edge.source === nid || edge.target === nid)).length === 0));
   //disableEdges(["y.edge.47", "y.edge.48", "y.edge.49", "y.edge.50", "y.edge.51"]);
-  g.each(addListeners);
+  g.last().each(addListeners);
   draw.findOne("#reset").on("click", (e) => reset());
 
   // test paths
