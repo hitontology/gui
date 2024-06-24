@@ -73,6 +73,7 @@ let controller = new AbortController();
 function reset() {
   if (sourceElement) sourceElement.classList.remove("source");
   if (targetElement) targetElement.classList.remove("target");
+  Array.from(document.getElementsByClassName("selected")).forEach((c) => c.classList.remove("selected"));
   controller.abort(); // clear existing event listeners
   oldSourceId = null;
   sourceElement = null;
@@ -141,6 +142,7 @@ function showPaths(validPaths, keep) {
   const pathCounts = new Map();
   for (let i = validPaths.length - 1; i >= 0; i--) {
     const path = validPaths[i];
+    const pathClass = "path" + i;
     // edges in path
     for (let j = 1; j < path.size() - 1; j += 2) {
       const id = path[j].id();
@@ -159,7 +161,7 @@ function showPaths(validPaths, keep) {
       if (arrowBodyEle) {
         if (pathCount === 0) {
           //console.log("keep original path");
-          arrowBodyEle.classList.add("path" + i);
+          arrowBodyEle.classList.add(pathClass);
         } else {
           //console.log("cloning");
           // we need both svg.js and DOM element functionality so we need to convert between the two
@@ -173,7 +175,7 @@ function showPaths(validPaths, keep) {
           for (let i = validPaths.length - 1; i >= 0; i--) {
             clone.removeClass("path" + i);
           }
-          clone.addClass("path" + i);
+          clone.addClass(pathClass);
           clone.addClass("clone");
           // determine shift direction based on path direction
           const points = [];
@@ -225,7 +227,7 @@ function showPaths(validPaths, keep) {
           }
           SVG(arrowBodyEle.parentElement).add(clone);
         }
-        eventEle.addEventListener("click", () => showTable(path), listenerOptions);
+        eventEle.addEventListener("click", () => showTable(path, pathClass), listenerOptions);
       }
     }
   }

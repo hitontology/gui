@@ -19,7 +19,9 @@ var lastPathHash = null;
  * Displays all instances of classes along a given path in a table with search and filter options.
  * @param {Cytoscape.Collection} path alternation of nodes and edges with nodes at both ends
  */
-export async function showTable(path) {
+export async function showTable(path, pathClass) {
+  Array.from(document.getElementsByClassName("selected")).forEach((c) => c.classList.remove("selected"));
+  Array.from(document.getElementsByClassName(pathClass)).forEach((c) => c.classList.add("selected"));
   document.getElementById("legend").classList.add("hidden");
   document.getElementById("aggrid").classList.remove("hidden");
   document.getElementById("bottom").classList.add("grow");

@@ -66,6 +66,6 @@ svg {
   stroke: gray;
 }
 
-.edge.highlighted .selected {
-  stroke-width: 10px;
+.edge.highlighted .arrow-body.selected {
+  stroke-width: 8px;
 }
