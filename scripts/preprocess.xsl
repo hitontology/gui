@@ -155,13 +155,34 @@
       </xsl:copy>
     </xsl:for-each>
   </xsl:template>
-  <!--
+  <xsl:template match="text/text()">
+    <xsl:choose>
+      <!-- replace suffixes with plural Title Case labels, Interoperability -> Interoperability Standards to be clearer for the users -->
+      <xsl:when test=".='Interoperability'">Interop. Standard</xsl:when>
+      <xsl:when test=".='DatabaseManagementSystem'">Database Management Systems</xsl:when>
+      <xsl:when test=".='Client'">Clients</xsl:when>
+      <xsl:when test=".='Homepage'">Homepages</xsl:when>
+      <xsl:when test=".='Language'">Languages</xsl:when>
+      <xsl:when test=".='License'">Licenses</xsl:when>
+      <xsl:when test=".='OperatingSystem'">Operating Systems</xsl:when>
+      <xsl:when test=".='ProgrammingLanguage'">Programming Languages</xsl:when>
+      <xsl:when test=".='ProgrammingLibrary'">Programming Libraries</xsl:when>
+      <xsl:when test=".='Repository'">Repositories</xsl:when>
+      <xsl:when test=".='SoftwareProduct'">Software Products</xsl:when>
+      <xsl:when test=".='Study'">Studies</xsl:when>
+      <xsl:when test=".='StudyMethod'">Study Methods</xsl:when>
+      <xsl:when test=".='FirstAuthor'">First Author</xsl:when>
+      <xsl:when test=".='Pmid'">PMID</xsl:when>
+      <xsl:when test=".='PublishedInYear'">Published In Year</xsl:when>
+      <!--
   rename catalogues, classifieds and citations
   Multiple templates with the same match priority are an error according to the XSLT spec, so we have to nest the replace function, even though it is hard to read.
   The inserted spaces are a workaround to somewhat center the labels as their positions are hardcoded in the yEd SVG export, see <https://yed.yworks.com/support/qa/28414/center-text-the-elegant-way-in-svg-export>.
   In case they fix this in the future we may remove that part.
   -->
-  <xsl:template match="text/text()">
-    <xsl:value-of select="replace(replace(replace(replace(.,'EnterpriseFunction|OrganizationalUnit|ApplicationSystemType|OutcomeCriteria','            '),'[^ ]*Catalogue','terminologies'),'[^ ]*Classified','terminology items'),'[^ ]*Citation','folks` terms')"/>
+      <xsl:otherwise>
+        <xsl:value-of select="replace(replace(replace(replace(.,'EnterpriseFunction|OrganizationalUnit|ApplicationSystemType|OutcomeCriteria','            '),'[^ ]*Catalogue','terminologies'),'[^ ]*Classified','terminology items'),'[^ ]*Citation','folks` terms')"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 </xsl:transform>

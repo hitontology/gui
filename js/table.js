@@ -51,7 +51,7 @@ export async function showTable(path) {
       const edge = edges[pathEdges[i - 1].id()];
       const inverse = edge.source === node.id();
       let s = inverse ? edge.iname : edge.name;
-      s = s.replaceAll(/(from catalogue|classified as)/g, "from")
+      s = s.replaceAll(/(from catalogue|classified as)/g, "from");
       //const COL_MIN_WIDTH = 30;
       //headerName = headerName.padEnd(COL_MIN_WIDTH - s.length - 1, " "); // Not a space because multiples of those aren't shown but U+2002!
       //headerName += inverse ? " ←" : " →";

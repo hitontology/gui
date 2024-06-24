@@ -1193,7 +1193,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="162.16" xml:space="preserve" y="290.75" stroke="none">Client</text>
+                  <text x="162.16" xml:space="preserve" y="290.75" stroke="none">Clients</text>
           </g>
             </g>
          </g>
@@ -1206,7 +1206,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="131.15" xml:space="preserve" y="467.75" stroke="none">OperatingSystem</text>
+                  <text x="131.15" xml:space="preserve" y="467.75" stroke="none">Operating Systems</text>
           </g>
             </g>
          </g>
@@ -1219,7 +1219,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="96.8" xml:space="preserve" y="220.75" stroke="none">DatabaseManagementSystem</text>
+                  <text x="96.8" xml:space="preserve" y="220.75" stroke="none">Database Management Systems</text>
           </g>
             </g>
          </g>
@@ -1258,7 +1258,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="138.15" xml:space="preserve" y="360.75" stroke="none">Interoperability</text>
+                  <text x="138.15" xml:space="preserve" y="360.75" stroke="none">Interop. Standard</text>
           </g>
             </g>
          </g>
@@ -1284,7 +1284,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="123.16" xml:space="preserve" y="539.75" stroke="none">ProgrammingLibrary</text>
+                  <text x="123.16" xml:space="preserve" y="539.75" stroke="none">Programming Libraries</text>
           </g>
             </g>
          </g>
@@ -1297,7 +1297,7 @@
             </g>
             <g>
                <g font-size="14px" stroke-linecap="butt" transform="matrix(1,0,0,1,-80,-95)" text-rendering="geometricPrecision" font-family="sans-serif" shape-rendering="geometricPrecision" font-weight="bold" stroke-miterlimit="1.45">
-                  <text x="460.49" xml:space="preserve" y="385.21" stroke="none">SoftwareProduct</text>
+                  <text x="460.49" xml:space="preserve" y="385.21" stroke="none">Software Products</text>
           </g>
             </g>
          </g>
@@ -1323,7 +1323,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="150.81" xml:space="preserve" y="396.75" stroke="none">Language</text>
+                  <text x="150.81" xml:space="preserve" y="396.75" stroke="none">Languages</text>
           </g>
             </g>
          </g>
@@ -1336,7 +1336,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="156.82" xml:space="preserve" y="432.75" stroke="none">License</text>
+                  <text x="156.82" xml:space="preserve" y="432.75" stroke="none">Licenses</text>
           </g>
             </g>
          </g>
@@ -1349,7 +1349,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="114.81" xml:space="preserve" y="503.75" stroke="none">ProgrammingLanguage</text>
+                  <text x="114.81" xml:space="preserve" y="503.75" stroke="none">Programming Languages</text>
           </g>
             </g>
          </g>
@@ -1492,7 +1492,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="148.15" xml:space="preserve" y="325.75" stroke="none">Homepage</text>
+                  <text x="148.15" xml:space="preserve" y="325.75" stroke="none">Homepages</text>
           </g>
             </g>
          </g>
@@ -1505,7 +1505,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="148.83" xml:space="preserve" y="575.75" stroke="none">Repository</text>
+                  <text x="148.83" xml:space="preserve" y="575.75" stroke="none">Repositories</text>
           </g>
             </g>
          </g>
@@ -1518,7 +1518,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="1091.16" xml:space="preserve" y="453.75" stroke="none">Study</text>
+                  <text x="1091.16" xml:space="preserve" y="453.75" stroke="none">Studies</text>
           </g>
             </g>
          </g>
@@ -1531,7 +1531,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="1194.16" xml:space="preserve" y="536.75" stroke="none">FirstAuthor</text>
+                  <text x="1194.16" xml:space="preserve" y="536.75" stroke="none">First Author</text>
           </g>
             </g>
          </g>
@@ -1544,7 +1544,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="1209.83" xml:space="preserve" y="575.75" stroke="none">Pmid</text>
+                  <text x="1209.83" xml:space="preserve" y="575.75" stroke="none">PMID</text>
           </g>
             </g>
          </g>
@@ -1557,7 +1557,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="1179.48" xml:space="preserve" y="614.75" stroke="none">PublishedInYear</text>
+                  <text x="1179.48" xml:space="preserve" y="614.75" stroke="none">Published In Year</text>
           </g>
             </g>
          </g>
@@ -1596,7 +1596,7 @@
             </g>
             <g>
                <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" font-family="sans-serif" transform="matrix(1,0,0,1,-80,-95)" stroke-linecap="butt">
-                  <text x="1374.27" xml:space="preserve" y="300.75" stroke="none">StudyMethod</text>
+                  <text x="1374.27" xml:space="preserve" y="300.75" stroke="none">Study Methods</text>
           </g>
             </g>
          </g>
