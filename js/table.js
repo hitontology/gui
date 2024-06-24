@@ -45,7 +45,7 @@ export async function showTable(path) {
   for (let node of pathNodes) {
     let headerName = node.data("name");
     headerName = headerName.replaceAll("Citation", "(folk`s term)");
-    headerName = headerName.replaceAll("Category", "(terminology item)");
+    headerName = headerName.replaceAll("Classified", "(terminology item)");
     headerName = headerName.replaceAll("Catalogue", "terminology");
     if (i > 0) {
       const edge = edges[pathEdges[i - 1].id()];

@@ -65,3 +65,7 @@ svg {
   opacity: 0.5;
   stroke: gray;
 }
+
+.path .selected {
+  stroke-width: 10px;
+}
