@@ -44,10 +44,14 @@ export async function showTable(path) {
   let i = 0;
   for (let node of pathNodes) {
     let headerName = node.data("name");
+    headerName = headerName.replaceAll("Citation", "(folk`s term)");
+    headerName = headerName.replaceAll("Category", "(terminology item)");
+    headerName = headerName.replaceAll("Catalogue", "terminology");
     if (i > 0) {
       const edge = edges[pathEdges[i - 1].id()];
       const inverse = edge.source === node.id();
-      const s = inverse ? edge.iname : edge.name;
+      let s = inverse ? edge.iname : edge.name;
+      s = s.replaceAll(/(from catalogue|classified as)/g, "from")
       //const COL_MIN_WIDTH = 30;
       //headerName = headerName.padEnd(COL_MIN_WIDTH - s.length - 1, " "); // Not a space because multiples of those aren't shown but U+2002!
       //headerName += inverse ? " ←" : " →";
