@@ -54,6 +54,90 @@ However typical information for HITO are not covered by existing exploration and
 The HITO project offers an [RickView RDF browser](https://hitontology.eu/ontology/), a [SPARQL endpoint](https://hitontology.eu/sparql/) and faceted search for [studies](https://hitontology.eu/search/) and [software](https://hitontology.eu/search/softwareproduct.html), but none of those 
 but we weren't satisified with the search and exploration user experience.
 
+Title: Visualizing Paths for Exploratory Search in the Health IT Ontology
+
+# Introduction
+Information systems in hospitals typically consist of hundreds of connected application systems, which are installations of different software products.
+Due to a lack of systematization and unbiased information, finding the optimal combination of software products for a particular use case is a challenging endeavour.
+The [Health IT Ontology (HITO)](https://hitontology.eu/) allows a precise description and comparation of application systems and software products in health IT
+and also includes a knowledge base of exemplary individual products.
+Due to the complex nature of a health information system (e.g. the Uniklinikum Leipzig has inserthowmany components and insert source for that), typical information needs of users are also complex, such as "Which authors wrote studies concerning a given enterprise function?"
+HITO provides access over several common interfaces: an RDF browser, a SPARQL endpoint for formal queries and faceted search.
+However of those options, only SPARQL queries have the necessary expressivity to satisfy the complex information but typical users don't have expertise in the formal RDF query language of SPARQL.
+
+Our goal is to visualize the paths two given classes in HITO are connected and to allow faceted search on a path, showing the individuals along the way and letting users filter them.
+
+- insert hito diagram here -
+
+# Methods
+
+-insert initial mockup here? -
+
+## OWL and RDF
+
+HITO is an OWL domain specific ontology and RDF knowledge graph.
+The ontology, as shown in figure ... consists of classes and object properties (relations) between them, where classes represent sets of instances (also called individuals).
+Formally, each of our object properties has a domain, respectively range, one of our classes.
+According to the principles of the resource description framework (RDF), each class, property and individual possesses a uniform resource identifier (URI), which is abbreviated with a prefix-suffix notation.
+An RDF knowledge graph consists of a set of statments of the shape (subject, predicate, object).
+For example, the relation <https://hitontology.eu/ontology/evaluatesProduct> is abbreviated to hito:evaluatesProduct or just ":evaluatesProduct" (empty prefix).
+:evaluatesProduct has the domain :SoftwareProduct and range :Study.
+This means that each triple (statement) that includes :evaluatesProduct in the predicate position has to have an instance of :SoftwareProduct in subject and :Study in object position.
+Answers to simple information needs, such as those occuring in standard faceted search, are often represented by single triples.
+For example the (positive) answer to "Does GNU Health support HL7 FHIR" is encoded in the triple (:GnuHealth, :interoperability, :HL7_FHIR).
+
+## Graph
+
+A set of RDF triples forms a labelled graph and is thus also called a knowledge graph.
+This means that we can use standard graph theory path finding to find complex relationships between resources.
+While the RDF graph is directed, the edge direction is sometimes arbitrary (e.g. "uses" vs "used by") so edges are traversed in both directions, treating the graph as undirected for the purpose of path finding here.
+While this has been done before for knowledge graphs (cite RelFinder), our approach uses path finding on the ontology level and combines this both with the
+individuals of the classes along the chosen path as well as faceted search filters to limit the search space.
+
+![early mockup](https://user-images.githubusercontent.com/43496783/122712136-b8442100-d263-11eb-9e2a-c3414e17db92.png)
+
+Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
+
+- Click on Search Class for Search Input: e.g., EnterpriseFunctionClassified
+- Click on Result Class for Results: e.g., FirstAuthor
+- Automatically: All paths between Search Class and Result Class, where each class is touched at most once, are calculated and displayed in the meta-model image. Paths are referred to as "search paths." For example, the following search paths would be found:
+  - EnterpriseFunctionClassified - EnterpriseFunctionCitation - SoftwareProduct - Feature Classified - FeatureCitation - Study - FirstAuthor
+  - EnterpriseFunctionClassified - EnterpriseFunctionCitation - FeatureCitation - Study - FirstAuthor
+- Click: Mark a class that must be included (or not) in the search path, e.g., FeatureCitation must be included.
+- Automatically: Only the search paths that include/not include the chosen class remain, e.g.,
+  - EnterpriseFunctionClassified - EnterpriseFunctionCitation - SoftwareProduct - Feature Classified - FeatureCitation - Study - FirstAuthor
+  - EnterpriseFunctionClassified - EnterpriseFunctionCitation - FeatureCitation - Study - FirstAuthor
+- Click: Mark a class that must be included (or not) in the search path, e.g., SoftwareProduct should not be included.
+- Automatically: Only the search paths that include/not include the chosen class remain, e.g.,
+  - EnterpriseFunctionClassified - EnterpriseFunctionCitation - FeatureCitation - Study - FirstAuthor
+  - ...
+- If only search paths remain that differ only by their edges (because there are multiple edges between two classes), then desired or undesired edges must be clicked or unclicked.
+- If only one search path remains, then a table is generated with the names of the classes of the search path and the names of the connecting edge as column headers, e.g.,
+
+  - EnterpriseFunctionClassified
+
+    < functionCitation < EnterpriseFunctionCitation
+
+    > supports > FeatureCitation
+    > <evaluate feature < Study
+    > firstAuthor > FirstAuthor
+
+- A search string can now be entered for the first column. In the first column, all instances of the corresponding class containing the search string are listed. In column n (n=2,...,LastColumn), all instances of the corresponding class are listed that are related to an entry from column n-1 via the specified edge.
+
+## 
+
+# Results
+
+- insert screenshot of the HITO GUI here
+
+# Discussion
+
+[Earlier](https://github.com/snikproject/ciono) experiments with similar approaches in the [SNIK](https://www.snik.eu/) project using shortest paths or automatically determining _interesting_ paths did not yield satisfying results, so all non-cyclic paths are given to the user to select a single one.
+
+In contrast to keyword search and question answering, where users enter a query into a text field...
+Alternative approaches: question answering
+
+# Conclusions
 
 
 # Acknowledgements
