@@ -61,6 +61,10 @@ Information systems in hospitals typically consist of hundreds of connected appl
 Due to a lack of systematization and unbiased information, finding the optimal combination of software products for a particular use case is a challenging endeavour.
 The [Health IT Ontology (HITO)](https://hitontology.eu/) allows a precise description and comparation of application systems and software products in health IT
 and also includes a knowledge base of exemplary individual products.
+TODO: cite Jahn 2023
+In order to appropriately separate existing terminologies and common synonyms, several terms categories are divided into catalogues, classified catalogue entries and citations, such as from a product website.
+These categories are: application system types, enterprise functions, features, roles, organizational units and study outcome criteria.
+
 Due to the complex nature of a health information system (e.g. the Uniklinikum Leipzig has inserthowmany components and insert source for that), typical information needs of users are also complex, such as "Which authors wrote studies concerning a given enterprise function?"
 HITO provides access over several common interfaces: an RDF browser, a SPARQL endpoint for formal queries and faceted search.
 However of those options, only SPARQL queries have the necessary expressivity to satisfy the complex information but typical users don't have expertise in the formal RDF query language of SPARQL.
@@ -130,15 +134,38 @@ Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
 
 - insert screenshot of the HITO GUI here
 
+The algorithm described above is implemented in a a web application that is freely available at <https://hitontology.github.io/gui> licensed under the open source MIT license.
+We experimented with automatic graph layouting algorithms but the result was visually confusing.
+Thus, we use the manually generated HITO ontology diagram that is maximized for visual clarity.
+UpperCamelCase suffixes are replaced with title case plural labels for easier consumption by readers not experienced in RDF/OWL, such as "ProgrammingLanguage" -> "Programming Languages".
+Also, the Catalogue-Classified-Citation structure is explained in-diagram with named groups and entries called "terminologies", "terminology entries" and
+"folks' terms".
+
+Due to the high potential time complexity of SPARQL 1.1 property path queries, which could lead to long waiting times or even crashes (TODO: cite beyond the yottabyte),
+HITO is transformed into a graph structure of the Cytoscape.js JavaScript library, which performs the path calculations.
+TODO: insert numbers for X and Y:
+Between the X classes, there are Y potential (cycle-free) paths, however most of them are empty (the join along the path does not contain any results).
+TODO: insert numbers for Y and Z:
+Thus, we execute the Y/2 SPARQL queries in preprocessing (accounting for inverse paths), assign hash values to paths and save the Z path hashes with at least one result.
+When a user selects a source and target class, the nonempty paths are shown and can be selected.
+[Earlier](https://github.com/snikproject/ciono) experiments with similar approaches in the [SNIK](https://www.snik.eu/) project using shortest paths or automatically determining _interesting_ paths did not yield satisfying results as it depends on the information need, so all non-cyclic paths are given to the user to select a single one.
+On selection, a SPARQL query is generated that joins all classes along the given path and displays them in a results table, which can then be further filtered,
+for example by a specific feature or enterprise function.
+TODO: running example?
+
+
 # Discussion
 
-[Earlier](https://github.com/snikproject/ciono) experiments with similar approaches in the [SNIK](https://www.snik.eu/) project using shortest paths or automatically determining _interesting_ paths did not yield satisfying results, so all non-cyclic paths are given to the user to select a single one.
 
 In contrast to keyword search and question answering, where users enter a query into a text field...
 Alternative approaches: question answering
 
 # Conclusions
 
+This approach can be adapted to other domains where users with complex information needs interact with ontologies and knowledge graphs.
+The adaptation requires manual effort as automatic graph layouting did not yield usable results in our experience and user facing labels differ from technical
+terms.
+However this could be implemented or supported by generative AI in the future.
 
 # Acknowledgements
 
