@@ -22,13 +22,16 @@ date: 31 May 2024
 bibliography: paper.bib
 ---
 
+title option: 'Visualizing Paths for Exploratory Search in the Health IT Ontology'
+other: 'MOHITO: Multi-Faceted Ontology search in the Health IT Ontology' (O used twice)
+other: 'HITOM: Health IT Ontology Multi-Faceted search'
+
 # Summary
 
 
 ![HITOM](img/hitogui.pdf)
 
 HITOM is a web application designed to interactively explore complex relationships between different classes in the Health IT Ontology (HITO) and their instances.
-
 
 
 
@@ -43,7 +46,7 @@ Andreea Somesan ... analyzing the user experience. @andreeama
 # Statement of need
 Information systems in hospitals typically consist of hundreds of connected application systems, which are installations of different software products.
 Due to a lack of systematization and unbiased information, finding the optimal combination of software products for a particular use case is a challenging endeavour.
-The [Health IT Ontology (HITO)](https://hitontology.eu/) allows a precise description and comparation of application systems and software products in health IT, but satisfying the information need of typical users is difficult because they don't have expertise in formal RDF query languages like SPARQL.
+The [Health IT Ontology (HITO)](https://hitontology.eu/) allows a precise description and comparison of application systems and software products in health IT, but satisfying the information need of typical users is difficult because they don't have expertise in formal RDF query languages like SPARQL.
 
 describe software products and application systems in health environments and studies describing them.
 Properties of software products, such as features, enterprise functions and 
@@ -59,45 +62,57 @@ Title: Visualizing Paths for Exploratory Search in the Health IT Ontology
 # Introduction
 Information systems in hospitals typically consist of hundreds of connected application systems, which are installations of different software products.
 Due to a lack of systematization and unbiased information, finding the optimal combination of software products for a particular use case is a challenging endeavour.
-The [Health IT Ontology (HITO)](https://hitontology.eu/) allows a precise description and comparation of application systems and software products in health IT
-and also includes a knowledge base of exemplary individual products.
+The [Health IT Ontology (HITO)](https://hitontology.eu/) [Jahn 2023] allows a precise description and comparison of application systems and software products in health IT.
+HITO also includes exemplary individual software products and studies.
 TODO: cite Jahn 2023
 In order to appropriately separate existing terminologies and common synonyms, several terms categories are divided into catalogues, classified catalogue entries and citations, such as from a product website.
 These categories are: application system types, enterprise functions, features, roles, organizational units and study outcome criteria.
 
-Due to the complex nature of a health information system (e.g. the Uniklinikum Leipzig has inserthowmany components and insert source for that), typical information needs of users are also complex, such as "Which authors wrote studies concerning a given enterprise function?"
-HITO provides access over several common interfaces: an RDF browser, a SPARQL endpoint for formal queries and faceted search.
-However of those options, only SPARQL queries have the necessary expressivity to satisfy the complex information but typical users don't have expertise in the formal RDF query language of SPARQL.
+Due to the complex nature of a health information system, typical information needs of users are also complex, such as which studies evaluate software products supporting a given enterprise function.
+Following established standards of the Semantic Web and Linked Open Data principles, HITO provides access over a SPARQL endpoint (a Semantic Web graph database) and an RDF browser and additionally faceted search.
+However of those options, only SPARQL queries have the necessary expressivity to satisfy complex information needs but typical users don't have expertise in the formal RDF query language of SPARQL.
 
-Our goal is to visualize the paths two given classes in HITO are connected and to allow faceted search on a path, showing the individuals along the way and letting users filter them.
+Our contribution is a novel approach to visually explore the domain of application systems and software products for hospitals.
+Users select two classes in the HITO ontology, select one out of several possible paths between them and finally explore the individuals along the path and filter the results to gain new insights.
 
 - insert hito diagram here -
 
 # Methods
 
+
 -insert initial mockup here? -
 
-## OWL and RDF
+## Semantic Web
 
-HITO is an OWL domain specific ontology and RDF knowledge graph.
-The ontology, as shown in figure ... consists of classes and object properties (relations) between them, where classes represent sets of instances (also called individuals).
-Formally, each of our object properties has a domain, respectively range, one of our classes.
-According to the principles of the resource description framework (RDF), each class, property and individual possesses a uniform resource identifier (URI), which is abbreviated with a prefix-suffix notation.
-An RDF knowledge graph consists of a set of statments of the shape (subject, predicate, object).
-For example, the relation <https://hitontology.eu/ontology/evaluatesProduct> is abbreviated to hito:evaluatesProduct or just ":evaluatesProduct" (empty prefix).
-:evaluatesProduct has the domain :SoftwareProduct and range :Study.
+HITO is an ontology and knowledge graph modelled using the Resource Description Framework (RDF) and RDFS (RDF Schema) languages.
+HITO, as shown in figure ... consists of classes and properties (relations) between them, where classes represent sets of instances (also called individuals).
+According to the principles of RDF, each class, property and individual possesses a uniform resource identifier (URI), which is abbreviated with a prefix-suffix notation.
+For example, the relation <https://hitontology.eu/ontology/evaluatesProduct> is abbreviated to hito:evaluatesProduct or just :evaluatesProduct (empty prefix).
+Using RDF, statements are modelled as triples of the form (subject, predicate, object).
+Each of our object properties has as domain, respectively range, one of our classes.
+For example, :evaluatesProduct has the domain :Study and range :SoftwareProduct.
 This means that each triple (statement) that includes :evaluatesProduct in the predicate position has to have an instance of :SoftwareProduct in subject and :Study in object position.
-Answers to simple information needs, such as those occuring in standard faceted search, are often represented by single triples.
-For example the (positive) answer to "Does GNU Health support HL7 FHIR" is encoded in the triple (:GnuHealth, :interoperability, :HL7_FHIR).
+
+SPARQL queries include triple patterns, where elements of a triple are either constants or variables.
+Answers to simple information needs, such as those occuring in standard faceted search, are often represented by a single triple pattern.
+For example, the answer to the question "Which interoperability standards does GNU Health support" is matched by the triple pattern (:GnuHealth, :interoperability, ?x),
+and a SPARQL SELECT query for ?x with this triple pattern would yield the values :HL7, :HL7_FHIR, :ICD9, :ICD10 and :ICPM.
+
 
 ## Graph
 
 A set of RDF triples forms a labelled graph and is thus also called a knowledge graph.
-This means that we can use standard graph theory path finding to find complex relationships between resources.
-While the RDF graph is directed, the edge direction is sometimes arbitrary (e.g. "uses" vs "used by") so edges are traversed in both directions, treating the graph as undirected for the purpose of path finding here.
-While this has been done before for knowledge graphs (cite RelFinder), our approach uses path finding on the ontology level and combines this both with the
-individuals of the classes along the chosen path as well as faceted search filters to limit the search space.
+This means that we can use standard graph theory path finding to discover complex relationships between resources.
+While the RDF graph is directed, information needs may require traversing an edge in either direction (e.g. "uses" vs "used by") so we do not restrict paths to be directed (pointed in the same direction).
 
+## Approach
+
+Each path is a finite 
+
+
+
+
+## Algorithm
 ![early mockup](https://user-images.githubusercontent.com/43496783/122712136-b8442100-d263-11eb-9e2a-c3414e17db92.png)
 
 Example: Which authors have dealt with a specific EnterpriseFunctionClassified?
@@ -142,7 +157,13 @@ Also, the Catalogue-Classified-Citation structure is explained in-diagram with n
 "folks' terms".
 
 Due to the high potential time complexity of SPARQL 1.1 property path queries, which could lead to long waiting times or even crashes (TODO: cite beyond the yottabyte),
-HITO is transformed into a graph structure of the Cytoscape.js JavaScript library, which performs the path calculations.
+HITO is transformed into a graph structure of the Cytoscape.js JavaScript library.
+Cytoscape.js offers several path calculation functions but none that calculate all undirected paths between a given source and target,
+so we calculate them recursively using a modified depth-first search with no abort condition when a path is found and a list of visited nodes, so that no node and thus edge is visited twice (also called simple path).
+Between the 36 nodes and 42 edges there are 20634 paths, half of which (10317) are unique disregarding direction.
+
+is associated SPARQL query that selects all instances 
+
 TODO: insert numbers for X and Y:
 Between the X classes, there are Y potential (cycle-free) paths, however most of them are empty (the join along the path does not contain any results).
 TODO: insert numbers for Y and Z:
@@ -159,6 +180,8 @@ TODO: running example?
 
 In contrast to keyword search and question answering, where users enter a query into a text field...
 Alternative approaches: question answering
+
+While this has been done before for knowledge graphs (cite RelFinder), the novelty of our approach is that it uses path finding on the ontology level and combines this both with the individuals of the classes along the chosen path as well as faceted search filters to limit the search space.
 
 # Conclusions
 
