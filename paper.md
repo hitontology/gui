@@ -161,8 +161,15 @@ HITO is transformed into a graph structure of the Cytoscape.js JavaScript librar
 Cytoscape.js offers several path calculation functions but none that calculate all undirected paths between a given source and target,
 so we calculate them recursively using a modified depth-first search with no abort condition when a path is found and a list of visited nodes, so that no node and thus edge is visited twice (also called simple path).
 Between the 36 nodes and 42 edges there are 20634 paths, half of which (10317) are unique disregarding direction.
-
-is associated SPARQL query that selects all instances 
+Each unique path is associated with a SPARQL query that joins all instances of classes along the path in the following way:
+Let p = r1,r2,...rn be the sequence of properties (relations) of a path along with a direction indicator for each property, D(r) be the domain and R(r) be the range of r.
+We now construct the sequence s = D(r1), r1, R(r1) = D(r2), r2, ..., R(rn-1) = D(rn), rn, R(rn).
+For each property traversed in the opposite direction we switch the domain and range, e.g. if r1 is traversed in backward and r2 in forward direction we obtain s' = R(r1), r1, D(r1) = D(r), ... .
+Along this sequence, we now convert each item x_i to a SPARQL triple pattern according to its type:
+1. If x_i is a HITO class: (?y_i, rdfs:subClassOf, ?x_i)
+2. If x_i is a datatype class, such as xsd:string: ?
+3. If x_i is a property: (?n_i+1, x_i, ?n+2) if forward, (?n_i+2, x_i, ?n+1) if backward
+TODO: this is not yet correct, the two numbering notations need to be unified
 
 TODO: insert numbers for X and Y:
 Between the X classes, there are Y potential (cycle-free) paths, however most of them are empty (the join along the path does not contain any results).
