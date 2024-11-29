@@ -1,6 +1,6 @@
 {
   "name": "hitogui",
-  "version": "24.3-alpha",
+  "version": "24.11",
   "description": "HITO search interface",
   "main": "index.js",
   "type": "module",
